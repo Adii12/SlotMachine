@@ -40,7 +40,7 @@ namespace Database
         }
 
         private void CreateTable() {
-            string stmt = "CREATE TABLE IF NOT EXISTS Users(ID INT PRIMARY KEY AUTOINCREMENT, Username TEXT, Password Text)";
+            string stmt = "CREATE TABLE IF NOT EXISTS Users(ID INT PRIMARY KEY AUTOINCREMENT, Username TEXT, Password TEXT, Balance REAL)";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
 
             try {
@@ -51,8 +51,8 @@ namespace Database
             }
         }
 
-        public void InsertUser(string username, string password) {
-            string stmt = "INSERT INTO Users(Username, Password) VALUES('" + username + "','" + password + "')";
+        public void InsertUser(string username, string password, string balance) {
+            string stmt = "INSERT INTO Users(Username, Password, Balance) VALUES('" + username + "','" + password + "','" + balance + "')";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
 
             try {
@@ -88,6 +88,7 @@ namespace Database
                 data += reader.GetInt32(0).ToString() + " ";
                 data += reader.GetString(1) + " ";
                 data += reader.GetString(2) + " ";
+                data += reader.GetDouble(3) + " ";
                 data += "\n";
             }
             reader.Close();
