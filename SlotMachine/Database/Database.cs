@@ -28,10 +28,11 @@ namespace Database {
             try {
                 conn = new SQLiteConnection("Data Source = Database.sqlite; Version = 3");
                 conn.Open();
-                WriteLog("Connected to database");
+                Debug.WriteLine("aa");
+                //WriteLog("Connected to database");
             }
             catch (Exception ex) {
-                WriteLog(ex.ToString()); ;
+                //WriteLog(ex.ToString()); ;
                 return;
             }
 
@@ -45,19 +46,19 @@ namespace Database {
                 conn = null;
             }
             else {
-                WriteLog("There is no connection with database to close");
+               // WriteLog("There is no connection with database to close");
             }
         }
 
         private void CreateTable() {
-            string stmt = "CREATE TABLE IF NOT EXISTS Users(ID INT PRIMARY KEY AUTOINCREMENT, Username UNIQUE TEXT, Password TEXT, Balance REAL)";
+            string stmt = "CREATE TABLE IF NOT EXISTS Users(ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT UNIQUE, Password TEXT, Balance REAL)";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
 
             try {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                WriteLog(ex.ToString());
+               // WriteLog(ex.ToString());
             }
         }
 
@@ -80,7 +81,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                WriteLog(ex.ToString());
+                //WriteLog(ex.ToString());
             }
         }
 
@@ -94,7 +95,7 @@ namespace Database {
                 cmd.ExecuteReader();
             }
             catch (Exception ex) {
-                WriteLog(ex.ToString());
+               // WriteLog(ex.ToString());
             }
 
             string data = "";
@@ -127,7 +128,7 @@ namespace Database {
             try {
                 reader = cmd.ExecuteReader();
             }catch(Exception ex) {
-                WriteLog(ex.ToString());
+                //WriteLog(ex.ToString());
             }
 
             string data = "not found";
@@ -161,11 +162,11 @@ namespace Database {
             try {
                 cmd.ExecuteNonQuery();
             }catch(Exception ex) {
-                WriteLog(ex.ToString());
+                //WriteLog(ex.ToString());
             }
         }
 
-        private void WriteLog(string text) {
+     /*   private void WriteLog(string text) {
             System.IO.FileStream LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
             string TimeStamp = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
 
@@ -173,6 +174,10 @@ namespace Database {
             Trace.Listeners.Add(txtListener);
             Trace.AutoFlush = true;
             Trace.WriteLine(TimeStamp + "\t" + text);
-        }
+
+            LogFile.Dispose();
+            LogFile.Close();
+            
+        }*/
     }
 }

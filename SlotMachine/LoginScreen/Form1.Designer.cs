@@ -122,6 +122,7 @@
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
+            this.loginButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.loginButton_MouseClick);
             // 
             // casinoLogo
             // 
@@ -145,6 +146,7 @@
             this.registerButton.TabIndex = 7;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // noAccountLabel
             // 
