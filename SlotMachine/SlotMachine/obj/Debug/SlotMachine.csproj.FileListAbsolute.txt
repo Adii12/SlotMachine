@@ -6,6 +6,10 @@ F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.reso
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 7b25be08b4ff40293da84aaa273f631ec470d5ca
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
@@ -14,3 +18,16 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMach
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+<<<<<<< HEAD
+=======
+=======
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+>>>>>>> fa15ac8b556d0a56b042185af9bcd2cbf74e5f1a
+>>>>>>> 7b25be08b4ff40293da84aaa273f631ec470d5ca
