@@ -70,7 +70,7 @@ namespace Database {
             return System.Text.Encoding.UTF8.GetString(hashValue);
         }
 
-        public void InsertUser(string username, string password, string balance) {
+        public void InsertUser(string username, string password) {
             string HashedPassword = CreateHash(password);
             
             string stmt = "INSERT INTO Users(Username, Password, Balance) VALUES('" + username + "','" + HashedPassword + "', 0.0)";
@@ -149,9 +149,11 @@ namespace Database {
                 return false;
         }
 
-        public void UpdateBalance(string username, double new_balance) {
+        public void UpdateBalance(string username, double new_balance, double old_balance) {
+            double final_balance = new_balance + old_balance;
+            
             string stmt="UPDATE Users " +
-                        "SET Balance="+new_balance+
+                        "SET Balance="+final_balance+
                         " WHERE Username='"+username+"'";
 
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
