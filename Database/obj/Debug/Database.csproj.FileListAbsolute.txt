@@ -1,9 +1,0 @@
-C:\Users\adic8\Documents\slot-machine\Database\bin\Debug\Database.dll
-C:\Users\adic8\Documents\slot-machine\Database\bin\Debug\Database.pdb
-C:\Users\adic8\Documents\slot-machine\Database\bin\Debug\System.Data.SQLite.dll
-C:\Users\adic8\Documents\slot-machine\Database\bin\Debug\System.Data.SQLite.xml
-C:\Users\adic8\Documents\slot-machine\Database\bin\Debug\System.Data.SQLite.dll.config
-C:\Users\adic8\Documents\slot-machine\Database\obj\Debug\Database.csprojAssemblyReference.cache
-C:\Users\adic8\Documents\slot-machine\Database\obj\Debug\Database.csproj.CopyComplete
-C:\Users\adic8\Documents\slot-machine\Database\obj\Debug\Database.dll
-C:\Users\adic8\Documents\slot-machine\Database\obj\Debug\Database.pdb
