@@ -1,0 +1,8 @@
+F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
+F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
+F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
