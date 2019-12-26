@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.29326.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SlotMachine", "SlotMachine\SlotMachine.csproj", "{F7E003AB-78D2-4C6D-99CE-A76F713622F7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LoginScreen", "LoginScreen\LoginScreen.csproj", "{D0421907-3F8C-457B-AC63-2C6B7E20584D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{F7E003AB-78D2-4C6D-99CE-A76F713622F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7E003AB-78D2-4C6D-99CE-A76F713622F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7E003AB-78D2-4C6D-99CE-A76F713622F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0421907-3F8C-457B-AC63-2C6B7E20584D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0421907-3F8C-457B-AC63-2C6B7E20584D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0421907-3F8C-457B-AC63-2C6B7E20584D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0421907-3F8C-457B-AC63-2C6B7E20584D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

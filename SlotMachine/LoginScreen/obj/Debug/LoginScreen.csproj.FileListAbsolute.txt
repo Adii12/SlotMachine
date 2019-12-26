@@ -1,0 +1,9 @@
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.exe.config
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csprojAssemblyReference.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Form1.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Properties.Resources.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.GenerateResource.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.pdb
