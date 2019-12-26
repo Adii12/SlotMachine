@@ -6,3 +6,11 @@ F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.reso
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
 F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
