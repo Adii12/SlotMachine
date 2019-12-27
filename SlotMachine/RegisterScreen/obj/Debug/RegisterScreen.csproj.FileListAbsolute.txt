@@ -1,0 +1,9 @@
+F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe.config
+F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe
+F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.pdb
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csprojAssemblyReference.cache
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Form1.resources
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Properties.Resources.resources
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.GenerateResource.cache
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.exe
+F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.pdb
