@@ -30,23 +30,16 @@ F:\Slots\SlotMachine\LoginScreen\bin\Debug\Database.pdb
 F:\Slots\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.xml
 F:\Slots\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.dll.config
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csprojAssemblyReference.cache
-<<<<<<< HEAD
-F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Form1.resources
-=======
->>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Properties.Resources.resources
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.GenerateResource.cache
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.exe
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.pdb
-<<<<<<< HEAD
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.pdb
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe.config
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
-=======
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
 F:\Slots\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe
 F:\Slots\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.pdb
 F:\Slots\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe.config
->>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
