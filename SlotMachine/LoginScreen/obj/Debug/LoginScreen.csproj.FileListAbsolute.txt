@@ -22,3 +22,9 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.D
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\Database.dll
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\Database.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\Database.dll
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.dll
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\Database.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.xml
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
