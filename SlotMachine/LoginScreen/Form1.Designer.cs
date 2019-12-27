@@ -137,6 +137,7 @@
             // 
             // registerButton
             // 
+            this.registerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.registerButton.BackColor = System.Drawing.Color.Yellow;
             this.registerButton.FlatAppearance.BorderSize = 0;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +151,7 @@
             // 
             // noAccountLabel
             // 
+            this.noAccountLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.noAccountLabel.AutoSize = true;
             this.noAccountLabel.BackColor = System.Drawing.Color.Transparent;
             this.noAccountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
