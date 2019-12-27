@@ -37,3 +37,4 @@ F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.GenerateResource.c
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.exe
 F:\Slots\SlotMachine\LoginScreen\obj\Debug\LoginScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources

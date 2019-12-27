@@ -7,3 +7,12 @@ F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Properties.Resource
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.GenerateResource.cache
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.exe
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe.config
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csprojAssemblyReference.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Form1.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Properties.Resources.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.GenerateResource.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.pdb
