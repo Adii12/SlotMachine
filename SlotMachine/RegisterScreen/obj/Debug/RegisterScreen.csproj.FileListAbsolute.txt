@@ -2,21 +2,8 @@ F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe.config
 F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe
 F:\Slots\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.pdb
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csprojAssemblyReference.cache
-<<<<<<< HEAD
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Form1.resources
-=======
->>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.Properties.Resources.resources
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.GenerateResource.cache
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.exe
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.pdb
-<<<<<<< HEAD
-=======
-F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.RegisterForm.resources
-F:\Slots\SlotMachine\RegisterScreen\bin\Debug\Database.dll
-F:\Slots\SlotMachine\RegisterScreen\bin\Debug\System.Data.SQLite.dll
-F:\Slots\SlotMachine\RegisterScreen\bin\Debug\Database.pdb
-F:\Slots\SlotMachine\RegisterScreen\bin\Debug\System.Data.SQLite.xml
-F:\Slots\SlotMachine\RegisterScreen\bin\Debug\System.Data.SQLite.dll.config
-F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.CopyComplete
->>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c

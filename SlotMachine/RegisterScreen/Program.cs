@@ -16,11 +16,7 @@ namespace RegisterScreen
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-<<<<<<< HEAD
             Application.Run(new Form1());
-=======
-            Application.Run(new RegisterForm());
->>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
         }
     }
 }
