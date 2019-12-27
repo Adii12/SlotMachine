@@ -1,4 +1,1 @@
-26-12-2019 10:33:29	Connected to database
-SQLite error (1): AUTOINCREMENT is only allowed on an INTEGER PRIMARY KEY in "CREATE TABLE IF NOT EXISTS Users(ID INT PRIMARY KEY AUTOINCREMENT, Username UNIQUE TEXT, Password TEXT, Balance REAL)"
-  at System.Data.SQLite.SQLiteCommand.ExecuteReader()
-   at Database.Database.AuthenticateUser(String username, String password)
+27-12-2019 03:27:34 PM	Connected to database

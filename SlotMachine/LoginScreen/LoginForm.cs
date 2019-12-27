@@ -13,12 +13,12 @@ using System.Reflection;
 
 namespace LoginScreen
 {
-    public partial class Form1 : Form
+    public partial class LoginForm : Form
     {
         System.Reflection.Assembly databaseDLL;
         dynamic db;
         PrivateFontCollection egyptFont;
-        public Form1()
+        public LoginForm()
         {
             setupFont();
             InitializeComponent();
@@ -101,17 +101,17 @@ namespace LoginScreen
 
         private void loginButton_MouseClick(object sender, MouseEventArgs e) {
 
-            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
-                MessageBox.Show("Logat");
-            }
+            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
+                MessageBox.Show("Succesfully logged in!");
             else
-                MessageBox.Show("Sinucide te");
-
+                MessageBox.Show("Incorrect username and/or password!");
         }
 
         private void registerButton_Click(object sender, EventArgs e) {
-            
-            db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
+            RegisterScreen.RegisterForm registerScreen = new RegisterScreen.RegisterForm();
+            registerScreen.Show();
+
+            //db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
         }
     }
 }
