@@ -11,96 +11,106 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
-
 namespace LoginScreen
 {
     public partial class Form1 : Form
     {
         System.Reflection.Assembly databaseDLL;
         dynamic db;
+        PrivateFontCollection egyptFont;
         public Form1()
         {
+            setupFont();
             InitializeComponent();
-            createBackground();
-            setupLabel();
+            setupScreen();
             databaseDLL = System.Reflection.Assembly.Load("Database");
             if(databaseDLL == null) {
-               
+                MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                System.Environment.Exit(1);
             }
 
             db = databaseDLL.CreateInstance("Database.Database");
             db.Init();
         }
 
-        public void createBackground()
+        private void setupFont()
         {
-           BackgroundImage.Dock = DockStyle.Fill;
-           
-        }    
-    
-        public void setupLabel()
-        {
-            userLabel.Parent = BackgroundImage;
-            userLabel.BackColor = Color.Transparent;
-            usernameTextbox.Parent = BackgroundImage;
-          
-            passwordLabel.Parent = BackgroundImage;
-            passwordLabel.BackColor = Color.Transparent;
-            passwordLabel.Parent = BackgroundImage;
-           
-            int x = this.Width / 2;
-            int y = this.Height / 2;
-            userLabel.Location = new Point(x-200,y-100);
-            passwordLabel.Location = new Point(userLabel.Location.X,y);
-
-            usernameTextbox.Location = new Point(userLabel.Location.X + 220, y-95);
-            passwordTextbox.Location = new Point(passwordLabel.Location.X + 220, y+8);
-            loginButton.Location= new Point(passwordLabel.Location.X + 160, y + 100);
-            
-            PrivateFontCollection egyptFont = new PrivateFontCollection();
+            egyptFont = new PrivateFontCollection();
             int fontLength = Properties.Resources.ISIS.Length;
             byte[] fontData = Properties.Resources.ISIS;
             System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontData, 0, data, fontLength);
             egyptFont.AddMemoryFont(data, fontLength);
-       
-            userLabel.Font = new Font(egyptFont.Families[0], 35);       // username label font
-            userLabel.Text = "Username: ";
-            passwordLabel.Font = new Font(egyptFont.Families[0], 35);   // password label font
-            passwordLabel.Text = "Password: ";
-           
-            loginButton.Font = new Font(egyptFont.Families[0], 35);
-            loginButton.BackColor = Color.Orange;
-            loginButton.FlatStyle = FlatStyle.Flat;
-            loginButton.FlatAppearance.BorderColor = Color.Yellow;
-                    
-            registerButton.Font = new Font(egyptFont.Families[0], 35);
-            registerButton.BackColor = Color.Orange;
-            registerButton.FlatStyle = FlatStyle.Flat;
-            registerButton.FlatAppearance.BorderColor = Color.Yellow;
+        }
 
-            registerButton.Location = new Point(loginButton.Location.X , loginButton.Location.Y+105);
-            noAccountLabel.Location= new Point(loginButton.Location.X+10, loginButton.Location.Y + 80);
-            
-            usernameTextbox.BackColor = Color.Yellow;
-            passwordTextbox.BackColor = Color.Yellow;
+        public void setupScreen()
+        {
+            BackgroundImage.Dock = DockStyle.Fill;
 
-            casinoLogo.Location = new Point(usernameTextbox.Location.X -250,usernameTextbox.Location.Y -230);
+            setupLabel(userLabel, "Username:", 35);
+            setupLabel(passwordLabel, "Password:", 35);
+            setupLabel(noAccountLabel, "Don't have an account?", 20);
+
+            setupTextBox(usernameTextbox);
+            setupTextBox(passwordTextbox);
+
+            setupButton(loginButton, "Login");
+            setupButton(registerButton, "Register");
+
+            int x = this.Width / 2;
+            int y = this.Height / 2;
+
+            //locations
+            userLabel.Location = new Point(x - 200, y - 100);
+            passwordLabel.Location = new Point(userLabel.Location.X, y);
+
+            usernameTextbox.Location = new Point(userLabel.Location.X + 220, y - 95);
+            passwordTextbox.Location = new Point(passwordLabel.Location.X + 220, y + 8);
+
+            loginButton.Location = new Point(passwordLabel.Location.X + 160, y + 100);
+            registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 105);
+
+            noAccountLabel.Location = new Point(loginButton.Location.X - 15, loginButton.Location.Y + 70);
+
+            casinoLogo.Location = new Point(usernameTextbox.Location.X - 250, usernameTextbox.Location.Y - 230);
             casinoLogo.Parent = BackgroundImage;
             casinoLogo.BackColor = Color.Transparent;
+        }
+        private void setupLabel(Label label, String text, int fontSize)
+        {
+            label.Parent = BackgroundImage;
+            label.Font= new Font(egyptFont.Families[0], fontSize);
+            label.BackColor = Color.Transparent;
+            label.Text = text;
+            label.UseCompatibleTextRendering = true;
+        }
 
+        private void setupTextBox(TextBox textBox) {
+            textBox.Parent = BackgroundImage;
+            textBox.BackColor = Color.Yellow;
+        }
+
+        private void setupButton(Button button,String text)
+        {
+            button.Font = new Font(egyptFont.Families[0], 30);
+            button.BackColor = Color.Orange;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Yellow;
+            button.Text = text;
         }
 
         private void loginButton_MouseClick(object sender, MouseEventArgs e) {
 
-            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
+            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
                 MessageBox.Show("Logat");
+            }
             else
                 MessageBox.Show("Sinucide te");
 
         }
 
         private void registerButton_Click(object sender, EventArgs e) {
+            
             db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
         }
     }
