@@ -20,6 +20,11 @@ namespace LoginScreen
         PrivateFontCollection egyptFont;
         public LoginForm()
         {
+<<<<<<< HEAD
+=======
+            this.FormBorderStyle = FormBorderStyle.None;
+            this.WindowState = FormWindowState.Maximized;
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
             setupFont();
             InitializeComponent();
             setupScreen();
@@ -56,6 +61,10 @@ namespace LoginScreen
 
             setupButton(loginButton, "Login");
             setupButton(registerButton, "Register");
+<<<<<<< HEAD
+=======
+            setupButton(quitButton, "Quit");
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
 
             int x = this.Width / 2;
             int y = this.Height / 2;
@@ -69,6 +78,10 @@ namespace LoginScreen
 
             loginButton.Location = new Point(passwordLabel.Location.X + 160, y + 100);
             registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 105);
+<<<<<<< HEAD
+=======
+            quitButton.Location = new Point(x + 1050, y + 619);
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
 
             noAccountLabel.Location = new Point(loginButton.Location.X - 15, loginButton.Location.Y + 70);
 
@@ -97,10 +110,15 @@ namespace LoginScreen
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;
             button.Text = text;
+<<<<<<< HEAD
+=======
+            button.UseCompatibleTextRendering = true;
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
         }
 
         private void loginButton_MouseClick(object sender, MouseEventArgs e) {
 
+<<<<<<< HEAD
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
                 MessageBox.Show("Succesfully logged in!");
             else
@@ -112,6 +130,28 @@ namespace LoginScreen
             registerScreen.Show();
 
             //db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
+=======
+            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
+                MessageBox.Show("Logat");
+            }
+            else
+                MessageBox.Show("Sinucide te");
+
+        }
+
+        private void registerButton_Click(object sender, EventArgs e) {
+
+            if (RegisterScreen.RegisterForm.registerInstance == null)
+            {
+                RegisterScreen.RegisterForm.registerInstance = new RegisterScreen.RegisterForm();
+                RegisterScreen.RegisterForm.registerInstance.Show();
+            }
+        }
+
+        private void quitButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
         }
     }
 }

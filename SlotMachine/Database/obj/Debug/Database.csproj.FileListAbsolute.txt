@@ -15,4 +15,7 @@ F:\Slots\SlotMachine\Database\obj\Debug\Database.csprojAssemblyReference.cache
 F:\Slots\SlotMachine\Database\obj\Debug\Database.csproj.CopyComplete
 F:\Slots\SlotMachine\Database\obj\Debug\Database.dll
 F:\Slots\SlotMachine\Database\obj\Debug\Database.pdb
+<<<<<<< HEAD
 C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\obj\Debug\Database.csprojAssemblyReference.cache
+=======
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c

@@ -168,6 +168,38 @@ namespace Database {
         //find user by username to check if there are no duplicates when inserting new account
        public bool FindUser(string username) {
             string stmt = "SELECT * FROM Users WHERE Username='"+username+"'";
+<<<<<<< HEAD
+=======
+
+            SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
+            SQLiteDataReader reader = null;
+
+            try {
+                reader = cmd.ExecuteReader();
+            }
+            catch (Exception ex) {
+                //WriteLog(ex.ToString());
+            }
+
+            string data = "not found";
+
+            if (reader != null) {
+                while (reader.Read()) {
+                    data += reader.GetInt32(0).ToString() + " ";
+                    data += reader.GetString(1) + " ";
+                    data += reader.GetString(2) + " ";
+                    data += reader.GetDouble(3) + " ";
+                    data += "\n";
+                }
+                reader.Close();
+            }
+
+            if (data != "not found")
+                return true;
+            else
+                return false;
+        }
+>>>>>>> e9fc81d91c8d5e216289a25039d1e3e74638411c
 
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
             SQLiteDataReader reader = null;
