@@ -13,7 +13,6 @@ F:\Slots\SlotMachine\RegisterScreen\bin\Debug\Database.pdb
 F:\Slots\SlotMachine\RegisterScreen\bin\Debug\System.Data.SQLite.xml
 F:\Slots\SlotMachine\RegisterScreen\bin\Debug\System.Data.SQLite.dll.config
 F:\Slots\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.CopyComplete
-<<<<<<< HEAD
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe.config
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\bin\Debug\RegisterScreen.pdb
@@ -29,5 +28,3 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\Regis
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.csproj.CopyComplete
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\RegisterScreen\obj\Debug\RegisterScreen.pdb
-=======
->>>>>>> 0d43f388cba7364ab58bbf6ed57897aa84cd1ce5
