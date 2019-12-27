@@ -1,6 +1,6 @@
 ﻿namespace LoginScreen
 {
-    partial class Form1
+    partial class LoginForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.BackgroundImage = new System.Windows.Forms.PictureBox();
             this.userLabel = new System.Windows.Forms.Label();
             this.passwordLabel = new System.Windows.Forms.Label();
@@ -39,6 +39,7 @@
             this.casinoLogo = new System.Windows.Forms.PictureBox();
             this.registerButton = new System.Windows.Forms.Button();
             this.noAccountLabel = new System.Windows.Forms.Label();
+            this.quitButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).BeginInit();
             this.SuspendLayout();
@@ -137,6 +138,7 @@
             // 
             // registerButton
             // 
+            this.registerButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.registerButton.BackColor = System.Drawing.Color.Yellow;
             this.registerButton.FlatAppearance.BorderSize = 0;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -150,6 +152,7 @@
             // 
             // noAccountLabel
             // 
+            this.noAccountLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.noAccountLabel.AutoSize = true;
             this.noAccountLabel.BackColor = System.Drawing.Color.Transparent;
             this.noAccountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -160,11 +163,22 @@
             this.noAccountLabel.TabIndex = 8;
             this.noAccountLabel.Text = "Don\'t have an account?";
             // 
-            // Form1
+            // quitButton
+            // 
+            this.quitButton.Location = new System.Drawing.Point(1014, 522);
+            this.quitButton.Name = "quitButton";
+            this.quitButton.Size = new System.Drawing.Size(146, 48);
+            this.quitButton.TabIndex = 9;
+            this.quitButton.Text = "button1";
+            this.quitButton.UseVisualStyleBackColor = true;
+            this.quitButton.Click += new System.EventHandler(this.quitButton_Click);
+            // 
+            // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 715);
+            this.Controls.Add(this.quitButton);
             this.Controls.Add(this.noAccountLabel);
             this.Controls.Add(this.registerButton);
             this.Controls.Add(this.casinoLogo);
@@ -174,7 +188,7 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.BackgroundImage);
-            this.Name = "Form1";
+            this.Name = "LoginForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).EndInit();
@@ -194,6 +208,7 @@
         private System.Windows.Forms.PictureBox casinoLogo;
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label noAccountLabel;
+        private System.Windows.Forms.Button quitButton;
     }
 }
 
