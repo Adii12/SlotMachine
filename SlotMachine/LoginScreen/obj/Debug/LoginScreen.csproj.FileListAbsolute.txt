@@ -49,3 +49,6 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.D
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe.config

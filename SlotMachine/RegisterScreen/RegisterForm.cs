@@ -51,8 +51,8 @@ namespace RegisterScreen
             setupTextbox(passwordTextbox, x, y - 50, true);
             setupTextbox(confirmPasswordTextbox, x, y + 50, true);
 
-            setupButton(registerButton, "Register", x - 100, y + 250); //ian si azteca
-            setupButton(cancelButton, "Cancel", x + 700, y + 430); //rey misterio
+            setupButton(registerButton, "Register", x - 100, y + 250); 
+            setupButton(cancelButton, "Cancel", x + 700, y + 430); 
 
             setupCheckbox(over18Check, x - 150, y + 150);
             logoPicturebox.Location = new Point(x - 250, y - 400);
@@ -139,6 +139,7 @@ namespace RegisterScreen
                 {
                     db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
                     MessageBox.Show("Succesfully registered!", "Merry Christmas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Dispose();
                 }
             }
         }
