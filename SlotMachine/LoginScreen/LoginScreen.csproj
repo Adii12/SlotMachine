@@ -96,6 +96,10 @@
     <None Include="Resources\vegascasino-logo.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\MainMenuScreen\MainMenuScreen.csproj">
+      <Project>{0b0beafd-fe85-412b-8b8b-e3bd52972f64}</Project>
+      <Name>MainMenuScreen</Name>
+    </ProjectReference>
     <ProjectReference Include="..\RegisterScreen\RegisterScreen.csproj">
       <Project>{ee0f10a1-d45d-4845-a91f-fba36d6d0d64}</Project>
       <Name>RegisterScreen</Name>

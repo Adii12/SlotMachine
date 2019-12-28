@@ -37,6 +37,7 @@ namespace Database {
             }
 
             CreateTable();
+            CreateWinnersTable();
         }
 
         public void CloseConnection() {
@@ -197,6 +198,55 @@ namespace Database {
                 return true;
             else
                 return false;
+        }
+
+
+        private void CreateWinnersTable() {
+            string stmt = "CREATE TABLE IF NOT EXISTS Winners (ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT, Winnings INTEGER)";
+            SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
+
+            try {
+                cmd.ExecuteNonQuery();
+            }catch(Exception ex) {
+
+            }
+        }
+
+        public void InsertWinner(string username, int winnings) {
+            string stmt = "INSERT INTO Winners(Username,Winnings) VALUES('" + username + "','" + winnings + "')";
+            SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
+
+            try {
+                cmd.ExecuteNonQuery();
+            }catch(Exception ex) {
+
+            }
+        }
+
+        public string SelectWinners() {
+            string stmt = "SELECT * FROM Winners ORDER BY Winnings DESC";
+            SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
+            SQLiteDataReader reader = null;
+
+            try {
+                reader = cmd.ExecuteReader();
+            }catch(Exception ex) {
+
+            }
+
+            string data = "";
+
+            if (reader != null) {
+                while (reader.Read()) {
+                    data += reader.GetInt32(0).ToString()+ " ";
+                    data += reader.GetString(1) + " ";
+                    data += reader.GetInt32(2).ToString() + " ";
+                    data += "\n";
+                }
+            }
+            reader.Close();
+
+            return data;
         }
 
      /*   private void WriteLog(string text) {

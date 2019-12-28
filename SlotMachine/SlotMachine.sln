@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Database", "Database\Databa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterScreen", "RegisterScreen\RegisterScreen.csproj", "{EE0F10A1-D45D-4845-A91F-FBA36D6D0D64}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackpotWinnersScreen", "JackpotWinnersScreen\JackpotWinnersScreen.csproj", "{B234705D-C917-423A-9CC4-7C4F9A92226D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenuScreen", "MainMenuScreen\MainMenuScreen.csproj", "{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +35,10 @@ Global
 		{EE0F10A1-D45D-4845-A91F-FBA36D6D0D64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EE0F10A1-D45D-4845-A91F-FBA36D6D0D64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EE0F10A1-D45D-4845-A91F-FBA36D6D0D64}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B234705D-C917-423A-9CC4-7C4F9A92226D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B234705D-C917-423A-9CC4-7C4F9A92226D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B234705D-C917-423A-9CC4-7C4F9A92226D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B234705D-C917-423A-9CC4-7C4F9A92226D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
