@@ -40,16 +40,24 @@ namespace JackpotWinnersScreen {
             int x = this.Width / 2;
             int y = this.Height / 2;
 
-            casinoLogo.Location = new Point(x, y - 300);
+            casinoLogo.Location = new Point(x + 300, y - 200);
             casinoLogo.Parent = backgroundImage;
             casinoLogo.BackColor = Color.Transparent;
 
             int i = 1;
             getData(data);
             foreach (string line in lines) {
-                setupLabel(line, x - 400, (y - 400) + (i * 75));
+                setupLabel(line, x -400, (y - 275) + (i * 75),40,900,80);
                 ++i;
+                if (i > 10)
+                {
+                    break;
+                }
             }
+            setupLabel("Place", x - 410, y - 325,60,200,80);
+            setupLabel("Name", x - 135, y - 325,60,200,80);
+            setupLabel("Winnings", x + 225, y - 325, 60, 300, 80);
+            setupButton(cancelButton, "Cancel", x + 690, y + 420);
         }
 
         private void setupFont() {
@@ -61,25 +69,39 @@ namespace JackpotWinnersScreen {
             egyptFont.AddMemoryFont(data, fontLength);
         }
 
-        private void setupLabel(String text, int x, int y) {
+        private void setupLabel(String text, int x, int y,int fontSize,int width,int height) {
             Label label = new Label();
             label.Parent = backgroundImage;
             label.BackColor = Color.Transparent;
-            label.Font = new Font(egyptFont.Families[0], 35);
+            label.Font = new Font(egyptFont.Families[0], fontSize);
             label.Text = text;
             label.UseCompatibleTextRendering = true;
-            label.Size = new Size(100, 75);
+            label.Size = new Size(width, height);
             label.Anchor = AnchorStyles.None;
             label.Location = new Point(x, y);
         }
+        private void setupButton(Button button, String text, int x, int y)
+        {
+            button.Font = new Font(egyptFont.Families[0], 30);
+            button.BackColor = Color.Orange;
+            button.FlatStyle = FlatStyle.Flat;
+            button.FlatAppearance.BorderColor = Color.Yellow;
+            button.Text = text;
+            button.Location = new Point(x, y);
+            button.Anchor = AnchorStyles.None;
+            button.Width = 180;
+            button.Height = 60;
+            button.UseCompatibleTextRendering = true;
+        }
+
         private void getData(string data) {
-            db.InsertWinner("alqaida", 1000);
-            db.InsertWinner("obama", 999);
-            db.InsertWinner("biciclentiu", 427);
-            data=db.SelectWinners();
-          
+            data = db.SelectWinners();
             lines = Regex.Split(data, "\n");
-            MessageBox.Show(lines[0]);
+        }
+
+        private void cancelButton_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
         }
     }
 }

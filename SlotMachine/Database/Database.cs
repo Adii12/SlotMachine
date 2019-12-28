@@ -236,14 +236,15 @@ namespace Database {
 
             }
 
-            string data = " ";
-
+            string data = "";
+            int c = 1;
             if (reader != null) {
                 while (reader.Read()) {
-                    data += reader.GetInt32(0).ToString()+ " ";
-                    data += reader.GetString(1) + " ";
+                    data += c.ToString()+ "                  ";
+                    data += reader.GetString(1) + "                  ";
                     data += reader.GetInt32(2).ToString() + " ";
                     data += "\n";
+                    c++;
                 }
                 reader.Close();
                 
