@@ -1,0 +1,9 @@
+F:\slots\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.exe.config
+F:\slots\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.exe
+F:\slots\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.pdb
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.csprojAssemblyReference.cache
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.JackpotWinnersForm.resources
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.Properties.Resources.resources
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.csproj.GenerateResource.cache
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.exe
+F:\slots\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.pdb
