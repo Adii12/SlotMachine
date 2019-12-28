@@ -1,0 +1,9 @@
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\MainMenuScreen.exe.config
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\MainMenuScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\MainMenuScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.csprojAssemblyReference.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.MainMenu.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.Properties.Resources.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.csproj.GenerateResource.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainMenuScreen.pdb
