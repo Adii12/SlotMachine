@@ -10,6 +10,7 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScr
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csprojAssemblyReference.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Form1.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Properties.Resources.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.GenerateResource.cache
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.exe
@@ -48,7 +49,6 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.D
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\System.Data.SQLite.dll.config
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.CopyComplete
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.pdb
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe.config
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe.config

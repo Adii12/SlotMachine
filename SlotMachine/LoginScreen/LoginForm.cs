@@ -106,12 +106,23 @@ namespace LoginScreen
 
         private void loginButton_MouseClick(object sender, MouseEventArgs e) {
 
-            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
-                MessageBox.Show("Logat");
+            if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
+            {
+                MessageBox.Show("Succesfully logged in!");
+                usernameTextbox.Text = "";
+                passwordTextbox.Text = "";
+                this.Hide();
+                MainMenuScreen.MainMenu mainMenu = new MainMenuScreen.MainMenu();
+                mainMenu.ShowDialog();
+                this.Show();
+                
+              
+              
             }
             else
-                MessageBox.Show("Sinucide te");
-
+                {
+                MessageBox.Show("Unable to log in!");
+                }
         }
 
         private void registerButton_Click(object sender, EventArgs e) {
