@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RegisterScreen", "RegisterS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenuScreen", "MainMenuScreen\MainMenuScreen.csproj", "{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutScreen", "AboutScreen\AboutScreen.csproj", "{6E7CC1E4-CD9B-49E9-8D41-322B84792493}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackpotWinnersScreen", "JackpotWinnersScreen\JackpotWinnersScreen.csproj", "{BB5E7B02-4625-46EF-BAC4-F642064CE514}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0B0BEAFD-FE85-412B-8B8B-E3BD52972F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6E7CC1E4-CD9B-49E9-8D41-322B84792493}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6E7CC1E4-CD9B-49E9-8D41-322B84792493}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6E7CC1E4-CD9B-49E9-8D41-322B84792493}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6E7CC1E4-CD9B-49E9-8D41-322B84792493}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

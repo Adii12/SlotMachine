@@ -10,7 +10,6 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScr
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\LoginScreen.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csprojAssemblyReference.cache
-C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Form1.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.Properties.Resources.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.csproj.GenerateResource.cache
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.exe
@@ -52,3 +51,16 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScr
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.pdb
 C:\Users\enric\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\AboutScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\RegisterScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\AboutScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\AboutScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScreen.LoginForm.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe.config

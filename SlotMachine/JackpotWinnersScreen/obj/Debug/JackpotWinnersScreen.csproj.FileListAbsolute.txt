@@ -1,0 +1,15 @@
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.JackpotWinnersForm.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.Properties.Resources.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.csproj.GenerateResource.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\JackpotWinnersScreen.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\Database.dll
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\System.Data.SQLite.dll
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\Database.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\System.Data.SQLite.xml
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\bin\Debug\System.Data.SQLite.dll.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.csprojAssemblyReference.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.csproj.CopyComplete
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\JackpotWinnersScreen\obj\Debug\JackpotWinnersScreen.pdb

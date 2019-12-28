@@ -87,5 +87,15 @@
   <ItemGroup>
     <None Include="Resources\vegascasino-logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AboutScreen\AboutScreen.csproj">
+      <Project>{6e7cc1e4-cd9b-49e9-8d41-322b84792493}</Project>
+      <Name>AboutScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JackpotWinnersScreen\JackpotWinnersScreen.csproj">
+      <Project>{bb5e7b02-4625-46ef-bac4-f642064ce514}</Project>
+      <Name>JackpotWinnersScreen</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

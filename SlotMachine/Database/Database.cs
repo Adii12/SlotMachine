@@ -87,36 +87,38 @@ namespace Database {
         }
 
         public string SelectAll() {
-            string stmt = "SELECT *  FROM Users";
+            string stmt = "SELECT * FROM Users";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
-
             SQLiteDataReader reader = null;
 
             try {
-                cmd.ExecuteReader();
+                reader = cmd.ExecuteReader();
             }
             catch (Exception ex) {
-               // WriteLog(ex.ToString());
+                Console.WriteLine(ex.ToString());
             }
 
             string data = "";
 
-            for (int i = 0; i < reader.FieldCount; ++i) {
-                data += reader.GetName(i) + "    ";
-            }
+            if (reader != null) {
+                for (int i = 0; i < reader.FieldCount; ++i) {
+                    data += reader.GetName(i) + "  ";
+                }
 
-            data += "\n";
-
-            while (reader.Read()) {
-                data += reader.GetInt32(0).ToString() + " ";
-                data += reader.GetString(1) + " ";
-                data += reader.GetString(2) + " ";
-                data += reader.GetDouble(3) + " ";
                 data += "\n";
-            }
-            reader.Close();
 
-            return data;
+                while (reader.Read()) {
+                    data += reader.GetInt32(0).ToString() + " ";
+                    data += reader.GetString(1) + " ";
+                    data += reader.GetString(2) + " ";
+                    data += "\n";
+                }
+                reader.Close();
+
+                return data;
+            }
+
+            return null;
         }
 
         public bool AuthenticateUser(string username, string password) {
@@ -202,7 +204,7 @@ namespace Database {
 
 
         private void CreateWinnersTable() {
-            string stmt = "CREATE TABLE IF NOT EXISTS Winners (ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT, Winnings INTEGER)";
+            string stmt = "CREATE TABLE IF NOT EXISTS Winners(ID INTEGER PRIMARY KEY AUTOINCREMENT, Username TEXT, Winnings INTEGER)";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
 
             try {
@@ -213,7 +215,7 @@ namespace Database {
         }
 
         public void InsertWinner(string username, int winnings) {
-            string stmt = "INSERT INTO Winners(Username,Winnings) VALUES('" + username + "','" + winnings + "')";
+            string stmt = "INSERT INTO Winners(Username, Winnings) VALUES('" + username + "'," + winnings + ")";
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
 
             try {
@@ -234,7 +236,7 @@ namespace Database {
 
             }
 
-            string data = "";
+            string data = " ";
 
             if (reader != null) {
                 while (reader.Read()) {
@@ -243,10 +245,12 @@ namespace Database {
                     data += reader.GetInt32(2).ToString() + " ";
                     data += "\n";
                 }
+                reader.Close();
+                
+                return data;
             }
-            reader.Close();
 
-            return data;
+            return null;
         }
 
      /*   private void WriteLog(string text) {

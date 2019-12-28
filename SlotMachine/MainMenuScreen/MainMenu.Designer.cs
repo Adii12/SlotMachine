@@ -80,6 +80,7 @@
             this.leaderboardButton.TabIndex = 4;
             this.leaderboardButton.Text = "button4";
             this.leaderboardButton.UseVisualStyleBackColor = true;
+            this.leaderboardButton.Click += new System.EventHandler(this.leaderboardButton_Click);
             // 
             // aboutButton
             // 
@@ -90,6 +91,7 @@
             this.aboutButton.TabIndex = 5;
             this.aboutButton.Text = "About";
             this.aboutButton.UseVisualStyleBackColor = true;
+            this.aboutButton.Click += new System.EventHandler(this.aboutButton_Click);
             // 
             // quitButton
             // 

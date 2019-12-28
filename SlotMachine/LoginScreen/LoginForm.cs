@@ -108,7 +108,6 @@ namespace LoginScreen
 
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
             {
-                MessageBox.Show("Succesfully logged in!");
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
                 this.Hide();
@@ -120,9 +119,9 @@ namespace LoginScreen
               
             }
             else
-                {
-                MessageBox.Show("Unable to log in!");
-                }
+            {
+                MessageBox.Show("Incorrect username and/or password!");
+            }
         }
 
         private void registerButton_Click(object sender, EventArgs e) {

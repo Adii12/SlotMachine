@@ -80,5 +80,15 @@ namespace MainMenuScreen
         {
               this.Close();
         }
+
+        private void aboutButton_Click(object sender, EventArgs e) {
+            AboutScreen.AboutForm about = new AboutScreen.AboutForm();
+            about.Show();
+        }
+
+        private void leaderboardButton_Click(object sender, EventArgs e) {
+            JackpotWinnersScreen.JackpotWinnersForm jackpotWinners = new JackpotWinnersScreen.JackpotWinnersForm();
+            jackpotWinners.Show();
+        }
     }
 }
