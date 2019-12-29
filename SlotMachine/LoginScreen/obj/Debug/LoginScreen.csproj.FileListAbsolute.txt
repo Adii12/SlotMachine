@@ -64,3 +64,8 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScr
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\SlotMachine.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\SlotMachine.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\XmlReader.dll
+C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\XmlReader.pdb

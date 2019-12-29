@@ -90,5 +90,10 @@ namespace MainMenuScreen
             JackpotWinnersScreen.JackpotWinnersForm jackpotWinners = new JackpotWinnersScreen.JackpotWinnersForm();
             jackpotWinners.Show();
         }
+
+        private void playButton_Click(object sender, EventArgs e) {
+            SlotMachine.Form1 slot = new SlotMachine.Form1();
+            slot.Show();
+        }
     }
 }

@@ -96,6 +96,10 @@
       <Project>{bb5e7b02-4625-46ef-bac4-f642064ce514}</Project>
       <Name>JackpotWinnersScreen</Name>
     </ProjectReference>
+    <ProjectReference Include="..\SlotMachine\SlotMachine.csproj">
+      <Project>{f7e003ab-78d2-4c6d-99ce-a76f713622f7}</Project>
+      <Name>SlotMachine</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -23,3 +23,6 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\obj\Debug\MainM
 C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\JackpotWinnersScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\JackpotWinnersScreen.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\JackpotWinnersScreen.exe.config
+C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\SlotMachine.exe
+C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\SlotMachine.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\MainMenuScreen\bin\Debug\SlotMachine.exe.config

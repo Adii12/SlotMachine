@@ -1,27 +1,10 @@
-F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
-F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
-F:\Slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
-F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
-F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
-F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
-F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
-F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
-<<<<<<< HEAD
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
-=======
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
-C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\XmlReader.dll
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\XmlReader.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.CopyComplete
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
->>>>>>> fa15ac8b556d0a56b042185af9bcd2cbf74e5f1a

@@ -17,6 +17,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutScreen", "AboutScreen\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackpotWinnersScreen", "JackpotWinnersScreen\JackpotWinnersScreen.csproj", "{BB5E7B02-4625-46EF-BAC4-F642064CE514}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader", "XmlReader\XmlReader.csproj", "{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,6 +53,10 @@ Global
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
