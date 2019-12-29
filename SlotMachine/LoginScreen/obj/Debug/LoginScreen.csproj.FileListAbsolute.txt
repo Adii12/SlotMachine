@@ -64,3 +64,12 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\obj\Debug\LoginScr
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe.config
+F:\slots\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe
+F:\slots\SlotMachine\LoginScreen\bin\Debug\AboutScreen.exe
+F:\slots\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe
+F:\slots\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.pdb
+F:\slots\SlotMachine\LoginScreen\bin\Debug\MainMenuScreen.exe.config
+F:\slots\SlotMachine\LoginScreen\bin\Debug\AboutScreen.pdb
+F:\slots\SlotMachine\LoginScreen\bin\Debug\AboutScreen.exe.config
+F:\slots\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.pdb
+F:\slots\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe.config
