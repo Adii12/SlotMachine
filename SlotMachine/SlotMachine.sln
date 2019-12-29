@@ -17,7 +17,16 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AboutScreen", "AboutScreen\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JackpotWinnersScreen", "JackpotWinnersScreen\JackpotWinnersScreen.csproj", "{BB5E7B02-4625-46EF-BAC4-F642064CE514}"
 EndProject
+<<<<<<< HEAD
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader", "XmlReader\XmlReader.csproj", "{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}"
+=======
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "XmlReader", "XmlReader\XmlReader.csproj", "{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{82EA2FFA-37C5-48FD-B0A6-E3332222C6B1}"
+	ProjectSection(SolutionItems) = preProject
+		CurrentPlayer.cs = CurrentPlayer.cs
+	EndProjectSection
+>>>>>>> b6b9351189834ec6ff32d0813c8b0ddb33cb4a33
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,10 +62,17 @@ Global
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BB5E7B02-4625-46EF-BAC4-F642064CE514}.Release|Any CPU.Build.0 = Release|Any CPU
+<<<<<<< HEAD
 		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}.Release|Any CPU.Build.0 = Release|Any CPU
+=======
+		{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}.Release|Any CPU.Build.0 = Release|Any CPU
+>>>>>>> b6b9351189834ec6ff32d0813c8b0ddb33cb4a33
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

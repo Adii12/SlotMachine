@@ -4,7 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+<<<<<<< HEAD
     <ProjectGuid>{9E4C8FC0-B360-44C9-908E-CC002D65FAB3}</ProjectGuid>
+=======
+    <ProjectGuid>{FBF6E812-20DB-4633-AA9A-3C5F04BD614D}</ProjectGuid>
+>>>>>>> b6b9351189834ec6ff32d0813c8b0ddb33cb4a33
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>XmlReader</RootNamespace>
@@ -44,5 +48,11 @@
     <Compile Include="XmlReader.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+<<<<<<< HEAD
+=======
+  <ItemGroup>
+    <Content Include="chances.xml" />
+  </ItemGroup>
+>>>>>>> b6b9351189834ec6ff32d0813c8b0ddb33cb4a33
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

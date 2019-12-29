@@ -11,6 +11,7 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
 
+
 namespace LoginScreen
 {
     public partial class LoginForm : Form
@@ -18,6 +19,7 @@ namespace LoginScreen
         System.Reflection.Assembly databaseDLL;
         dynamic db;
         PrivateFontCollection egyptFont;
+        CurrentPlayer.CurrentPlayer currentPlayer;
         public LoginForm()
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -108,15 +110,16 @@ namespace LoginScreen
 
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true)
             {
+                this.Hide();
+                currentPlayer = CurrentPlayer.CurrentPlayer.getInstance();
+                currentPlayer.setUsername(usernameTextbox.Text);
+                currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));
+                MainMenuScreen.MainMenu mainMenu = new MainMenuScreen.MainMenu();
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
-                this.Hide();
-                MainMenuScreen.MainMenu mainMenu = new MainMenuScreen.MainMenu();
                 mainMenu.ShowDialog();
                 this.Show();
                 
-              
-              
             }
             else
             {

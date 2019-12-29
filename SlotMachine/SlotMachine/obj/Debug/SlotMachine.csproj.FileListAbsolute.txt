@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
@@ -8,3 +9,16 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMach
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.CopyComplete
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+=======
+F:\slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe.config
+F:\slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.exe
+F:\slots\SlotMachine\SlotMachine\bin\Debug\SlotMachine.pdb
+F:\slots\SlotMachine\SlotMachine\bin\Debug\XmlReader.dll
+F:\slots\SlotMachine\SlotMachine\bin\Debug\XmlReader.pdb
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Properties.Resources.resources
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.GenerateResource.cache
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csproj.CopyComplete
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.exe
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.csprojAssemblyReference.cache
+>>>>>>> b6b9351189834ec6ff32d0813c8b0ddb33cb4a33

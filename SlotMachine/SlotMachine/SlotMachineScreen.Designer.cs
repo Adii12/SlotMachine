@@ -1,6 +1,6 @@
 ﻿namespace SlotMachine
 {
-    partial class Form1
+    partial class SlotMachineScreen
     {
         /// <summary>
         /// Required designer variable.
@@ -18,6 +18,7 @@
                 components.Dispose();
             }
             base.Dispose(disposing);
+            xmlReader.updateJackpot(jackpotChance);
         }
 
         #region Windows Form Designer generated code
