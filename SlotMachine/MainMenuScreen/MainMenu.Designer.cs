@@ -49,6 +49,7 @@
             this.playButton.TabIndex = 1;
             this.playButton.Text = "button1";
             this.playButton.UseVisualStyleBackColor = true;
+            this.playButton.Click += new System.EventHandler(this.playButton_Click);
             // 
             // addcreditButton
             // 

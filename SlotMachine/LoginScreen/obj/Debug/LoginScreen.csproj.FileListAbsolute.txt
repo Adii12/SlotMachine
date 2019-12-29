@@ -73,3 +73,8 @@ F:\slots\SlotMachine\LoginScreen\bin\Debug\AboutScreen.pdb
 F:\slots\SlotMachine\LoginScreen\bin\Debug\AboutScreen.exe.config
 F:\slots\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.pdb
 F:\slots\SlotMachine\LoginScreen\bin\Debug\JackpotWinnersScreen.exe.config
+F:\slots\SlotMachine\LoginScreen\bin\Debug\SlotMachine.exe
+F:\slots\SlotMachine\LoginScreen\bin\Debug\SlotMachine.pdb
+F:\slots\SlotMachine\LoginScreen\bin\Debug\SlotMachine.exe.config
+F:\slots\SlotMachine\LoginScreen\bin\Debug\XmlReader.dll
+F:\slots\SlotMachine\LoginScreen\bin\Debug\XmlReader.pdb

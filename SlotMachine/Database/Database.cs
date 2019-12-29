@@ -254,6 +254,31 @@ namespace Database {
             return null;
         }
 
+        public double GetBalance(string username)
+        {
+            string stmt = "SELECT Balance FROM Users WHERE Username='" + username + "'";
+            SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
+            SQLiteDataReader reader = null;
+            try
+            {
+                reader = cmd.ExecuteReader();
+            }
+            catch (Exception ex)
+            {
+
+            }
+            double balance=1;
+            if (reader != null)
+            {
+                while (reader.Read())
+                {
+                    balance = reader.GetDouble(0);
+                }
+                return balance;
+            }
+            return 0;
+        }
+
      /*   private void WriteLog(string text) {
             System.IO.FileStream LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
             string TimeStamp = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");

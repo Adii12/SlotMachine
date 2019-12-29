@@ -15,6 +15,7 @@ namespace MainMenuScreen
     public partial class MainMenu : Form
     {
         PrivateFontCollection egyptFont;
+        CurrentPlayer.CurrentPlayer currentPlayer;
         public MainMenu()
         {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -22,9 +23,13 @@ namespace MainMenuScreen
             InitializeComponent();
             setupFont();
             setupScreen();
-
         }
 
+        public void loadMainMenu(CurrentPlayer.CurrentPlayer currentPlayer)
+        {
+            this.currentPlayer = currentPlayer;
+            
+        }
         private void setupFont()
         {
             egyptFont = new PrivateFontCollection();
@@ -89,6 +94,12 @@ namespace MainMenuScreen
         private void leaderboardButton_Click(object sender, EventArgs e) {
             JackpotWinnersScreen.JackpotWinnersForm jackpotWinners = new JackpotWinnersScreen.JackpotWinnersForm();
             jackpotWinners.Show();
+        }
+
+        private void playButton_Click(object sender, EventArgs e)
+        {
+            SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
+            slotMachine.Show();
         }
     }
 }
