@@ -10,7 +10,11 @@ namespace XmlReader {
     public class XmlReader {
         XmlTextReader xmlReader;
         XmlTextWriter xmlWriter;
+<<<<<<< HEAD
         private int[] chances = new int[8];
+=======
+        private int[] chances = new int[9];
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
         public XmlReader() {
             xmlReader = new XmlTextReader("chances.xml");
             int i = 0;
@@ -40,6 +44,7 @@ namespace XmlReader {
             xmlWriter.WriteWhitespace("\n");
             xmlWriter.WriteStartElement("chances");
             xmlWriter.WriteWhitespace("\n\t");
+<<<<<<< HEAD
             xmlWriter.WriteElementString("cherry", "30");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("orange", "15");
@@ -47,11 +52,25 @@ namespace XmlReader {
             xmlWriter.WriteElementString("lemon", "15");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("plum", "15");
+=======
+            xmlWriter.WriteElementString("cherry", "29");
+            xmlWriter.WriteWhitespace("\n\t");
+            xmlWriter.WriteElementString("orange", "13");
+            xmlWriter.WriteWhitespace("\n\t");
+            xmlWriter.WriteElementString("lemon", "13");
+            xmlWriter.WriteWhitespace("\n\t");
+            xmlWriter.WriteElementString("plum", "13");
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("grapes", "10");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("melon", "10");
             xmlWriter.WriteWhitespace("\n\t");
+<<<<<<< HEAD
+=======
+            xmlWriter.WriteElementString("start", "7");
+            xmlWriter.WriteWhitespace("\n\t");
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
             xmlWriter.WriteElementString("seven", "5");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("jackpot", chance.ToString());

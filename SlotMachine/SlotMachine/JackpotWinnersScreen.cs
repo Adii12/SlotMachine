@@ -19,6 +19,10 @@ namespace SlotMachine {
         private PrivateFontCollection egyptFont;
         string data = "";
         string[] lines;
+<<<<<<< HEAD:SlotMachine/SlotMachine/JackpotWinnersScreen.cs
+=======
+       
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/JackpotWinnersScreen/JackpotWinnersForm.cs
         public JackpotWinnersScreen() {
             InitializeComponent();
             databaseDLL = Assembly.Load("Database");
@@ -47,15 +51,25 @@ namespace SlotMachine {
             int i = 1;
             getData(data);
             foreach (string line in lines) {
+<<<<<<< HEAD:SlotMachine/SlotMachine/JackpotWinnersScreen.cs
                 setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 80);
+=======
+                setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 20);
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/JackpotWinnersScreen/JackpotWinnersForm.cs
                 ++i;
                 if (i > 10) {
                     break;
                 }
             }
+<<<<<<< HEAD:SlotMachine/SlotMachine/JackpotWinnersScreen.cs
             setupLabel("Place", x - 410, y - 325, 60, 200, 80);
             setupLabel("Name", x - 135, y - 325, 60, 200, 80);
             setupLabel("Winnings", x + 225, y - 325, 60, 300, 80);
+=======
+            setupLabel("Place", x - 410, y - 325, 40, 200, 80);
+            setupLabel("Name", x - 135, y - 325, 40, 200, 80);
+            setupLabel("Winnings", x + 225, y - 325, 40, 300, 80);
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/JackpotWinnersScreen/JackpotWinnersForm.cs
             setupButton(cancelButton, "Cancel", x + 690, y + 420);
         }
 

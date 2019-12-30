@@ -77,7 +77,11 @@ namespace SlotMachine {
             }
         }
         private void setupButton(Button button, String text, int x, int y) {
+<<<<<<< HEAD:SlotMachine/SlotMachine/RegisterScreen.cs
             button.Font = new Font(egyptFont.Families[0], 30);
+=======
+            button.Font = new Font(egyptFont.Families[0], 20);
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/RegisterScreen/RegisterForm.cs
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;

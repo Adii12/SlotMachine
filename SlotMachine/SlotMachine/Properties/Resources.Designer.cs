@@ -71,6 +71,29 @@ namespace SlotMachine.Properties {
         }
         
         /// <summary>
+<<<<<<< HEAD
+=======
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap cherry {
+            get {
+                object obj = ResourceManager.GetObject("cherry", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap grapes {
+            get {
+                object obj = ResourceManager.GetObject("grapes", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
         internal static byte[] ISIS {
@@ -83,11 +106,87 @@ namespace SlotMachine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+<<<<<<< HEAD
+=======
+        internal static System.Drawing.Bitmap lemon {
+            get {
+                object obj = ResourceManager.GetObject("lemon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap orange {
+            get {
+                object obj = ResourceManager.GetObject("orange", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap plum {
+            get {
+                object obj = ResourceManager.GetObject("plum", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap seven {
+            get {
+                object obj = ResourceManager.GetObject("seven", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap sluts {
+            get {
+                object obj = ResourceManager.GetObject("sluts", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap star {
+            get {
+                object obj = ResourceManager.GetObject("star", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
         internal static System.Drawing.Bitmap vegascasino_logo {
             get {
                 object obj = ResourceManager.GetObject("vegascasino_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+<<<<<<< HEAD
+=======
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap watermelon {
+            get {
+                object obj = ResourceManager.GetObject("watermelon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8
     }
 }

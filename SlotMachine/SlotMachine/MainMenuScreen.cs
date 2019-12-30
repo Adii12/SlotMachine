@@ -13,7 +13,10 @@ using System.Windows.Forms;
 namespace SlotMachine {
     public partial class MainMenuScreen : Form {
         PrivateFontCollection egyptFont;
+<<<<<<< HEAD:SlotMachine/SlotMachine/MainMenuScreen.cs
         //CurrentPlayer.CurrentPlayer currentPlayer;
+=======
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/MainMenuScreen/MainMenu.cs
         public MainMenuScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -53,7 +56,11 @@ namespace SlotMachine {
 
 
         private void setupButton(Button button, String text, int x, int y) {
+<<<<<<< HEAD:SlotMachine/SlotMachine/MainMenuScreen.cs
             button.Font = new Font(egyptFont.Families[0], 30);
+=======
+            button.Font = new Font(egyptFont.Families[0], 20);
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/MainMenuScreen/MainMenu.cs
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;

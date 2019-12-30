@@ -17,7 +17,11 @@ namespace SlotMachine {
         System.Reflection.Assembly databaseDLL;
         dynamic db;
         PrivateFontCollection egyptFont;
+<<<<<<< HEAD:SlotMachine/SlotMachine/LoginScreen.cs
         //CurrentPlayer.CurrentPlayer currentPlayer;
+=======
+        SlotMachine.CurrentPlayer currentPlayer;
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/LoginScreen/LoginForm.cs
         public LoginScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -50,8 +54,8 @@ namespace SlotMachine {
         public void setupScreen() {
             BackgroundImage.Dock = DockStyle.Fill;
 
-            setupLabel(userLabel, "Username:", 35);
-            setupLabel(passwordLabel, "Password:", 35);
+            setupLabel(userLabel, "Username:", 25);
+            setupLabel(passwordLabel, "Password:", 25);
             setupLabel(noAccountLabel, "Don't have an account?", 20);
 
             setupTextBox(usernameTextbox);
@@ -68,14 +72,14 @@ namespace SlotMachine {
             userLabel.Location = new Point(x - 200, y - 100);
             passwordLabel.Location = new Point(userLabel.Location.X, y);
 
-            usernameTextbox.Location = new Point(userLabel.Location.X + 220, y - 95);
-            passwordTextbox.Location = new Point(passwordLabel.Location.X + 220, y + 8);
+            usernameTextbox.Location = new Point(userLabel.Location.X + 190, y - 105);
+            passwordTextbox.Location = new Point(passwordLabel.Location.X + 190, y - 4);
 
             loginButton.Location = new Point(passwordLabel.Location.X + 160, y + 100);
-            registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 105);
+            registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 120);
             quitButton.Location = new Point(x + 1050, y + 619);
 
-            noAccountLabel.Location = new Point(loginButton.Location.X - 15, loginButton.Location.Y + 70);
+            noAccountLabel.Location = new Point(loginButton.Location.X - 70, loginButton.Location.Y + 90);
 
             casinoLogo.Location = new Point(usernameTextbox.Location.X - 250, usernameTextbox.Location.Y - 230);
             casinoLogo.Parent = BackgroundImage;
@@ -95,7 +99,11 @@ namespace SlotMachine {
         }
 
         private void setupButton(Button button, String text) {
+<<<<<<< HEAD:SlotMachine/SlotMachine/LoginScreen.cs
             button.Font = new Font(egyptFont.Families[0], 30);
+=======
+            button.Font = new Font(egyptFont.Families[0], 20);
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/LoginScreen/LoginForm.cs
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;
@@ -107,9 +115,15 @@ namespace SlotMachine {
 
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
                 this.Hide();
+<<<<<<< HEAD:SlotMachine/SlotMachine/LoginScreen.cs
                /* currentPlayer = CurrentPlayer.CurrentPlayer.getInstance();
                 currentPlayer.setUsername(usernameTextbox.Text);
                 currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));*/
+=======
+                currentPlayer = SlotMachine.CurrentPlayer.getInstance();
+                currentPlayer.setUsername(usernameTextbox.Text);
+                currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));
+>>>>>>> bb88726c59962a3df6a4cd7c1586eba428ab59e8:SlotMachine/LoginScreen/LoginForm.cs
                 SlotMachine.MainMenuScreen mainMenu = new SlotMachine.MainMenuScreen();
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
