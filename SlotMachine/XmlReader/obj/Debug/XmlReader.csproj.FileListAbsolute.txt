@@ -1,0 +1,4 @@
+C:\Users\adic8\Desktop\SlotMachine\XmlReader\bin\Debug\XmlReader.dll
+C:\Users\adic8\Desktop\SlotMachine\XmlReader\bin\Debug\XmlReader.pdb
+C:\Users\adic8\Desktop\SlotMachine\XmlReader\obj\Debug\XmlReader.dll
+C:\Users\adic8\Desktop\SlotMachine\XmlReader\obj\Debug\XmlReader.pdb
