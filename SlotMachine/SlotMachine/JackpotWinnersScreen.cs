@@ -19,6 +19,7 @@ namespace SlotMachine {
         private PrivateFontCollection egyptFont;
         string data = "";
         string[] lines;
+       
         public JackpotWinnersScreen() {
             InitializeComponent();
             databaseDLL = Assembly.Load("Database");
@@ -47,15 +48,15 @@ namespace SlotMachine {
             int i = 1;
             getData(data);
             foreach (string line in lines) {
-                setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 80);
+                setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 20);
                 ++i;
                 if (i > 10) {
                     break;
                 }
             }
-            setupLabel("Place", x - 410, y - 325, 60, 200, 80);
-            setupLabel("Name", x - 135, y - 325, 60, 200, 80);
-            setupLabel("Winnings", x + 225, y - 325, 60, 300, 80);
+            setupLabel("Place", x - 410, y - 325, 40, 200, 80);
+            setupLabel("Name", x - 135, y - 325, 40, 200, 80);
+            setupLabel("Winnings", x + 225, y - 325, 40, 300, 80);
             setupButton(cancelButton, "Cancel", x + 690, y + 420);
         }
 

@@ -64,6 +64,7 @@
     <Compile Include="AboutScreen.Designer.cs">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="CurrentPlayer.cs" />
     <Compile Include="JackpotWinnersScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -118,6 +119,9 @@
     <EmbeddedResource Include="RegisterScreen.resx">
       <DependentUpon>RegisterScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="SlotMachineScreen.resx">
+      <DependentUpon>SlotMachineScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -128,6 +132,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Resources\CasinoShadow.ttf" />
     <None Include="Resources\OhMightyIsisBold-erX3.otf" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +143,36 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\vegascasino-logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SizzlingHotdeluxe_Reels %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sluts.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\157773272725733354.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cherry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\imageedit_6_5063335759.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lemon_1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plum.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\watermelon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" />

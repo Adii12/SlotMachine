@@ -10,7 +10,7 @@ namespace XmlReader {
     public class XmlReader {
         XmlTextReader xmlReader;
         XmlTextWriter xmlWriter;
-        private int[] chances = new int[8];
+        private int[] chances = new int[9];
         public XmlReader() {
             xmlReader = new XmlTextReader("chances.xml");
             int i = 0;
@@ -40,17 +40,19 @@ namespace XmlReader {
             xmlWriter.WriteWhitespace("\n");
             xmlWriter.WriteStartElement("chances");
             xmlWriter.WriteWhitespace("\n\t");
-            xmlWriter.WriteElementString("cherry", "30");
+            xmlWriter.WriteElementString("cherry", "29");
             xmlWriter.WriteWhitespace("\n\t");
-            xmlWriter.WriteElementString("orange", "15");
+            xmlWriter.WriteElementString("orange", "13");
             xmlWriter.WriteWhitespace("\n\t");
-            xmlWriter.WriteElementString("lemon", "15");
+            xmlWriter.WriteElementString("lemon", "13");
             xmlWriter.WriteWhitespace("\n\t");
-            xmlWriter.WriteElementString("plum", "15");
+            xmlWriter.WriteElementString("plum", "13");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("grapes", "10");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("melon", "10");
+            xmlWriter.WriteWhitespace("\n\t");
+            xmlWriter.WriteElementString("start", "7");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("seven", "5");
             xmlWriter.WriteWhitespace("\n\t");
