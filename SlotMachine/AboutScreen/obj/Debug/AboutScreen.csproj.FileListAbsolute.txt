@@ -1,9 +1,0 @@
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.csprojAssemblyReference.cache
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.Properties.Resources.resources
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.csproj.GenerateResource.cache
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\bin\Debug\AboutScreen.exe.config
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\bin\Debug\AboutScreen.exe
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\bin\Debug\AboutScreen.pdb
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.exe
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.pdb
-C:\Users\adic8\Documents\slot-machine\SlotMachine\AboutScreen\obj\Debug\AboutScreen.AboutForm.resources
