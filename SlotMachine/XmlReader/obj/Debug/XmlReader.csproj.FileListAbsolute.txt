@@ -1,5 +1,0 @@
-F:\slots\SlotMachine\XmlReader\bin\Debug\XmlReader.dll
-F:\slots\SlotMachine\XmlReader\bin\Debug\XmlReader.pdb
-F:\slots\SlotMachine\XmlReader\obj\Debug\XmlReader.csprojAssemblyReference.cache
-F:\slots\SlotMachine\XmlReader\obj\Debug\XmlReader.dll
-F:\slots\SlotMachine\XmlReader\obj\Debug\XmlReader.pdb
