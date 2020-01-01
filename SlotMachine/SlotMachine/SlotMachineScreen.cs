@@ -20,6 +20,10 @@ namespace SlotMachine {
         private int jackpotChance;
         PrivateFontCollection egyptFont;
         SlotMachine.CurrentPlayer currentPlayer;
+        private int[] bets = new int[6];
+        int bet_pos_in_vector;
+
+
         public SlotMachineScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -36,6 +40,8 @@ namespace SlotMachine {
             }
             jackpotChance = chances[8];
             currentPlayer = SlotMachine.CurrentPlayer.getInstance();
+            
+            bet_pos_in_vector = 0;
         }
 
         private void setupScreen() {
@@ -52,12 +58,10 @@ namespace SlotMachine {
             setupButton(moreBet, "BET +", lessBet.Location.X + 450, y + 430);
             setupSpinButton(spinButton, "SPIN", x-100, y + 400);
             setupButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 430);
-            //gambleButton.Enabled = false;
             gambleButton.Hide();
 
-            setupLabel(BetLabel, "BET: 5000", 35, x-650, y+440);
-           
-           
+            createBets(bets);
+            setupLabel(BetLabel, "BET: "+bets[bet_pos_in_vector], 35, x-650, y+440);         
         }
 
         private void setupButton(Button button, String text, int x, int y) {
@@ -104,8 +108,35 @@ namespace SlotMachine {
             egyptFont.AddMemoryFont(data, fontLength);
         }
 
+        private void createBets(int[] bets) {
+            bets[0] = 50;
+            bets[1] = 100;
+            bets[2] = 500;
+            bets[3] = 1000;
+            bets[4] = 2500;
+            bets[5] = 5000;
+        }
+       
         private void backButton_Click(object sender, EventArgs e) {
             this.Dispose();
+        }
+
+        private void lessBet_Click(object sender, EventArgs e) {
+            if (bet_pos_in_vector == 0)
+                bet_pos_in_vector = 5; //daca ajunge la cel mai mic bet si se apasa butonul = > se pune pe bet cel mai mare
+            else
+                bet_pos_in_vector--;
+
+            BetLabel.Text = "BET: " + bets[bet_pos_in_vector];
+        }
+
+        private void moreBet_Click(object sender, EventArgs e) {
+            if (bet_pos_in_vector == 5)
+                bet_pos_in_vector = 0;  //daca ajunge la cel mai mare bet si se apasa butonul = > se reseteaza bet ul
+            else 
+                bet_pos_in_vector++;
+
+            BetLabel.Text = "BET: " + bets[bet_pos_in_vector];
         }
     }
 }

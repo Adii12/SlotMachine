@@ -52,7 +52,7 @@ namespace XmlReader {
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("melon", "10");
             xmlWriter.WriteWhitespace("\n\t");
-            xmlWriter.WriteElementString("start", "7");
+            xmlWriter.WriteElementString("stars", "7");
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("seven", "5");
             xmlWriter.WriteWhitespace("\n\t");

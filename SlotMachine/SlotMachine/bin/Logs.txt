@@ -1,0 +1,3 @@
+Native library pre-loader is trying to load native SQLite library "C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
+Connected to database
+se

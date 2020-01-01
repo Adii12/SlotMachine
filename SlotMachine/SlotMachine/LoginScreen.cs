@@ -11,6 +11,7 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Diagnostics;
+using System.IO;
 
 namespace SlotMachine {
     public partial class LoginScreen : Form {
@@ -18,6 +19,7 @@ namespace SlotMachine {
         dynamic db;
         PrivateFontCollection egyptFont;
         SlotMachine.CurrentPlayer currentPlayer;
+
         public LoginScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -103,8 +105,7 @@ namespace SlotMachine {
             button.UseCompatibleTextRendering = true;
         }
 
-        private void loginButton_MouseClick(object sender, MouseEventArgs e) {
-
+        private void loginButton_Click(object sender, EventArgs e) {
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
                 this.Hide();
                 currentPlayer = SlotMachine.CurrentPlayer.getInstance();
@@ -115,7 +116,7 @@ namespace SlotMachine {
                 passwordTextbox.Text = "";
                 mainMenu.ShowDialog();
                 this.Show();
-
+                Trace.WriteLine("Logat");
             }
             else {
                 MessageBox.Show("Incorrect username and/or password!");
