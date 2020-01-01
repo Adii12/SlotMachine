@@ -38,9 +38,10 @@
             // 
             // backButton
             // 
-            this.backButton.Location = new System.Drawing.Point(713, 415);
+            this.backButton.Location = new System.Drawing.Point(535, 337);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
-            this.backButton.Size = new System.Drawing.Size(75, 23);
+            this.backButton.Size = new System.Drawing.Size(56, 19);
             this.backButton.TabIndex = 2;
             this.backButton.Text = "button1";
             this.backButton.UseVisualStyleBackColor = true;
@@ -49,9 +50,10 @@
             // SlotsColumns
             // 
             this.SlotsColumns.Image = global::SlotMachine.Properties.Resources.sluts;
-            this.SlotsColumns.Location = new System.Drawing.Point(8, 8);
+            this.SlotsColumns.Location = new System.Drawing.Point(6, 6);
+            this.SlotsColumns.Margin = new System.Windows.Forms.Padding(2);
             this.SlotsColumns.Name = "SlotsColumns";
-            this.SlotsColumns.Size = new System.Drawing.Size(111, 100);
+            this.SlotsColumns.Size = new System.Drawing.Size(83, 81);
             this.SlotsColumns.TabIndex = 1;
             this.SlotsColumns.TabStop = false;
             // 
@@ -59,8 +61,9 @@
             // 
             this.BackgroundImage.Image = global::SlotMachine.Properties.Resources.background_image;
             this.BackgroundImage.Location = new System.Drawing.Point(0, 0);
+            this.BackgroundImage.Margin = new System.Windows.Forms.Padding(2);
             this.BackgroundImage.Name = "BackgroundImage";
-            this.BackgroundImage.Size = new System.Drawing.Size(803, 455);
+            this.BackgroundImage.Size = new System.Drawing.Size(602, 370);
             this.BackgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage.TabIndex = 0;
             this.BackgroundImage.TabStop = false;
@@ -72,36 +75,41 @@
             this.spinButton.BackColor = System.Drawing.Color.Red;
             this.spinButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.spinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.spinButton.Location = new System.Drawing.Point(342, 385);
+            this.spinButton.Location = new System.Drawing.Point(256, 313);
+            this.spinButton.Margin = new System.Windows.Forms.Padding(2);
             this.spinButton.Name = "spinButton";
-            this.spinButton.Size = new System.Drawing.Size(150, 53);
+            this.spinButton.Size = new System.Drawing.Size(112, 43);
             this.spinButton.TabIndex = 3;
             this.spinButton.Text = "SPIN";
             this.spinButton.UseVisualStyleBackColor = false;
+            this.spinButton.Click += new System.EventHandler(this.spinButton_Click);
             // 
             // moreBet
             // 
-            this.moreBet.Location = new System.Drawing.Point(154, 418);
+            this.moreBet.Location = new System.Drawing.Point(116, 340);
+            this.moreBet.Margin = new System.Windows.Forms.Padding(2);
             this.moreBet.Name = "moreBet";
-            this.moreBet.Size = new System.Drawing.Size(75, 23);
+            this.moreBet.Size = new System.Drawing.Size(56, 19);
             this.moreBet.TabIndex = 4;
             this.moreBet.Text = "button1";
             this.moreBet.UseVisualStyleBackColor = true;
             // 
             // lessBet
             // 
-            this.lessBet.Location = new System.Drawing.Point(12, 415);
+            this.lessBet.Location = new System.Drawing.Point(9, 337);
+            this.lessBet.Margin = new System.Windows.Forms.Padding(2);
             this.lessBet.Name = "lessBet";
-            this.lessBet.Size = new System.Drawing.Size(75, 23);
+            this.lessBet.Size = new System.Drawing.Size(56, 19);
             this.lessBet.TabIndex = 5;
             this.lessBet.Text = "button1";
             this.lessBet.UseVisualStyleBackColor = true;
             // 
             // gambleButton
             // 
-            this.gambleButton.Location = new System.Drawing.Point(554, 415);
+            this.gambleButton.Location = new System.Drawing.Point(416, 337);
+            this.gambleButton.Margin = new System.Windows.Forms.Padding(2);
             this.gambleButton.Name = "gambleButton";
-            this.gambleButton.Size = new System.Drawing.Size(75, 23);
+            this.gambleButton.Size = new System.Drawing.Size(56, 19);
             this.gambleButton.TabIndex = 6;
             this.gambleButton.Text = "button1";
             this.gambleButton.UseVisualStyleBackColor = true;
@@ -110,17 +118,18 @@
             // 
             this.BetLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.BetLabel.AutoSize = true;
-            this.BetLabel.Location = new System.Drawing.Point(94, 421);
+            this.BetLabel.Location = new System.Drawing.Point(70, 342);
+            this.BetLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.BetLabel.Name = "BetLabel";
-            this.BetLabel.Size = new System.Drawing.Size(32, 16);
+            this.BetLabel.Size = new System.Drawing.Size(25, 13);
             this.BetLabel.TabIndex = 7;
             this.BetLabel.Text = "aaa";
             // 
             // SlotMachineScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(799, 451);
+            this.ClientSize = new System.Drawing.Size(599, 366);
             this.Controls.Add(this.BetLabel);
             this.Controls.Add(this.gambleButton);
             this.Controls.Add(this.lessBet);
@@ -129,6 +138,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.SlotsColumns);
             this.Controls.Add(this.BackgroundImage);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SlotMachineScreen";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.SlotsColumns)).EndInit();

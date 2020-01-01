@@ -1,0 +1,5 @@
+F:\slots\SlotMachine\WinningsCalculator\bin\Debug\WinningsCalculator.dll
+F:\slots\SlotMachine\WinningsCalculator\bin\Debug\WinningsCalculator.pdb
+F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsCalculator.csprojAssemblyReference.cache
+F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsCalculator.dll
+F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsCalculator.pdb
