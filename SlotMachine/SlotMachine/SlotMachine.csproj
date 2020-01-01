@@ -53,6 +53,9 @@
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
+    <Reference Include="WinningsCalculator">
+      <HintPath>..\WinningsCalculator\bin\Debug\WinningsCalculator.dll</HintPath>
+    </Reference>
     <Reference Include="XmlReader">
       <HintPath>..\XmlReader\bin\Debug\XmlReader.dll</HintPath>
     </Reference>
