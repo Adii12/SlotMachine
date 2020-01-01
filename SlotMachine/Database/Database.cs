@@ -22,13 +22,13 @@ namespace Database {
         private SQLiteConnection conn = null;
         System.IO.FileStream LogFile;
 
-        TextWriterTraceListener txtListener;
+        //TextWriterTraceListener txtListener;
 
         public Database() {
-            LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
-            txtListener = new TextWriterTraceListener(LogFile);
-            Trace.AutoFlush = true;
-            Trace.Listeners.Add(txtListener);
+            //LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
+            //txtListener = new TextWriterTraceListener(LogFile);
+            //Trace.AutoFlush = true;
+            //Trace.Listeners.Add(txtListener);
         }
 
         public void Init() {

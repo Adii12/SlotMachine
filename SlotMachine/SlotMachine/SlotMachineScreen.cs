@@ -37,13 +37,17 @@ namespace SlotMachine {
 
             winningsCalc = Assembly.Load("WinningsCalculator");
             winningsCalculator = winningsCalc.CreateInstance("WinningsCalculator.WinningsCalculator");
+            
             xml = Assembly.Load("XmlReader");
             xmlReader = xml.CreateInstance("XmlReader.XmlReader");
             chances = xmlReader.getChances();
+            
             winTypes = new WinningsCalculator.WinType[15];
+            
             for (int i = 0; i < 9; i++) {
                 Debug.WriteLine(chances[i]);
             }
+           
             jackpotChance = chances[8];
             currentPlayer = SlotMachine.CurrentPlayer.getInstance();
             setupMatrix();
