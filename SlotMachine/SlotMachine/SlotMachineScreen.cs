@@ -18,19 +18,34 @@ namespace SlotMachine {
         dynamic xmlReader;
         Assembly winningsCalc;
         dynamic winningsCalculator;
+        Assembly database;
+        dynamic db;
+       
         private int[] chances = new int[9];
         private int jackpotChance;
         PrivateFontCollection egyptFont;
         CurrentPlayer currentPlayer;
+
+        private int[] bets = new int[6];
+        int bet_pos_in_vector;
+
         WinningsCalculator.WinType[] winTypes;
         Random random = new Random();
         WinningsCalculator. PictureMap[,] pictureMatrix = new WinningsCalculator.PictureMap[3, 5];
+
+        double userCredits;
+        double win;
+
+        Graphics graphics;
         public SlotMachineScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
+            currentPlayer = SlotMachine.CurrentPlayer.getInstance();
 
+            database = Assembly.Load("Database");
+            db = database.CreateInstance("Database.Database");
+            db.Init();
 
-            
             InitializeComponent();
             setupFont();
             setupScreen();
@@ -41,7 +56,7 @@ namespace SlotMachine {
             xml = Assembly.Load("XmlReader");
             xmlReader = xml.CreateInstance("XmlReader.XmlReader");
             chances = xmlReader.getChances();
-            
+
             winTypes = new WinningsCalculator.WinType[15];
             
             for (int i = 0; i < 9; i++) {
@@ -49,7 +64,9 @@ namespace SlotMachine {
             }
            
             jackpotChance = chances[8];
-            currentPlayer = SlotMachine.CurrentPlayer.getInstance();
+            
+            bet_pos_in_vector = 0;
+            
             setupMatrix();
         }
 
@@ -66,15 +83,22 @@ namespace SlotMachine {
             setupButton(lessBet, "BET -", x - 860, y + 430);
             setupButton(moreBet, "BET +", lessBet.Location.X + 450, y + 430);
             setupSpinButton(spinButton, "SPIN", x-100, y + 400);
-            setupButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 430);
+            setupSpinButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 400);
+            setupButton(PaytableButton, "Paytable", x - 953, y - 430);
             //gambleButton.Enabled = false;
             gambleButton.Hide();
 
-            setupLabel(BetLabel, "BET: 5000", 35, x - 650, y + 440);   
+            createBets(bets);
+            setupLabel(BetLabel, "BET: " + bets[bet_pos_in_vector], 35, x - 650, y + 440);
+
+            userCredits = db.GetBalance(currentPlayer.getUsername());
+            setupLabel(CreditsLabel, "Credits:\n"+userCredits ,28, PaytableButton.Location.X, PaytableButton.Location.Y + 300);
+
+            setupLabel(WinLabel, "Win:\n", 28, CreditsLabel.Location.X, CreditsLabel.Location.Y + 200);
         }
 
         private void setupButton(Button button, String text, int x, int y) {
-            button.Font = new Font(egyptFont.Families[0], 30);
+            button.Font = new Font(egyptFont.Families[0], 25);
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;
@@ -87,7 +111,7 @@ namespace SlotMachine {
         }
 
         private void setupSpinButton(Button button, String text, int x, int y) {
-            button.Font = new Font(egyptFont.Families[0], 50);
+            button.Font = new Font(egyptFont.Families[0], 45);
             button.BackColor = Color.Red;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Red;
@@ -115,6 +139,15 @@ namespace SlotMachine {
             System.IntPtr data = Marshal.AllocCoTaskMem(fontLength);
             Marshal.Copy(fontData, 0, data, fontLength);
             egyptFont.AddMemoryFont(data, fontLength);
+        }
+
+        private void createBets(int[] bets) {
+            bets[0] = 50;
+            bets[1] = 100;
+            bets[2] = 500;
+            bets[3] = 1000;
+            bets[4] = 2500;
+            bets[5] = 5000;
         }
 
         private void backButton_Click(object sender, EventArgs e) {
@@ -366,17 +399,105 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-            updateMatrix();
-            String s="";
-            winTypes = winningsCalculator.findWins(pictureMatrix,winTypes);
-            for (int i = 0; i < 15; i++)
-            {
-                if (winTypes[i] != null)
-                {
-                    s+=winTypes[i].WinLine+" "+winTypes[i].IconAmount.ToString()+"\n";
+            win=0;
+            WinLabel.Text = "Win:\n" + win;
+            if (userCredits >= bets[bet_pos_in_vector]) {
+                gambleButton.Hide();
+                updateMatrix();
+               
+                userCredits -= bets[bet_pos_in_vector];
+                db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                CreditsLabel.Text = "Credits:\n" + userCredits;
+
+                String s = "";
+                winTypes = winningsCalculator.findWins(pictureMatrix, winTypes);
+                for (int i = 0; i < 15; i++) {
+                    if (winTypes[i] != null) {
+                        s += winTypes[i].WinLine + " " + winTypes[i].IconAmount.ToString() + "\n";
+                      
+                    }
+                }
+                if (winTypes[0] != null) {
+                    win = calculateWin(bets[bet_pos_in_vector], winTypes);
+                    gambleButton.Show();
+                    userCredits += win;
+                    CreditsLabel.Text = "Credits:\n" + userCredits;
+                    WinLabel.Text = "Win:\n" + win;
+                    db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                }
+                if (s != "")
+                    MessageBox.Show(s);
+            }
+            else {
+                MessageBox.Show("Sorry. You don't have enough credits!");
+            }
+        }
+
+        private void PaytableButton_Click(object sender, EventArgs e) {
+            SlotMachine.Paytable paytable = new SlotMachine.Paytable();
+            paytable.Show();
+        }
+
+        private void lessBet_Click(object sender, EventArgs e) {
+            if (bet_pos_in_vector == 0)
+                bet_pos_in_vector = 5; //daca ajunge la cel mai mic bet si se apasa butonul = > se pune pe bet cel mai mare
+            else
+                bet_pos_in_vector--;
+
+            BetLabel.Text = "BET: " + bets[bet_pos_in_vector];
+        }
+
+        private void moreBet_Click(object sender, EventArgs e) {
+            if (bet_pos_in_vector == 5)
+                bet_pos_in_vector = 0;  //daca ajunge la cel mai mare bet si se apasa butonul = > se reseteaza bet ul
+            else
+                bet_pos_in_vector++;
+
+            BetLabel.Text = "BET: " + bets[bet_pos_in_vector];
+        }
+        private double calculateWin(int bet, WinningsCalculator.WinType[] winTypes) {
+            double win = 0;
+            for (int i = 0; i < 15; ++i) {
+                if (winTypes[i] != null) {
+                    win += bet * winTypes[i].WinAmount;
                 }
             }
-            MessageBox.Show(s);
+            return win;
+        }
+
+        private void gambleButton_Click(object sender, EventArgs e) {
+            this.Hide();
+            GamblingScreen gamblingScreen = new GamblingScreen(win);
+            gamblingScreen.ShowDialog();
+            userCredits -= win;//scade castigul curent
+
+            userCredits+=gamblingScreen.win; //adauga castigul de dupa gambling
+            
+            CreditsLabel.Text = "Credits:\n" + userCredits;
+            WinLabel.Text = "Win:\n" + gamblingScreen.win;
+            gambleButton.Hide();
+            this.Show();
+        }
+
+        private void SlotsColumns_Paint(object sender, PaintEventArgs e) {
+            graphics = Graphics.FromImage(SlotsColumns.Image);
+            Pen bluePen = new Pen(Color.Blue, 7);
+            Pen redPen = new Pen(Color.Red, 7);
+            Pen greenPen = new Pen(Color.Green, 7);
+            Pen yellowPen = new Pen(Color.Yellow, 7);
+            Pen purplePen = new Pen(Color.Purple, 7);
+            graphics.DrawLine(bluePen, 200, 454, 1720, 454);
+
+            graphics.DrawLine(redPen, 200, 148, 1720, 148);
+
+            graphics.DrawLine(greenPen, 200, 760, 1720, 760);
+
+            graphics.DrawLine(yellowPen, 200, 168, 960, 760);
+            graphics.DrawLine(yellowPen, 960, 760, 1720, 168);
+
+            graphics.DrawLine(purplePen, 200, 740, 960, 168);
+            graphics.DrawLine(purplePen, 960, 168, 1720, 760);
+            graphics.Dispose();
         }
     }
 }

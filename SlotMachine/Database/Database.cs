@@ -25,10 +25,10 @@ namespace Database {
         //TextWriterTraceListener txtListener;
 
         public Database() {
-            //LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
-            //txtListener = new TextWriterTraceListener(LogFile);
-            //Trace.AutoFlush = true;
-            //Trace.Listeners.Add(txtListener);
+           //LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
+           //txtListener = new TextWriterTraceListener(LogFile);
+           //Trace.AutoFlush = true;
+           //Trace.Listeners.Add(txtListener);
         }
 
         public void Init() {
@@ -163,11 +163,10 @@ namespace Database {
                 return false;
         }
 
-        public void UpdateBalance(string username, double new_balance, double old_balance) {
-            double final_balance = new_balance + old_balance;
+        public void UpdateBalance(string username, double new_balance) { 
 
             string stmt = "UPDATE Users " +
-                        "SET Balance=" + final_balance +
+                        "SET Balance=" + new_balance +
                         " WHERE Username='" + username + "'";
 
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
@@ -245,6 +244,7 @@ namespace Database {
 
             try {
                 reader = cmd.ExecuteReader();
+                Trace.WriteLine("Winners Selected");
             }
             catch (Exception ex) {
                 Trace.WriteLine(ex.ToString());

@@ -64,3 +64,6 @@ F:\slots\SlotMachine\SlotMachine\bin\Debug\WinningsCalculator.dll
 F:\slots\SlotMachine\SlotMachine\bin\Debug\WinningsCalculator.pdb
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\WinningsCalculator.dll
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\WinningsCalculator.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Paytable.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.GamblingScreen.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.MainMenuScreen.resources

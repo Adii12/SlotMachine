@@ -67,7 +67,19 @@
     <Compile Include="AboutScreen.Designer.cs">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="AddCreditScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddCreditScreen.Designer.cs">
+      <DependentUpon>AddCreditScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="CurrentPlayer.cs" />
+    <Compile Include="GamblingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GamblingScreen.Designer.cs">
+      <DependentUpon>GamblingScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="JackpotWinnersScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +98,12 @@
     <Compile Include="MainMenuScreen.Designer.cs">
       <DependentUpon>MainMenuScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="Paytable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Paytable.Designer.cs">
+      <DependentUpon>Paytable.cs</DependentUpon>
+    </Compile>
     <Compile Include="RegisterScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,11 +121,20 @@
     <EmbeddedResource Include="AboutScreen.resx">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GamblingScreen.resx">
+      <DependentUpon>GamblingScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="JackpotWinnersScreen.resx">
       <DependentUpon>JackpotWinnersScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainMenuScreen.resx">
+      <DependentUpon>MainMenuScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Paytable.resx">
+      <DependentUpon>Paytable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
