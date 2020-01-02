@@ -1,9 +1,0 @@
-F:\slots\SlotMachine\WinningsCalculator\bin\Debug\WinningsCalculator.dll
-F:\slots\SlotMachine\WinningsCalculator\bin\Debug\WinningsCalculator.pdb
-F:\slots\SlotMachine\WinningsCalculator\bin\Debug\SlotMachine.exe
-F:\slots\SlotMachine\WinningsCalculator\bin\Debug\SlotMachine.pdb
-F:\slots\SlotMachine\WinningsCalculator\bin\Debug\SlotMachine.exe.config
-F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsFinder.csprojAssemblyReference.cache
-F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsFinder.csproj.CopyComplete
-F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsCalculator.dll
-F:\slots\SlotMachine\WinningsCalculator\obj\Debug\WinningsCalculator.pdb
