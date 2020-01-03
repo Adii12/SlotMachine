@@ -20,6 +20,16 @@ using System.Diagnostics;
 namespace Database {
     public class Database {
         private SQLiteConnection conn = null;
+        System.IO.FileStream LogFile;
+
+        //TextWriterTraceListener txtListener;
+
+        public Database() {
+           //LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
+           //txtListener = new TextWriterTraceListener(LogFile);
+           //Trace.AutoFlush = true;
+           //Trace.Listeners.Add(txtListener);
+        }
 
         public void Init() {
             if (!File.Exists("Database.sqlite"))
@@ -28,11 +38,10 @@ namespace Database {
             try {
                 conn = new SQLiteConnection("Data Source = Database.sqlite; Version = 3");
                 conn.Open();
-                Debug.WriteLine("aa");
-                //WriteLog("Connected to database");
+                Trace.WriteLine("Connected to database");
             }
             catch (Exception ex) {
-                //WriteLog(ex.ToString()); ;
+                Trace.WriteLine(ex.ToString()); ;
                 return;
             }
 
@@ -47,7 +56,7 @@ namespace Database {
                 conn = null;
             }
             else {
-                // WriteLog("There is no connection with database to close");
+                Trace.WriteLine("There is no connection with database to close");
             }
         }
 
@@ -59,7 +68,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                // WriteLog(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
         }
 
@@ -82,7 +91,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                //WriteLog(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
         }
 
@@ -95,7 +104,7 @@ namespace Database {
                 reader = cmd.ExecuteReader();
             }
             catch (Exception ex) {
-                Console.WriteLine(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
 
             string data = "";
@@ -132,7 +141,7 @@ namespace Database {
                 reader = cmd.ExecuteReader();
             }
             catch (Exception ex) {
-                //WriteLog(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
 
             string data = "not found";
@@ -154,11 +163,10 @@ namespace Database {
                 return false;
         }
 
-        public void UpdateBalance(string username, double new_balance, double old_balance) {
-            double final_balance = new_balance + old_balance;
+        public void UpdateBalance(string username, double new_balance) { 
 
             string stmt = "UPDATE Users " +
-                        "SET Balance=" + final_balance +
+                        "SET Balance=" + new_balance +
                         " WHERE Username='" + username + "'";
 
             SQLiteCommand cmd = new SQLiteCommand(stmt, conn);
@@ -167,7 +175,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-                //WriteLog(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
         }
 
@@ -182,7 +190,7 @@ namespace Database {
                 reader = cmd.ExecuteReader();
             }
             catch (Exception ex) {
-                //WriteLog(ex.ToString());
+                Trace.WriteLine(ex.ToString());
             }
 
             string data = "not found";
@@ -213,7 +221,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-
+                Trace.WriteLine(ex.ToString());
             }
         }
 
@@ -225,7 +233,7 @@ namespace Database {
                 cmd.ExecuteNonQuery();
             }
             catch (Exception ex) {
-
+                Trace.WriteLine(ex.ToString());
             }
         }
 
@@ -236,9 +244,10 @@ namespace Database {
 
             try {
                 reader = cmd.ExecuteReader();
+                Trace.WriteLine("Winners Selected");
             }
             catch (Exception ex) {
-
+                Trace.WriteLine(ex.ToString());
             }
 
             string data = "";
@@ -267,7 +276,7 @@ namespace Database {
                 reader = cmd.ExecuteReader();
             }
             catch (Exception ex) {
-
+                Trace.WriteLine(ex.ToString());
             }
             double balance = 1;
             if (reader != null) {
@@ -278,19 +287,5 @@ namespace Database {
             }
             return 0;
         }
-
-        /*   private void WriteLog(string text) {
-               System.IO.FileStream LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
-               string TimeStamp = DateTime.Now.ToString("dd-MM-yyyy hh:mm:ss");
-
-               TextWriterTraceListener txtListener = new TextWriterTraceListener(LogFile);
-               Trace.Listeners.Add(txtListener);
-               Trace.AutoFlush = true;
-               Trace.WriteLine(TimeStamp + "\t" + text);
-
-               LogFile.Dispose();
-               LogFile.Close();
-
-           }*/
     }
 }

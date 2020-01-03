@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -50,7 +51,6 @@ namespace SlotMachine {
 
         }
 
-
         private void setupButton(Button button, String text, int x, int y) {
             button.Font = new Font(egyptFont.Families[0], 20);
             button.BackColor = Color.Orange;
@@ -65,6 +65,7 @@ namespace SlotMachine {
         }
 
         private void quitButton_Click(object sender, EventArgs e) {
+            File.Delete("chances.xml");
             System.Environment.Exit(1);
         }
 
@@ -73,18 +74,31 @@ namespace SlotMachine {
         }
 
         private void aboutButton_Click(object sender, EventArgs e) {
-           SlotMachine.AboutScreen about = new SlotMachine.AboutScreen();
-           about.Show();
+            this.Hide();
+            SlotMachine.AboutScreen about = new SlotMachine.AboutScreen();
+            about.ShowDialog();
+            this.Show();
         }
 
         private void leaderboardButton_Click(object sender, EventArgs e) {
+            this.Hide();
             SlotMachine.JackpotWinnersScreen jackpotWinners = new SlotMachine.JackpotWinnersScreen();
-            jackpotWinners.Show();
+            jackpotWinners.ShowDialog();
+            this.Show();
         }
 
         private void playButton_Click(object sender, EventArgs e) {
-           SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
-           slotMachine.Show();
+            this.Hide();
+            SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
+            slotMachine.ShowDialog();
+            this.Show();
+        }
+
+        private void addcreditButton_Click(object sender, EventArgs e) {
+            this.Hide();
+            SlotMachine.AddCreditScreen addCreditScreen = new SlotMachine.AddCreditScreen();
+            addCreditScreen.ShowDialog();
+            this.Show();
         }
     }
 }

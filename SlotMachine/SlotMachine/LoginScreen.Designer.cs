@@ -44,8 +44,7 @@
             this.userLabel.AutoSize = true;
             this.userLabel.BackColor = System.Drawing.SystemColors.Window;
             this.userLabel.Font = new System.Drawing.Font("Matura MT Script Capitals", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.userLabel.Location = new System.Drawing.Point(583, 298);
-            this.userLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.userLabel.Location = new System.Drawing.Point(437, 242);
             this.userLabel.Name = "userLabel";
             this.userLabel.Size = new System.Drawing.Size(176, 52);
             this.userLabel.TabIndex = 1;
@@ -59,8 +58,7 @@
             this.passwordLabel.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordLabel.Location = new System.Drawing.Point(583, 412);
-            this.passwordLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.passwordLabel.Location = new System.Drawing.Point(437, 335);
             this.passwordLabel.Name = "passwordLabel";
             this.passwordLabel.Size = new System.Drawing.Size(182, 50);
             this.passwordLabel.TabIndex = 2;
@@ -74,11 +72,10 @@
             this.usernameTextbox.BackColor = System.Drawing.SystemColors.HighlightText;
             this.usernameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.usernameTextbox.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameTextbox.Location = new System.Drawing.Point(940, 308);
-            this.usernameTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.usernameTextbox.Location = new System.Drawing.Point(705, 250);
             this.usernameTextbox.Multiline = true;
             this.usernameTextbox.Name = "usernameTextbox";
-            this.usernameTextbox.Size = new System.Drawing.Size(267, 47);
+            this.usernameTextbox.Size = new System.Drawing.Size(200, 38);
             this.usernameTextbox.TabIndex = 3;
             this.usernameTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -88,10 +85,9 @@
             this.passwordTextbox.BackColor = System.Drawing.Color.White;
             this.passwordTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.passwordTextbox.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.passwordTextbox.Location = new System.Drawing.Point(940, 431);
-            this.passwordTextbox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.passwordTextbox.Location = new System.Drawing.Point(705, 350);
             this.passwordTextbox.Name = "passwordTextbox";
-            this.passwordTextbox.Size = new System.Drawing.Size(267, 36);
+            this.passwordTextbox.Size = new System.Drawing.Size(200, 36);
             this.passwordTextbox.TabIndex = 4;
             this.passwordTextbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.passwordTextbox.UseSystemPasswordChar = true;
@@ -105,14 +101,13 @@
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.loginButton.ForeColor = System.Drawing.Color.Black;
-            this.loginButton.Location = new System.Drawing.Point(815, 550);
-            this.loginButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.loginButton.Location = new System.Drawing.Point(611, 447);
             this.loginButton.Name = "loginButton";
-            this.loginButton.Size = new System.Drawing.Size(195, 59);
+            this.loginButton.Size = new System.Drawing.Size(146, 48);
             this.loginButton.TabIndex = 5;
             this.loginButton.Text = "Login";
             this.loginButton.UseVisualStyleBackColor = false;
-            this.loginButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.loginButton_MouseClick);
+            this.loginButton.Click += new System.EventHandler(this.loginButton_Click);
             // 
             // registerButton
             // 
@@ -120,10 +115,9 @@
             this.registerButton.BackColor = System.Drawing.Color.Yellow;
             this.registerButton.FlatAppearance.BorderSize = 0;
             this.registerButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.registerButton.Location = new System.Drawing.Point(815, 700);
-            this.registerButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.registerButton.Location = new System.Drawing.Point(611, 569);
             this.registerButton.Name = "registerButton";
-            this.registerButton.Size = new System.Drawing.Size(195, 59);
+            this.registerButton.Size = new System.Drawing.Size(146, 48);
             this.registerButton.TabIndex = 7;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = false;
@@ -136,19 +130,17 @@
             this.noAccountLabel.BackColor = System.Drawing.Color.Transparent;
             this.noAccountLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.noAccountLabel.ForeColor = System.Drawing.Color.Black;
-            this.noAccountLabel.Location = new System.Drawing.Point(835, 668);
-            this.noAccountLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.noAccountLabel.Location = new System.Drawing.Point(626, 543);
             this.noAccountLabel.Name = "noAccountLabel";
-            this.noAccountLabel.Size = new System.Drawing.Size(147, 16);
+            this.noAccountLabel.Size = new System.Drawing.Size(122, 13);
             this.noAccountLabel.TabIndex = 8;
             this.noAccountLabel.Text = "Don\'t have an account?";
             // 
             // quitButton
             // 
-            this.quitButton.Location = new System.Drawing.Point(1352, 642);
-            this.quitButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.quitButton.Location = new System.Drawing.Point(1014, 522);
             this.quitButton.Name = "quitButton";
-            this.quitButton.Size = new System.Drawing.Size(195, 59);
+            this.quitButton.Size = new System.Drawing.Size(146, 48);
             this.quitButton.TabIndex = 9;
             this.quitButton.Text = "button1";
             this.quitButton.UseVisualStyleBackColor = true;
@@ -159,10 +151,9 @@
             this.casinoLogo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.casinoLogo.BackColor = System.Drawing.Color.Transparent;
             this.casinoLogo.Image = global::SlotMachine.Properties.Resources.vegascasino_logo;
-            this.casinoLogo.Location = new System.Drawing.Point(544, 53);
-            this.casinoLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.casinoLogo.Location = new System.Drawing.Point(408, 43);
             this.casinoLogo.Name = "casinoLogo";
-            this.casinoLogo.Size = new System.Drawing.Size(707, 182);
+            this.casinoLogo.Size = new System.Drawing.Size(530, 148);
             this.casinoLogo.TabIndex = 6;
             this.casinoLogo.TabStop = false;
             // 
@@ -172,15 +163,16 @@
             this.BackgroundImage.Location = new System.Drawing.Point(-1, -1);
             this.BackgroundImage.Margin = new System.Windows.Forms.Padding(0);
             this.BackgroundImage.Name = "BackgroundImage";
-            this.BackgroundImage.Size = new System.Drawing.Size(1775, 882);
+            this.BackgroundImage.Size = new System.Drawing.Size(1331, 717);
             this.BackgroundImage.TabIndex = 0;
             this.BackgroundImage.TabStop = false;
             // 
             // LoginScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AcceptButton = this.loginButton;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1765, 880);
+            this.ClientSize = new System.Drawing.Size(1324, 715);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.noAccountLabel);
             this.Controls.Add(this.registerButton);
@@ -191,7 +183,6 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.userLabel);
             this.Controls.Add(this.BackgroundImage);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "LoginScreen";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).EndInit();
