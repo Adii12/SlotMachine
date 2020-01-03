@@ -12,30 +12,24 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace SlotMachine
-{
-    public partial class AddCreditScreen : Form
-    {
+namespace SlotMachine {
+    public partial class AddCreditScreen : Form {
         Assembly dataBase;
         dynamic db;
         private PrivateFontCollection egyptFont;
-        public AddCreditScreen()
-        {
-            
+        public AddCreditScreen() {
+
             InitializeComponent();
             setupScreen();
         }
 
-        public void setupScreen()
-        {
+        public void setupScreen() {
             dataBase = Assembly.Load("Database");
             db = dataBase.CreateInstance("Database.Database");
-            try
-            {
+            try {
                 db.Init();
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Debug.WriteLine(ex.ToString());
             }
             setupFont();
@@ -50,8 +44,8 @@ namespace SlotMachine
             casinoLogo.Parent = backgroundImage;
             casinoLogo.BackColor = Color.Transparent;
 
-            setupLabel("Credit card number:", x - 500, y - 200, 35 ,460, 50);
-            setupLabel("CVC:", x - 500, y-100, 30, 460, 50);
+            setupLabel("Credit card number:", x - 500, y - 200, 35, 460, 50);
+            setupLabel("CVC:", x - 500, y - 100, 30, 460, 50);
             setupLabel("Confirm password:", x - 500, y, 30, 460, 50);
             setupLabel("Credit amount:", x - 500, y + 100, 30, 460, 50);
             setupTextbox(creditCardNumberTextbox, x, y - 200, false);
@@ -62,8 +56,7 @@ namespace SlotMachine
             setupButton(cancelButton, "Cancel", x + 690, y + 420);
         }
 
-        private void setupLabel(String text, int x, int y, int fontSize, int width, int height)
-        {
+        private void setupLabel(String text, int x, int y, int fontSize, int width, int height) {
             Label label = new Label();
             label.Parent = backgroundImage;
             label.BackColor = Color.Transparent;
@@ -76,21 +69,18 @@ namespace SlotMachine
             label.TextAlign = ContentAlignment.MiddleRight;
         }
 
-        private void setupTextbox(TextBox textbox, int x, int y, bool isPassword)
-        {
+        private void setupTextbox(TextBox textbox, int x, int y, bool isPassword) {
             textbox.Parent = backgroundImage;
             textbox.BackColor = Color.Yellow;
             textbox.Anchor = AnchorStyles.None;
             textbox.Location = new Point(x, y);
             textbox.Width = 500;
-            if (isPassword == true)
-            {
+            if (isPassword == true) {
                 textbox.PasswordChar = '*';
             }
             textbox.TextAlign = HorizontalAlignment.Center;
         }
-            private void setupButton(Button button, String text, int x, int y)
-        {
+        private void setupButton(Button button, String text, int x, int y) {
             button.Font = new Font(egyptFont.Families[0], 30);
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
@@ -102,9 +92,8 @@ namespace SlotMachine
             button.Height = 60;
             button.UseCompatibleTextRendering = true;
         }
-        
-        private void setupFont()
-        {
+
+        private void setupFont() {
             egyptFont = new PrivateFontCollection();
             int fontLength = Properties.Resources.ISIS.Length;
             byte[] fontData = Properties.Resources.ISIS;
@@ -113,50 +102,43 @@ namespace SlotMachine
             egyptFont.AddMemoryFont(data, fontLength);
         }
 
-        private void cancelButton_Click(object sender, EventArgs e)
-        {
+        private void cancelButton_Click(object sender, EventArgs e) {
             this.Dispose();
         }
 
-        private void confirmButton_Click(object sender, EventArgs e)
-        {
-            int result=0;
-            if (creditCardNumberTextbox.Text.Length != 16)
-            {
+        private void confirmButton_Click(object sender, EventArgs e) {
+            int result = 0;
+            if (creditCardNumberTextbox.Text.Length != 16) {
                 MessageBox.Show("Credit card number is invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            if (cvcTextbox.Text.Length != 3)
-            {
+            if (cvcTextbox.Text.Length != 3) {
                 MessageBox.Show("CVC is invalid.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            try
-            {
+            try {
                 result = Int32.Parse(cvcTextbox.Text);
             }
-            catch (FormatException)
-            {
+            catch (FormatException) {
                 MessageBox.Show("CVC field must contain a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
             CurrentPlayer currentPlayer = CurrentPlayer.getInstance();
-            if (db.AuthenticateUser(currentPlayer.getUsername(), confirmPasswordTextbox.Text) != true)
-            {
+            if (db.AuthenticateUser(currentPlayer.getUsername(), confirmPasswordTextbox.Text) != true) {
                 MessageBox.Show("Wrong password.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            try
-            {
+            try {
                 result = Int32.Parse(creditAmountTextbox.Text);
             }
-            catch (FormatException)
-            {
+            catch (FormatException) {
                 MessageBox.Show("Credit amount field must contain a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            double balance=result+currentPlayer.getBalance();
+            double balance = result + currentPlayer.getBalance();
             db.UpdateBalance(currentPlayer.getUsername(), balance);
+            MessageBox.Show("Succes!");
+            this.Dispose();
         }
     }
 }

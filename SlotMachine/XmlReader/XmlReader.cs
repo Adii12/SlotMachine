@@ -100,7 +100,8 @@ namespace XmlReader {
             outputFile.Close();
             inputFile.Close();
             Debug.WriteLine("Criptat");
-            File.Delete("C:\\Users\\adic8\\Documents\\slot-machine\\SlotMachine\\SlotMachine\\bin\\Debug\\chances.xml");
+            File.Delete("chances.xml");
+            
         }
 
         private void Decrypt() {
@@ -123,6 +124,7 @@ namespace XmlReader {
             outputFile.Close();
             inputFile.Close();
             Debug.WriteLine("Decriptat");
+
         }
     }
 }

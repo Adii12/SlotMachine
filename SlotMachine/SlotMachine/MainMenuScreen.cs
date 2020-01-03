@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Drawing.Text;
+using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
 using System.Text;
@@ -50,7 +51,6 @@ namespace SlotMachine {
 
         }
 
-
         private void setupButton(Button button, String text, int x, int y) {
             button.Font = new Font(egyptFont.Families[0], 20);
             button.BackColor = Color.Orange;
@@ -65,6 +65,7 @@ namespace SlotMachine {
         }
 
         private void quitButton_Click(object sender, EventArgs e) {
+            File.Delete("chances.xml");
             System.Environment.Exit(1);
         }
 
@@ -73,30 +74,29 @@ namespace SlotMachine {
         }
 
         private void aboutButton_Click(object sender, EventArgs e) {
-           AboutScreen about = new AboutScreen();
             this.Hide();
-            about.Show();
+            SlotMachine.AboutScreen about = new SlotMachine.AboutScreen();
+            about.ShowDialog();
             this.Show();
         }
 
         private void leaderboardButton_Click(object sender, EventArgs e) {
-            JackpotWinnersScreen jackpotWinners = new JackpotWinnersScreen();
             this.Hide();
-            jackpotWinners.Show();
+            SlotMachine.JackpotWinnersScreen jackpotWinners = new SlotMachine.JackpotWinnersScreen();
+            jackpotWinners.ShowDialog();
             this.Show();
         }
 
         private void playButton_Click(object sender, EventArgs e) {
-            SlotMachineScreen slotMachine = new SlotMachineScreen();
             this.Hide();
+            SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
             slotMachine.ShowDialog();
             this.Show();
         }
 
-        private void addcreditButton_Click(object sender, EventArgs e)
-        {
-            AddCreditScreen addCreditScreen = new AddCreditScreen();
+        private void addcreditButton_Click(object sender, EventArgs e) {
             this.Hide();
+            SlotMachine.AddCreditScreen addCreditScreen = new SlotMachine.AddCreditScreen();
             addCreditScreen.ShowDialog();
             this.Show();
         }
