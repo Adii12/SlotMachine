@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,8 @@ using System.Windows.Forms;
 
 namespace SlotMachine {
     public partial class MainMenuScreen : Form {
+        Assembly xmlReader;
+        dynamic xml;
         PrivateFontCollection egyptFont;
         public MainMenuScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
@@ -20,6 +23,8 @@ namespace SlotMachine {
             InitializeComponent();
             setupFont();
             setupScreen();
+            xmlReader = Assembly.Load("XmlReader");
+            xml = xmlReader.CreateInstance("XmlReader.XmlReader");
         }
 
         private void setupFont() {
@@ -65,6 +70,7 @@ namespace SlotMachine {
         }
 
         private void quitButton_Click(object sender, EventArgs e) {
+            xml.Encrypt();
             File.Delete("chances.xml");
             System.Environment.Exit(1);
         }

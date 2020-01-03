@@ -67,3 +67,6 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\Winnings
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Paytable.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.GamblingScreen.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.MainMenuScreen.resources
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.GamblingScreen.resources
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.MainMenuScreen.resources
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Paytable.resources
