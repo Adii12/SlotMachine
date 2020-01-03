@@ -53,7 +53,7 @@ namespace SlotMachine {
             setupSpinButton(spinButton, "SPIN", x-100, y + 400);
             setupButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 430);
             //gambleButton.Enabled = false;
-            gambleButton.Hide();
+           // gambleButton.Hide();
 
             setupLabel(BetLabel, "BET: 5000", 35, x-650, y+440);
            
@@ -106,6 +106,12 @@ namespace SlotMachine {
 
         private void backButton_Click(object sender, EventArgs e) {
             this.Dispose();
+        }
+
+        private void gambleButton_Click(object sender, EventArgs e)
+        {
+            GambleScreen gs = new GambleScreen();
+            gs.ShowDialog();
         }
     }
 }
