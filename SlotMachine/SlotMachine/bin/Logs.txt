@@ -1,0 +1,21 @@
+Native library pre-loader is trying to load native SQLite library "C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
+Connected to database
+chances
+cherry
+orange
+lemon
+plum
+grapes
+melon
+start
+seven
+jackpot
+29
+13
+13
+13
+10
+10
+7
+5
+1
