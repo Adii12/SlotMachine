@@ -135,7 +135,7 @@ namespace SlotMachine {
                 MessageBox.Show("Credit amount field must contain a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            double balance = result + currentPlayer.getBalance();
+            double balance = result + db.GetBalance(currentPlayer.getUsername());
             db.UpdateBalance(currentPlayer.getUsername(), balance);
             MessageBox.Show("Succes!");
             this.Dispose();
