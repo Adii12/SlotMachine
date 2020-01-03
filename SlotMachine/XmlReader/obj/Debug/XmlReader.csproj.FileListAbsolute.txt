@@ -7,3 +7,8 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\XmlReader\bin\Debug\XmlReader.
 C:\Users\adic8\Documents\slot-machine\SlotMachine\XmlReader\obj\Debug\XmlReader.csprojAssemblyReference.cache
 C:\Users\adic8\Documents\slot-machine\SlotMachine\XmlReader\obj\Debug\XmlReader.dll
 C:\Users\adic8\Documents\slot-machine\SlotMachine\XmlReader\obj\Debug\XmlReader.pdb
+F:\Slots\SlotMachine\XmlReader\bin\Debug\XmlReader.dll
+F:\Slots\SlotMachine\XmlReader\bin\Debug\XmlReader.pdb
+F:\Slots\SlotMachine\XmlReader\obj\Debug\XmlReader.csprojAssemblyReference.cache
+F:\Slots\SlotMachine\XmlReader\obj\Debug\XmlReader.dll
+F:\Slots\SlotMachine\XmlReader\obj\Debug\XmlReader.pdb

@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
+
 namespace SlotMachine {
     public partial class SlotMachineScreen : Form {
         Assembly xml;
@@ -20,9 +21,9 @@ namespace SlotMachine {
         dynamic winningsCalculator;
         Assembly database;
         dynamic db;
-       
-        private int[] chances = new int[9];
-        private int jackpotChance;
+
+        private double[] chances = new double[9];
+        private double jackpotChance;
         PrivateFontCollection egyptFont;
         CurrentPlayer currentPlayer;
 
@@ -31,7 +32,7 @@ namespace SlotMachine {
 
         WinningsCalculator.WinType[] winTypes;
         Random random = new Random();
-        WinningsCalculator. PictureMap[,] pictureMatrix = new WinningsCalculator.PictureMap[3, 5];
+        WinningsCalculator.PictureMap[,] pictureMatrix = new WinningsCalculator.PictureMap[3, 5];
 
         double userCredits;
         double win;
@@ -52,21 +53,21 @@ namespace SlotMachine {
 
             winningsCalc = Assembly.Load("WinningsCalculator");
             winningsCalculator = winningsCalc.CreateInstance("WinningsCalculator.WinningsCalculator");
-            
+
             xml = Assembly.Load("XmlReader");
             xmlReader = xml.CreateInstance("XmlReader.XmlReader");
             chances = xmlReader.getChances();
 
             winTypes = new WinningsCalculator.WinType[15];
-            
+
             for (int i = 0; i < 9; i++) {
                 Debug.WriteLine(chances[i]);
             }
-           
+
             jackpotChance = chances[8];
-            
+
             bet_pos_in_vector = 0;
-            
+
             setupMatrix();
         }
 
@@ -82,7 +83,7 @@ namespace SlotMachine {
             setupButton(backButton, "Back", x + 700, y + 430);
             setupButton(lessBet, "BET -", x - 860, y + 430);
             setupButton(moreBet, "BET +", lessBet.Location.X + 450, y + 430);
-            setupSpinButton(spinButton, "SPIN", x-100, y + 400);
+            setupSpinButton(spinButton, "SPIN", x - 100, y + 400);
             setupSpinButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 400);
             setupButton(PaytableButton, "Paytable", x - 953, y - 430);
             //gambleButton.Enabled = false;
@@ -92,7 +93,7 @@ namespace SlotMachine {
             setupLabel(BetLabel, "BET: " + bets[bet_pos_in_vector], 35, x - 650, y + 440);
 
             userCredits = db.GetBalance(currentPlayer.getUsername());
-            setupLabel(CreditsLabel, "Credits:\n"+userCredits ,28, PaytableButton.Location.X, PaytableButton.Location.Y + 300);
+            setupLabel(CreditsLabel, "Credits:\n" + userCredits, 28, PaytableButton.Location.X, PaytableButton.Location.Y + 300);
 
             setupLabel(WinLabel, "Win:\n", 28, CreditsLabel.Location.X, CreditsLabel.Location.Y + 200);
         }
@@ -153,7 +154,7 @@ namespace SlotMachine {
         private void backButton_Click(object sender, EventArgs e) {
             this.Dispose();
         }
-        private void createPic(int i,int j)
+        private void createPic(int i, int j)
         {
             PictureBox pic = new PictureBox();
             pic.Size = new Size(286, 286);
@@ -165,15 +166,15 @@ namespace SlotMachine {
             pictureMatrix[i, j].PictureBox = pic;
             pictureMatrix[i, j].PictureBox.BackgroundImageLayout = ImageLayout.Zoom;
         }
-        private int[] generatePic(int i,int j)
+        private int[] generatePic(int i, int j)
         {
-            int[] checks=new int[2];
+            int[] checks = new int[2];
             checks[0] = 0;
             checks[1] = 0;
             int rnd = random.Next(1, 100);
             if (rnd < chances[0])
             {
-                pictureMatrix[i,j].PictureBox.Image = SlotMachine.Properties.Resources.cherry;
+                pictureMatrix[i, j].PictureBox.Image = SlotMachine.Properties.Resources.cherry;
                 pictureMatrix[i, j].ImageId = "cherry";
             }
             else if (rnd < (chances[0] + chances[1]))
@@ -334,26 +335,26 @@ namespace SlotMachine {
         private void setupMatrix()
         {
 
-            for(int i = 0; i < 3; ++i)
+            for (int i = 0; i < 3; ++i)
             {
-                for(int j = 0; j < 5; ++j)
+                for (int j = 0; j < 5; ++j)
                 {
                     pictureMatrix[i, j] = new WinningsCalculator.PictureMap();
                 }
             }
-            for(int j = 0; j < 5; j++)
+            for (int j = 0; j < 5; j++)
             {
                 int[] checks = new int[2];
                 checks[0] = 0;
                 checks[1] = 0;
-                for(int i = 0; i < 3; i++)
+                for (int i = 0; i < 3; i++)
                 {
                     createPic(i, j);
                     if (checks[0] == 0 && checks[1] == 0)
                     {
                         checks = generatePic(i, j);
                     }
-                    else if(checks[0]==1)
+                    else if (checks[0] == 1)
                     {
                         generateNoStar(i, j);
                     }
@@ -399,38 +400,45 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-            win=0;
-            WinLabel.Text = "Win:\n" + win;
-            if (userCredits >= bets[bet_pos_in_vector]) {
-                gambleButton.Hide();
-                updateMatrix();
-               
-                userCredits -= bets[bet_pos_in_vector];
-                db.UpdateBalance(currentPlayer.getUsername(), userCredits);
-                CreditsLabel.Text = "Credits:\n" + userCredits;
+            int rnd = random.Next(0, 100);
+            if (rnd < jackpotChance)
+            {
+                //
+                MessageBox.Show("muie");
+                jackpotChance = 0;
+            }
+            else
+            {
+                win = 0;
+                WinLabel.Text = "Win:\n" + win;
+                if (userCredits >= bets[bet_pos_in_vector])
+                {
+                    gambleButton.Hide();
+                    updateMatrix();
 
-                String s = "";
-                winTypes = winningsCalculator.findWins(pictureMatrix, winTypes);
-                for (int i = 0; i < 15; i++) {
-                    if (winTypes[i] != null) {
-                        s += winTypes[i].WinLine + " " + winTypes[i].IconAmount.ToString() + "\n";
-                      
+                    userCredits -= bets[bet_pos_in_vector];
+                    db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                    CreditsLabel.Text = "Credits:\n" + userCredits;
+
+                    winTypes = winningsCalculator.findWins(pictureMatrix, winTypes);
+                    if (winTypes[0] != null)
+                    {
+                        win = calculateWin(bets[bet_pos_in_vector], winTypes);
+                        gambleButton.Show();
+                        userCredits += win;
+                        CreditsLabel.Text = "Credits:\n" + userCredits;
+                        WinLabel.Text = "Win:\n" + win;
+                        db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+
                     }
                 }
-                if (winTypes[0] != null) {
-                    win = calculateWin(bets[bet_pos_in_vector], winTypes);
-                    gambleButton.Show();
-                    userCredits += win;
-                    CreditsLabel.Text = "Credits:\n" + userCredits;
-                    WinLabel.Text = "Win:\n" + win;
-                    db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                else
+                {
+                    MessageBox.Show("Sorry. You don't have enough credits!");
                 }
-                if (s != "")
-                    MessageBox.Show(s);
+                jackpotChance += 0.01;
             }
-            else {
-                MessageBox.Show("Sorry. You don't have enough credits!");
-            }
+            xmlReader.updateJackpot(jackpotChance);
         }
 
         private void PaytableButton_Click(object sender, EventArgs e) {
@@ -457,9 +465,11 @@ namespace SlotMachine {
         }
         private double calculateWin(int bet, WinningsCalculator.WinType[] winTypes) {
             double win = 0;
+            int c = 0;
             for (int i = 0; i < 15; ++i) {
                 if (winTypes[i] != null) {
                     win += bet * winTypes[i].WinAmount;
+                    makeLine(winTypes[i].WinLine, winTypes[i].IconAmount);
                 }
             }
             return win;
@@ -471,8 +481,8 @@ namespace SlotMachine {
             gamblingScreen.ShowDialog();
             userCredits -= win;//scade castigul curent
 
-            userCredits+=gamblingScreen.win; //adauga castigul de dupa gambling
-            
+            userCredits += gamblingScreen.win; //adauga castigul de dupa gambling
+
             CreditsLabel.Text = "Credits:\n" + userCredits;
             WinLabel.Text = "Win:\n" + gamblingScreen.win;
             gambleButton.Hide();
@@ -497,7 +507,212 @@ namespace SlotMachine {
 
             graphics.DrawLine(purplePen, 200, 740, 960, 168);
             graphics.DrawLine(purplePen, 960, 168, 1720, 760);
+
             graphics.Dispose();
+        }
+
+        private void makeBorder(String lineType, int i, int j)
+        {
+            /*System.Windows.Forms.Label label = new System.Windows.Forms.Label();
+            label.Anchor = AnchorStyles.None;
+            label.FlatStyle = FlatStyle.Flat;
+            label.AutoSize = false;
+            label.Size = new Size(300, 300);
+            label.Location = new Point(x, y);
+            label.BackColor = color;
+            label.Parent = pictureMatrix[0,0].PictureBox;*/
+            PictureBox pic = new PictureBox();
+            switch (lineType)
+            {
+                case "red":
+                    pic.Image = SlotMachine.Properties.Resources.red;
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    break;
+                case "blue":
+                    pic.Image = SlotMachine.Properties.Resources.blue;
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    break;
+                case "green":
+                    pic.Image = SlotMachine.Properties.Resources.green;
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    break;
+                case "yellow":
+                    pic.Image = SlotMachine.Properties.Resources.yellow;
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    break;
+                case "purple":
+                    pic.Image = SlotMachine.Properties.Resources.purple;
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    break;
+            }
+        }
+        private void makeLine(String lineType, int iconAmount)
+        {
+            if (lineType == "red")
+            {
+                switch (iconAmount)
+                {
+                    case 2:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 0, 1);
+                        break;
+                    case 3:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 0, 1);
+                        makeBorder(lineType, 0, 2);
+                        break;
+                    case 4:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 0, 1);
+                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 0, 3);
+                        break;
+                    case 5:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 0, 1);
+                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 0, 3);
+                        makeBorder(lineType, 0, 4);
+                        break;
+                }
+            }
+            else if (lineType == "blue")
+            {
+                switch (iconAmount)
+                {
+                    case 2:
+                        makeBorder(lineType, 1, 0);
+                        makeBorder(lineType, 1, 1);
+                        break;
+                    case 3:
+                        makeBorder(lineType, 1, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 1, 2);
+                        break;
+                    case 4:
+                        makeBorder(lineType, 1, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 1, 2);
+                        makeBorder(lineType, 1, 3);
+                        break;
+                    case 5:
+                        makeBorder(lineType, 1, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 1, 2);
+                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 1, 4);
+                        break;
+                }
+            }
+            else if (lineType == "green")
+            {
+                switch (iconAmount)
+                {
+                    case 2:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 2, 1);
+                        break;
+                    case 3:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 2, 1);
+                        makeBorder(lineType, 2, 2);
+                        break;
+                    case 4:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 2, 1);
+                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 2, 3);
+                        break;
+                    case 5:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 2, 1);
+                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 2, 3);
+                        makeBorder(lineType, 2, 4);
+                        break;
+                }
+            }
+            else if (lineType == "yellow")
+            {
+                switch (iconAmount)
+                {
+                    case 2:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 1, 1);
+                        break;
+                    case 3:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 2, 2);
+                        break;
+                    case 4:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 1, 3);
+                        break;
+                    case 5:
+                        makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 0, 4);
+                        break;
+                }   
+            }
+             else if (lineType == "purple")
+            {
+                switch (iconAmount)
+                {
+                    case 2:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 1, 1);
+                        break;
+                    case 3:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 0, 2);
+                        break;
+                    case 4:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 1, 3);
+                        break;
+                    case 5:
+                        makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 1, 1);
+                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 2, 4);
+                        break;
+                }
+            }
         }
     }
 }

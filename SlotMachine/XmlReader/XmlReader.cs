@@ -12,7 +12,7 @@ namespace XmlReader {
     public class XmlReader {
         XmlTextReader xmlReader;
         XmlTextWriter xmlWriter;
-        private int[] chances = new int[9];
+        private double[] chances = new double[9];
         
         public XmlReader() {
             Decrypt();
@@ -25,7 +25,14 @@ namespace XmlReader {
                         break;
                     case XmlNodeType.Text:
                         if (xmlReader.Value != null) {
-                            chances[i] = System.Convert.ToInt32(xmlReader.Value);
+                            if (i == 8)
+                            {
+                                chances[i] = Convert.ToDouble(xmlReader.Value);
+                            }
+                            else
+                            {
+                                chances[i] = System.Convert.ToInt32(xmlReader.Value);
+                            }
                         }
                         break;
                     case XmlNodeType.EndElement:
@@ -34,10 +41,9 @@ namespace XmlReader {
                 }
             }
             xmlReader.Close();
-            Encrypt();
         }
        
-        public int[] getChances() {
+        public double[] getChances() {
             return chances;
         }
         
@@ -63,6 +69,7 @@ namespace XmlReader {
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("seven", "5");
             xmlWriter.WriteWhitespace("\n\t");
+            Debug.WriteLine(chance.ToString());
             xmlWriter.WriteElementString("jackpot", chance.ToString());
             xmlWriter.WriteWhitespace("\n");
             xmlWriter.WriteEndElement();
@@ -70,10 +77,11 @@ namespace XmlReader {
             xmlWriter.Close();
         }
 
-        private void Encrypt() {
+        public void Encrypt()
+        {
             byte[] encKey;
             byte[] encIV;
-            
+
             FileStream inputFile = new FileStream("chances.xml", FileMode.Open, FileAccess.Read);
             FileStream outputFile = new FileStream("EncryptedChances.enc", FileMode.OpenOrCreate, FileAccess.Write);
 
@@ -88,11 +96,12 @@ namespace XmlReader {
 
             System.IO.File.WriteAllBytes("chances.key", encKey);
             System.IO.File.WriteAllBytes("chances.IV", encIV);
-            
+
             byte[] input = new byte[128];
             int inLen = -1;
 
-            while ((inLen = inputFile.Read(input, 0, 128)) > 0) {
+            while ((inLen = inputFile.Read(input, 0, 128)) > 0)
+            {
                 stream.Write(input, 0, inLen);
             }
 
@@ -100,11 +109,10 @@ namespace XmlReader {
             outputFile.Close();
             inputFile.Close();
             Debug.WriteLine("Criptat");
-            File.Delete("chances.xml");
-            
         }
 
-        private void Decrypt() {
+        private void Decrypt()
+        {
             FileStream inputFile = new FileStream("EncryptedChances.enc", FileMode.Open, FileAccess.Read);
             FileStream outputFile = new FileStream("chances.xml", FileMode.OpenOrCreate, FileAccess.Write);
 
@@ -124,7 +132,6 @@ namespace XmlReader {
             outputFile.Close();
             inputFile.Close();
             Debug.WriteLine("Decriptat");
-
         }
     }
 }
