@@ -56,6 +56,7 @@
             this.SlotsColumns.Size = new System.Drawing.Size(83, 81);
             this.SlotsColumns.TabIndex = 1;
             this.SlotsColumns.TabStop = false;
+            this.SlotsColumns.Paint += new System.Windows.Forms.PaintEventHandler(this.SlotsColumns_Paint);
             // 
             // BackgroundImage
             // 

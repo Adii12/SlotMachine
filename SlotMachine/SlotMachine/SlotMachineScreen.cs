@@ -23,14 +23,13 @@ namespace SlotMachine {
         PrivateFontCollection egyptFont;
         CurrentPlayer currentPlayer;
         WinningsCalculator.WinType[] winTypes;
+        Graphics graphics=null;
         Random random = new Random();
         WinningsCalculator. PictureMap[,] pictureMatrix = new WinningsCalculator.PictureMap[3, 5];
         public SlotMachineScreen() {
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
 
-
-            
             InitializeComponent();
             setupFont();
             setupScreen();
@@ -51,6 +50,7 @@ namespace SlotMachine {
             jackpotChance = chances[8];
             currentPlayer = SlotMachine.CurrentPlayer.getInstance();
             setupMatrix();
+            
         }
 
         private void setupScreen() {
@@ -366,6 +366,7 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
+            this.Invalidate();
             updateMatrix();
             String s="";
             winTypes = winningsCalculator.findWins(pictureMatrix,winTypes);
@@ -377,6 +378,40 @@ namespace SlotMachine {
                 }
             }
             MessageBox.Show(s);
+        }
+
+        private void SlotsColumns_Paint(object sender, PaintEventArgs e)
+        {
+            graphics = Graphics.FromImage(SlotsColumns.Image);
+            Pen bluePen = new Pen(Color.Blue, 7);
+            Pen redPen = new Pen(Color.Red, 7);
+            Pen greenPen = new Pen(Color.Green, 7);
+            Pen yellowPen = new Pen(Color.Yellow, 7);
+            Pen purplePen = new Pen(Color.Purple, 7);
+            graphics.DrawLine(bluePen, 200, 454, 1720, 454);
+
+            graphics.DrawLine(redPen, 200, 148, 1720, 148);
+
+            graphics.DrawLine(greenPen, 200, 760, 1720, 760);
+
+            graphics.DrawLine(yellowPen, 200, 168, 960, 760);
+            graphics.DrawLine(yellowPen, 960, 760, 1720, 168);
+
+            graphics.DrawLine(purplePen, 200, 740, 960, 168);
+            graphics.DrawLine(purplePen, 960, 168, 1720, 760);
+        }
+
+        private double calculateWin(int bet, WinningsCalculator.WinType[] winTypes)
+        {
+            double win = 0;
+            for(int i = 0; i < 15; ++i)
+            {
+                if (winTypes[i] != null)
+                {
+                    win += bet * winTypes[i].WinAmount;
+                }
+            }
+            return win;
         }
     }
 }

@@ -55,6 +55,7 @@
             this.addcreditButton.TabIndex = 2;
             this.addcreditButton.Text = "button2";
             this.addcreditButton.UseVisualStyleBackColor = true;
+            this.addcreditButton.Click += new System.EventHandler(this.addcreditButton_Click);
             // 
             // logoutButton
             // 
@@ -119,7 +120,7 @@
             this.backgroundPicture.TabIndex = 0;
             this.backgroundPicture.TabStop = false;
             // 
-            // MainMenu
+            // MainMenuScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -132,7 +133,7 @@
             this.Controls.Add(this.addcreditButton);
             this.Controls.Add(this.playButton);
             this.Controls.Add(this.backgroundPicture);
-            this.Name = "MainMenu";
+            this.Name = "MainMenuScreen";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.logoPicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundPicture)).EndInit();

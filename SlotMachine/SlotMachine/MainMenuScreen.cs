@@ -73,18 +73,32 @@ namespace SlotMachine {
         }
 
         private void aboutButton_Click(object sender, EventArgs e) {
-           SlotMachine.AboutScreen about = new SlotMachine.AboutScreen();
-           about.Show();
+           AboutScreen about = new AboutScreen();
+            this.Hide();
+            about.Show();
+            this.Show();
         }
 
         private void leaderboardButton_Click(object sender, EventArgs e) {
-            SlotMachine.JackpotWinnersScreen jackpotWinners = new SlotMachine.JackpotWinnersScreen();
+            JackpotWinnersScreen jackpotWinners = new JackpotWinnersScreen();
+            this.Hide();
             jackpotWinners.Show();
+            this.Show();
         }
 
         private void playButton_Click(object sender, EventArgs e) {
-           SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
-           slotMachine.Show();
+            SlotMachineScreen slotMachine = new SlotMachineScreen();
+            this.Hide();
+            slotMachine.ShowDialog();
+            this.Show();
+        }
+
+        private void addcreditButton_Click(object sender, EventArgs e)
+        {
+            AddCreditScreen addCreditScreen = new AddCreditScreen();
+            this.Hide();
+            addCreditScreen.ShowDialog();
+            this.Show();
         }
     }
 }
