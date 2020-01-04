@@ -122,6 +122,9 @@
     <EmbeddedResource Include="AboutScreen.resx">
       <DependentUpon>AboutScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="AddCreditScreen.resx">
+      <DependentUpon>AddCreditScreen.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GamblingScreen.resx">
       <DependentUpon>GamblingScreen.cs</DependentUpon>
     </EmbeddedResource>
