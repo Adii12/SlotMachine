@@ -70,3 +70,4 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMach
 F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.GamblingScreen.resources
 F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.MainMenuScreen.resources
 F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.Paytable.resources
+F:\Slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.AddCreditScreen.resources

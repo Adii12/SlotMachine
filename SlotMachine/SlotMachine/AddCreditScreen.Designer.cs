@@ -23,35 +23,18 @@
         /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent() {
-            this.casinoLogo = new System.Windows.Forms.PictureBox();
-            this.backgroundImage = new System.Windows.Forms.PictureBox();
             this.creditCardNumberTextbox = new System.Windows.Forms.TextBox();
             this.cvcTextbox = new System.Windows.Forms.TextBox();
             this.confirmPasswordTextbox = new System.Windows.Forms.TextBox();
             this.creditAmountTextbox = new System.Windows.Forms.TextBox();
             this.confirmButton = new System.Windows.Forms.Button();
             this.cancelButton = new System.Windows.Forms.Button();
+            this.casinoLogo = new System.Windows.Forms.PictureBox();
+            this.backgroundImage = new System.Windows.Forms.PictureBox();
+            this.nameTextbox = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // casinoLogo
-            // 
-            this.casinoLogo.Image = global::SlotMachine.Properties.Resources.vegascasino_logo;
-            this.casinoLogo.Location = new System.Drawing.Point(199, 233);
-            this.casinoLogo.Name = "casinoLogo";
-            this.casinoLogo.Size = new System.Drawing.Size(513, 140);
-            this.casinoLogo.TabIndex = 1;
-            this.casinoLogo.TabStop = false;
-            // 
-            // backgroundImage
-            // 
-            this.backgroundImage.Image = global::SlotMachine.Properties.Resources.background_image;
-            this.backgroundImage.Location = new System.Drawing.Point(401, 106);
-            this.backgroundImage.Name = "backgroundImage";
-            this.backgroundImage.Size = new System.Drawing.Size(100, 50);
-            this.backgroundImage.TabIndex = 0;
-            this.backgroundImage.TabStop = false;
             // 
             // creditCardNumberTextbox
             // 
@@ -109,11 +92,39 @@
             this.cancelButton.UseVisualStyleBackColor = true;
             this.cancelButton.Click += new System.EventHandler(this.cancelButton_Click);
             // 
+            // casinoLogo
+            // 
+            this.casinoLogo.Image = global::SlotMachine.Properties.Resources.vegascasino_logo;
+            this.casinoLogo.Location = new System.Drawing.Point(199, 233);
+            this.casinoLogo.Name = "casinoLogo";
+            this.casinoLogo.Size = new System.Drawing.Size(513, 140);
+            this.casinoLogo.TabIndex = 1;
+            this.casinoLogo.TabStop = false;
+            // 
+            // backgroundImage
+            // 
+            this.backgroundImage.Image = global::SlotMachine.Properties.Resources.background_image;
+            this.backgroundImage.Location = new System.Drawing.Point(401, 106);
+            this.backgroundImage.Name = "backgroundImage";
+            this.backgroundImage.Size = new System.Drawing.Size(100, 50);
+            this.backgroundImage.TabIndex = 0;
+            this.backgroundImage.TabStop = false;
+            // 
+            // nameTextbox
+            // 
+            this.nameTextbox.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.nameTextbox.Font = new System.Drawing.Font("Algerian", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameTextbox.Location = new System.Drawing.Point(317, 84);
+            this.nameTextbox.Name = "nameTextbox";
+            this.nameTextbox.Size = new System.Drawing.Size(100, 36);
+            this.nameTextbox.TabIndex = 8;
+            // 
             // AddCreditScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.nameTextbox);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.confirmButton);
             this.Controls.Add(this.creditAmountTextbox);
@@ -141,5 +152,6 @@
         private System.Windows.Forms.TextBox creditAmountTextbox;
         private System.Windows.Forms.Button confirmButton;
         private System.Windows.Forms.Button cancelButton;
+        private System.Windows.Forms.TextBox nameTextbox;
     }
 }
