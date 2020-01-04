@@ -44,12 +44,16 @@ namespace SlotMachine {
             casinoLogo.Parent = backgroundImage;
             casinoLogo.BackColor = Color.Transparent;
 
+            setupLabel("Full name:", x - 500, y - 300, 35, 460, 50);
             setupLabel("Credit card number:", x - 500, y - 200, 35, 460, 50);
             setupLabel("CVC:", x - 500, y - 100, 30, 460, 50);
             setupLabel("Confirm password:", x - 500, y, 30, 460, 50);
             setupLabel("Credit amount:", x - 500, y + 100, 30, 460, 50);
+            setupTextbox(nameTextbox, x, y - 300, false);
             setupTextbox(creditCardNumberTextbox, x, y - 200, false);
+            creditCardNumberTextbox.MaxLength = 16;
             setupTextbox(cvcTextbox, x, y - 100, false);
+            cvcTextbox.MaxLength = 3;
             setupTextbox(confirmPasswordTextbox, x, y, true);
             setupTextbox(creditAmountTextbox, x, y + 100, false);
             setupButton(confirmButton, "Confirm", x - 100, y + 200);
@@ -135,7 +139,7 @@ namespace SlotMachine {
                 MessageBox.Show("Credit amount field must contain a number.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
-            double balance = result + currentPlayer.getBalance();
+            double balance = result + db.GetBalance(currentPlayer.getUsername());
             db.UpdateBalance(currentPlayer.getUsername(), balance);
             MessageBox.Show("Succes!");
             this.Dispose();

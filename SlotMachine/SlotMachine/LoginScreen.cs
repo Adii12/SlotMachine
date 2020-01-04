@@ -111,7 +111,7 @@ namespace SlotMachine {
                 currentPlayer = SlotMachine.CurrentPlayer.getInstance();
                 currentPlayer.setUsername(usernameTextbox.Text);
                 currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));
-                SlotMachine.MainMenuScreen mainMenu = new SlotMachine.MainMenuScreen();
+                MainMenuScreen mainMenu = new MainMenuScreen();
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
                 mainMenu.ShowDialog();
