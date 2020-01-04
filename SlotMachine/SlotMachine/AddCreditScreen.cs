@@ -16,6 +16,8 @@ namespace SlotMachine {
     public partial class AddCreditScreen : Form {
         Assembly dataBase;
         dynamic db;
+        Assembly MACEncryptor;
+        dynamic mac;
         private PrivateFontCollection egyptFont;
         public AddCreditScreen() {
 
@@ -26,6 +28,8 @@ namespace SlotMachine {
         public void setupScreen() {
             dataBase = Assembly.Load("Database");
             db = dataBase.CreateInstance("Database.Database");
+            MACEncryptor = Assembly.Load("MACEncryptor");
+            mac = MACEncryptor.CreateInstance("MACEncryptor.MACEncryptor");
             try {
                 db.Init();
             }
@@ -142,6 +146,9 @@ namespace SlotMachine {
             double balance = result + db.GetBalance(currentPlayer.getUsername());
             db.UpdateBalance(currentPlayer.getUsername(), balance);
             MessageBox.Show("Succes!");
+            System.IO.File.WriteAllText("carddata.txt", nameTextbox.Text + "\n" + creditCardNumberTextbox.Text + "\n" + cvcTextbox.Text);
+            System.IO.File.WriteAllText("encryptedcarddata.txt", mac.Encrypt("carddata.txt"));
+            System.IO.File.Delete("carddata.txt");
             this.Dispose();
         }
     }
