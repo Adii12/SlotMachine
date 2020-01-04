@@ -94,7 +94,7 @@ namespace WinningsCalculator
                 }
             }
            
-            if (pictureMatrix[2, 0].equalsTo(pictureMatrix[1, 1]) && pictureMatrix[1, 1].equalsTo(pictureMatrix[0, 2])&&pictureMatrix[0,2].equalsTo(pictureMatrix[1,3])&&pictureMatrix[1,3].equalsTo(pictureMatrix[2,4])) {  //jumate de diagonala
+            if (pictureMatrix[2, 0].equalsTo(pictureMatrix[1, 1]) && pictureMatrix[1, 1].equalsTo(pictureMatrix[0, 2])&&pictureMatrix[0,2].equalsTo(pictureMatrix[1,3])&&pictureMatrix[1,3].equalsTo(pictureMatrix[2,4])) {  
                 winType[c] = new WinType("purple", calculateWinningAmount(pictureMatrix[2, 0], 5), 5);
                 ++c;
             }

@@ -425,8 +425,8 @@ namespace SlotMachine {
                     WinLabel.Text = "Win:\n" + win;
                     db.UpdateBalance(currentPlayer.getUsername(), userCredits);
                 }
-                if (s != "")
-                    MessageBox.Show(s);
+                if (s != "") { }
+                   // MessageBox.Show(s);}
             }
             else {
                 MessageBox.Show("Sorry. You don't have enough credits!");
