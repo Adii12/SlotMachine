@@ -19,8 +19,16 @@ namespace SlotMachine {
         dynamic db;
         PrivateFontCollection egyptFont;
         SlotMachine.CurrentPlayer currentPlayer;
+        System.IO.FileStream LogFile;
+
+        TextWriterTraceListener txtListener;
 
         public LoginScreen() {
+            LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
+            txtListener = new TextWriterTraceListener(LogFile);
+            Trace.AutoFlush = true;
+            Trace.Listeners.Add(txtListener);
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             setupFont();
@@ -108,6 +116,7 @@ namespace SlotMachine {
         private void loginButton_Click(object sender, EventArgs e) {
             if (db.AuthenticateUser(usernameTextbox.Text, passwordTextbox.Text) == true) {
                 this.Hide();
+                Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tLogged in succesfully");
                 currentPlayer = SlotMachine.CurrentPlayer.getInstance();
                 currentPlayer.setUsername(usernameTextbox.Text);
                 currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));
@@ -115,11 +124,12 @@ namespace SlotMachine {
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
                 mainMenu.ShowDialog();
-                this.Show();
-                Trace.WriteLine("Logat");
+                this.Show();     
             }
             else {
                 MessageBox.Show("Incorrect username and/or password!");
+                Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tLogin fail: incorrect username and/or password");
+
             }
         }
 

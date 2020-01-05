@@ -17,6 +17,7 @@ namespace SlotMachine {
         Random random = new Random();
         int randomNumber;
         int counter;
+       
         public double win { get; set; }
        
         public GamblingScreen(double win) {

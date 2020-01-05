@@ -85,6 +85,12 @@
     <Compile Include="GamblingScreen.Designer.cs">
       <DependentUpon>GamblingScreen.cs</DependentUpon>
     </Compile>
+    <Compile Include="JackpotScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JackpotScreen.Designer.cs">
+      <DependentUpon>JackpotScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="JackpotWinnersScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -131,6 +137,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GamblingScreen.resx">
       <DependentUpon>GamblingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JackpotScreen.resx">
+      <DependentUpon>JackpotScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="JackpotWinnersScreen.resx">
       <DependentUpon>JackpotWinnersScreen.cs</DependentUpon>
@@ -226,6 +235,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\purple.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\vector-hand-painted-billboards.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Jackpot-PNG-.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.112.0\build\net46\System.Data.SQLite.Core.targets')" />

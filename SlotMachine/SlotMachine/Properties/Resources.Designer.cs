@@ -123,6 +123,16 @@ namespace SlotMachine.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jackpot_win {
+            get {
+                object obj = ResourceManager.GetObject("jackpot_win", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap lemon {
             get {
                 object obj = ResourceManager.GetObject("lemon", resourceCulture);

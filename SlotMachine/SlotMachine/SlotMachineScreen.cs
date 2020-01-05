@@ -55,15 +55,13 @@ namespace SlotMachine {
             winningsCalc = Assembly.Load("WinningsCalculator");
             winningsCalculator = winningsCalc.CreateInstance("WinningsCalculator.WinningsCalculator");
 
+
             xml = Assembly.Load("XmlReader");
             xmlReader = xml.CreateInstance("XmlReader.XmlReader");
+
             chances = xmlReader.getChances();
 
             winTypes = new WinningsCalculator.WinType[15];
-
-            for (int i = 0; i < 9; i++) {
-                Debug.WriteLine(chances[i]);
-            }
 
             jackpotChance = chances[8];
 
@@ -87,7 +85,6 @@ namespace SlotMachine {
             setupSpinButton(spinButton, "SPIN", x - 100, y + 400);
             setupSpinButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 400);
             setupButton(PaytableButton, "Paytable", x - 953, y - 430);
-            //gambleButton.Enabled = false;
             gambleButton.Hide();
 
             createBets(bets);
@@ -432,10 +429,10 @@ namespace SlotMachine {
                 }
             }
             int rnd = random.Next(0, 100);
-            if (rnd < jackpotChance)
+            if (rnd < jackpotChance + 70)
             {
-                //
-                MessageBox.Show("muie");
+                JackpotScreen jackpotScreen = new JackpotScreen(System.Convert.ToInt32(win));
+                jackpotScreen.ShowDialog();
                 jackpotChance = 0;
             }
             else
