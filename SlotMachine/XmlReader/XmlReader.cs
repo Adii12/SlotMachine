@@ -21,7 +21,6 @@ namespace XmlReader {
             while (xmlReader.Read()) {
                 switch (xmlReader.NodeType) {
                     case XmlNodeType.Element:
-                        Debug.WriteLine(xmlReader.Name);
                         break;
                     case XmlNodeType.Text:
                         if (xmlReader.Value != null) {
@@ -41,6 +40,7 @@ namespace XmlReader {
                 }
             }
             xmlReader.Close();
+            Encrypt();
         }
        
         public double[] getChances() {
@@ -69,7 +69,6 @@ namespace XmlReader {
             xmlWriter.WriteWhitespace("\n\t");
             xmlWriter.WriteElementString("seven", "5");
             xmlWriter.WriteWhitespace("\n\t");
-            Debug.WriteLine(chance.ToString());
             xmlWriter.WriteElementString("jackpot", chance.ToString());
             xmlWriter.WriteWhitespace("\n");
             xmlWriter.WriteEndElement();
@@ -108,7 +107,7 @@ namespace XmlReader {
             stream.Close();
             outputFile.Close();
             inputFile.Close();
-            Debug.WriteLine("Criptat");
+            Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tCriptat");
         }
 
         private void Decrypt()
@@ -131,7 +130,7 @@ namespace XmlReader {
             stream.Close();
             outputFile.Close();
             inputFile.Close();
-            Debug.WriteLine("Decriptat");
+            Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tDecriptat");
         }
     }
 }

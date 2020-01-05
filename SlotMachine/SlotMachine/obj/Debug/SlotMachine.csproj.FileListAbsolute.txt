@@ -100,3 +100,7 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMach
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.pdb
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.dll
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.dll
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.pdb
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.AddCreditScreen.resources
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
