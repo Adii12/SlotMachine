@@ -1,17 +1,17 @@
-Native library pre-loader is trying to load native SQLite library "C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
-05-01-2020-06:39-PM	Logged in succesfully
-05-01-2020-06:39-PM	Decriptat
-05-01-2020-06:39-PM	Criptat
-05-01-2020-06:39-PM	Decriptat
-05-01-2020-06:39-PM	Criptat
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-Winners Selected
-05-01-2020-06:39-PM	Selected Jackpot winners from database
+Native library pre-loader is trying to load native SQLite library "C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
+05-01-2020-08:49-PM	Logged in succesfully
+05-01-2020-08:49-PM	Decriptat
+05-01-2020-08:49-PM	Criptat
+05-01-2020-08:49-PM	Decriptat
+05-01-2020-08:49-PM	Criptat
+05-01-2020-08:49-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+05-01-2020-08:29-PMJackpot Won
+39-PM	Selected Jackpot winners from database
 UInt32 timeoutMS, String& strRemain)
    at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
    at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)

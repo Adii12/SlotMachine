@@ -12,6 +12,7 @@ using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Diagnostics;
 using System.IO;
+using System.Media;
 
 namespace SlotMachine {
     public partial class LoginScreen : Form {
@@ -22,12 +23,17 @@ namespace SlotMachine {
         System.IO.FileStream LogFile;
 
         TextWriterTraceListener txtListener;
+        
 
         public LoginScreen() {
             LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
             txtListener = new TextWriterTraceListener(LogFile);
             Trace.AutoFlush = true;
             Trace.Listeners.Add(txtListener);
+
+            System.Media.SoundPlayer player = new SoundPlayer();
+            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "blunt.wav";
+            player.Play();
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
