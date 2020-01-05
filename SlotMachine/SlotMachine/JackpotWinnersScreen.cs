@@ -11,6 +11,7 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
 using System.Text.RegularExpressions;
+using System.Diagnostics;
 
 namespace SlotMachine {
     public partial class JackpotWinnersScreen : Form {
@@ -48,7 +49,7 @@ namespace SlotMachine {
             int i = 1;
             getData(data);
             foreach (string line in lines) {
-                setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 20);
+                setupLabel(line, x - 400, (y - 275) + (i * 75), 40, 900, 60);
                 ++i;
                 if (i > 10) {
                     break;
@@ -95,6 +96,8 @@ namespace SlotMachine {
 
         private void getData(string data) {
             data = db.SelectWinners();
+            Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tSelected Jackpot winners from database");
+
             lines = Regex.Split(data, "\n");
         }
 

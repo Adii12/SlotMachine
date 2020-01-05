@@ -70,7 +70,6 @@ namespace SlotMachine {
         }
 
         private void quitButton_Click(object sender, EventArgs e) {
-            xml.Encrypt();
             File.Delete("chances.xml");
             System.Environment.Exit(1);
         }

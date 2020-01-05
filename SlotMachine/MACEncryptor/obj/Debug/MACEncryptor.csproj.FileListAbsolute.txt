@@ -1,0 +1,5 @@
+C:\Users\enric\Documents\slot-machine\SlotMachine\MACEncryptor\bin\Debug\MACEncryptor.dll
+C:\Users\enric\Documents\slot-machine\SlotMachine\MACEncryptor\bin\Debug\MACEncryptor.pdb
+C:\Users\enric\Documents\slot-machine\SlotMachine\MACEncryptor\obj\Debug\MACEncryptor.csprojAssemblyReference.cache
+C:\Users\enric\Documents\slot-machine\SlotMachine\MACEncryptor\obj\Debug\MACEncryptor.dll
+C:\Users\enric\Documents\slot-machine\SlotMachine\MACEncryptor\obj\Debug\MACEncryptor.pdb
