@@ -136,6 +136,9 @@
   <data name="ISIS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\CasinoShadow.ttf;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="jackpot_win" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Jackpot-PNG-.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="lemon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\lemon_1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>

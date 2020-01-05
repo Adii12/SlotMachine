@@ -16,6 +16,8 @@ namespace SlotMachine {
     public partial class AddCreditScreen : Form {
         Assembly dataBase;
         dynamic db;
+        Assembly MACEncryptor;
+        dynamic mac;
         private PrivateFontCollection egyptFont;
         public AddCreditScreen() {
 
@@ -26,6 +28,8 @@ namespace SlotMachine {
         public void setupScreen() {
             dataBase = Assembly.Load("Database");
             db = dataBase.CreateInstance("Database.Database");
+            MACEncryptor = Assembly.Load("MACEncryptor");
+            mac = MACEncryptor.CreateInstance("MACEncryptor.MACEncryptor");
             try {
                 db.Init();
             }
@@ -44,12 +48,16 @@ namespace SlotMachine {
             casinoLogo.Parent = backgroundImage;
             casinoLogo.BackColor = Color.Transparent;
 
+            setupLabel("Full name:", x - 500, y - 300, 35, 460, 50);
             setupLabel("Credit card number:", x - 500, y - 200, 35, 460, 50);
             setupLabel("CVC:", x - 500, y - 100, 30, 460, 50);
             setupLabel("Confirm password:", x - 500, y, 30, 460, 50);
             setupLabel("Credit amount:", x - 500, y + 100, 30, 460, 50);
+            setupTextbox(nameTextbox, x, y - 300, false);
             setupTextbox(creditCardNumberTextbox, x, y - 200, false);
+            creditCardNumberTextbox.MaxLength = 16;
             setupTextbox(cvcTextbox, x, y - 100, false);
+            cvcTextbox.MaxLength = 3;
             setupTextbox(confirmPasswordTextbox, x, y, true);
             setupTextbox(creditAmountTextbox, x, y + 100, false);
             setupButton(confirmButton, "Confirm", x - 100, y + 200);
@@ -138,6 +146,9 @@ namespace SlotMachine {
             double balance = result + db.GetBalance(currentPlayer.getUsername());
             db.UpdateBalance(currentPlayer.getUsername(), balance);
             MessageBox.Show("Succes!");
+            System.IO.File.WriteAllText("carddata.txt", nameTextbox.Text + "\n" + creditCardNumberTextbox.Text + "\n" + cvcTextbox.Text);
+            System.IO.File.WriteAllText("encryptedcarddata.txt", mac.Encrypt("carddata.txt"));
+            System.IO.File.Delete("carddata.txt");
             this.Dispose();
         }
     }

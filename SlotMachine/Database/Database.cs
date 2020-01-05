@@ -20,15 +20,10 @@ using System.Diagnostics;
 namespace Database {
     public class Database {
         private SQLiteConnection conn = null;
-        System.IO.FileStream LogFile;
-
-        //TextWriterTraceListener txtListener;
+       
 
         public Database() {
-           //LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
-           //txtListener = new TextWriterTraceListener(LogFile);
-           //Trace.AutoFlush = true;
-           //Trace.Listeners.Add(txtListener);
+          
         }
 
         public void Init() {
@@ -38,7 +33,6 @@ namespace Database {
             try {
                 conn = new SQLiteConnection("Data Source = Database.sqlite; Version = 3");
                 conn.Open();
-                Trace.WriteLine("Connected to database");
             }
             catch (Exception ex) {
                 Trace.WriteLine(ex.ToString()); ;

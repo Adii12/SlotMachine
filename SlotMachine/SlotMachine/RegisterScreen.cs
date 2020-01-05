@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Reflection;
+using System.Diagnostics;
 
 namespace SlotMachine {
     public partial class RegisterScreen : Form {
@@ -27,6 +28,7 @@ namespace SlotMachine {
             databaseDLL = Assembly.Load("Database");
             if (databaseDLL == null) {
                 MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tCould not load database assembly");
                 System.Environment.Exit(1);
             }
             db = databaseDLL.CreateInstance("Database.Database");
@@ -114,14 +116,19 @@ namespace SlotMachine {
             }
             else if (passwordTextbox.Text != confirmPasswordTextbox.Text) {
                 MessageBox.Show("Passwords do not match.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tError creating account: Passwords do not match");
+
             }
             else {
                 if (db.FindUser(usernameTextbox.Text)) {
                     MessageBox.Show("Username taken.", "Sorry", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tError creating account - username taken: " + usernameTextbox.Text);
+
                 }
                 else {
                     db.InsertUser(usernameTextbox.Text, passwordTextbox.Text);
                     MessageBox.Show("Succesfully registered!", "Merry Christmas", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tRegistered new account: " + usernameTextbox.Text);
                     this.Dispose();
                 }
             }

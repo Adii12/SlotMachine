@@ -33,6 +33,7 @@ namespace SlotMachine {
         WinningsCalculator.WinType[] winTypes;
         Random random = new Random();
         WinningsCalculator.PictureMap[,] pictureMatrix = new WinningsCalculator.PictureMap[3, 5];
+        PictureBox[,] borderMatrix = new PictureBox[3, 5];
 
         double userCredits;
         double win;
@@ -54,15 +55,13 @@ namespace SlotMachine {
             winningsCalc = Assembly.Load("WinningsCalculator");
             winningsCalculator = winningsCalc.CreateInstance("WinningsCalculator.WinningsCalculator");
 
+
             xml = Assembly.Load("XmlReader");
             xmlReader = xml.CreateInstance("XmlReader.XmlReader");
+
             chances = xmlReader.getChances();
 
             winTypes = new WinningsCalculator.WinType[15];
-
-            for (int i = 0; i < 9; i++) {
-                Debug.WriteLine(chances[i]);
-            }
 
             jackpotChance = chances[8];
 
@@ -86,7 +85,6 @@ namespace SlotMachine {
             setupSpinButton(spinButton, "SPIN", x - 100, y + 400);
             setupSpinButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 400);
             setupButton(PaytableButton, "Paytable", x - 953, y - 430);
-            //gambleButton.Enabled = false;
             gambleButton.Hide();
 
             createBets(bets);
@@ -123,6 +121,7 @@ namespace SlotMachine {
             button.Height = 100;
             button.UseCompatibleTextRendering = true;
         }
+
         private void setupLabel(Label label, String text, int fontSize, int x, int y) {
             label.Parent = SlotsColumns;
             label.BackColor = Color.Orange;
@@ -166,6 +165,27 @@ namespace SlotMachine {
             pictureMatrix[i, j].PictureBox = pic;
             pictureMatrix[i, j].PictureBox.BackgroundImageLayout = ImageLayout.Zoom;
         }
+
+        private void createBorders()
+        {
+            for (int i = 0; i < 3; i++)
+            {
+                for (int j = 0; j < 5; j++)
+                {
+                    PictureBox pic = new PictureBox();
+                    pic.BackgroundImageLayout = ImageLayout.Zoom;
+                    pic.Parent = pictureMatrix[i, j].PictureBox;
+                    pic.BackColor = Color.Transparent;
+                    pic.Location = new Point(0, 0);
+                    pic.Size = new Size(286, 286);
+                    pic.Anchor = AnchorStyles.None;
+                    borderMatrix[i, j] = pic;
+                    borderMatrix[i, j].BackgroundImageLayout = ImageLayout.Zoom;
+                }
+            }
+            
+        }
+
         private int[] generatePic(int i, int j)
         {
             int[] checks = new int[2];
@@ -334,7 +354,7 @@ namespace SlotMachine {
 
         private void setupMatrix()
         {
-
+            
             for (int i = 0; i < 3; ++i)
             {
                 for (int j = 0; j < 5; ++j)
@@ -368,6 +388,7 @@ namespace SlotMachine {
                     }
                 }
             }
+            createBorders();
         }
         private void updateMatrix()
         {
@@ -400,11 +421,18 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-            int rnd = random.Next(0, 100);
-            if (rnd < jackpotChance)
+            for(int i = 0; i < 3; ++i)
             {
-                //
-                MessageBox.Show("muie");
+                for(int j = 0; j < 5; ++j)
+                {
+                    borderMatrix[i, j].Image = null;
+                }
+            }
+            int rnd = random.Next(0, 100);
+            if (rnd < jackpotChance + 70)
+            {
+                JackpotScreen jackpotScreen = new JackpotScreen(System.Convert.ToInt32(win));
+                jackpotScreen.ShowDialog();
                 jackpotChance = 0;
             }
             else
@@ -513,203 +541,264 @@ namespace SlotMachine {
 
         private void makeBorder(String lineType, int i, int j)
         {
-            /*System.Windows.Forms.Label label = new System.Windows.Forms.Label();
-            label.Anchor = AnchorStyles.None;
-            label.FlatStyle = FlatStyle.Flat;
-            label.AutoSize = false;
-            label.Size = new Size(300, 300);
-            label.Location = new Point(x, y);
-            label.BackColor = color;
-            label.Parent = pictureMatrix[0,0].PictureBox;*/
-            PictureBox pic = new PictureBox();
-            switch (lineType)
-            {
-                case "red":
-                    pic.Image = SlotMachine.Properties.Resources.red;
-                    pic.BackgroundImageLayout = ImageLayout.Zoom;
-                    pic.Parent = pictureMatrix[i, j].PictureBox;
-                    pic.BackColor = Color.Transparent;
-                    pic.Location = new Point(0, 0);
-                    pic.Size = new Size(286, 286);
-                    pic.Anchor = AnchorStyles.None;
-                    break;
-                case "blue":
-                    pic.Image = SlotMachine.Properties.Resources.blue;
-                    pic.BackgroundImageLayout = ImageLayout.Zoom;
-                    pic.Parent = pictureMatrix[i, j].PictureBox;
-                    pic.BackColor = Color.Transparent;
-                    pic.Location = new Point(0, 0);
-                    pic.Size = new Size(286, 286);
-                    pic.Anchor = AnchorStyles.None;
-                    break;
-                case "green":
-                    pic.Image = SlotMachine.Properties.Resources.green;
-                    pic.BackgroundImageLayout = ImageLayout.Zoom;
-                    pic.Parent = pictureMatrix[i, j].PictureBox;
-                    pic.BackColor = Color.Transparent;
-                    pic.Location = new Point(0, 0);
-                    pic.Size = new Size(286, 286);
-                    pic.Anchor = AnchorStyles.None;
-                    break;
-                case "yellow":
-                    pic.Image = SlotMachine.Properties.Resources.yellow;
-                    pic.BackgroundImageLayout = ImageLayout.Zoom;
-                    pic.Parent = pictureMatrix[i, j].PictureBox;
-                    pic.BackColor = Color.Transparent;
-                    pic.Location = new Point(0, 0);
-                    pic.Size = new Size(286, 286);
-                    pic.Anchor = AnchorStyles.None;
-                    break;
-                case "purple":
-                    pic.Image = SlotMachine.Properties.Resources.purple;
-                    pic.BackgroundImageLayout = ImageLayout.Zoom;
-                    pic.Parent = pictureMatrix[i, j].PictureBox;
-                    pic.BackColor = Color.Transparent;
-                    pic.Location = new Point(0, 0);
-                    pic.Size = new Size(286, 286);
-                    pic.Anchor = AnchorStyles.None;
-                    break;
+            Object matrixLock = new Object();
+
+            lock(matrixLock){
+                switch (lineType)
+                {
+                    case "red":
+                        borderMatrix[i,j].Image = SlotMachine.Properties.Resources.red;
+                        break;
+                    case "blue":
+                        borderMatrix[i, j].Image = SlotMachine.Properties.Resources.blue;
+                        break;
+                    case "green":
+                        borderMatrix[i, j].Image = SlotMachine.Properties.Resources.green;
+                        break;
+                    case "yellow":
+                        borderMatrix[i, j].Image = SlotMachine.Properties.Resources.yellow;
+                        break;
+                    case "purple":
+                        borderMatrix[i, j].Image = SlotMachine.Properties.Resources.purple;
+                        break;
+                }
             }
         }
         private void makeLine(String lineType, int iconAmount)
         {
+            Thread[] threads = new Thread[5];
             if (lineType == "red")
             {
+                for (int i = 0; i < 5; i++)
+                {
+                    int localVar = i;
+                    threads[i] = new Thread(() => makeBorder("red", 0, localVar));
+                }
                 switch (iconAmount)
                 {
                     case 2:
-                        makeBorder(lineType, 0, 0);
-                        makeBorder(lineType, 0, 1);
+                        /*makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 0, 1);*/
+                        threads[0].Start();
+                        threads[1].Start();
                         break;
                     case 3:
-                        makeBorder(lineType, 0, 0);
+                        /*makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 0, 1);
-                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 0, 2);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
                         break;
                     case 4:
-                        makeBorder(lineType, 0, 0);
+                        /*makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 0, 1);
                         makeBorder(lineType, 0, 2);
-                        makeBorder(lineType, 0, 3);
+                        makeBorder(lineType, 0, 3);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
                         break;
                     case 5:
-                        makeBorder(lineType, 0, 0);
+                        /*makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 0, 1);
                         makeBorder(lineType, 0, 2);
                         makeBorder(lineType, 0, 3);
-                        makeBorder(lineType, 0, 4);
+                        makeBorder(lineType, 0, 4);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
+                        threads[4].Start();
                         break;
                 }
             }
             else if (lineType == "blue")
             {
+                for (int i = 0; i < 5; i++)
+                {
+                    int localVar = i;
+                    threads[i] = new Thread(() => makeBorder("blue", 1, localVar));
+                }
                 switch (iconAmount)
                 {
                     case 2:
-                        makeBorder(lineType, 1, 0);
-                        makeBorder(lineType, 1, 1);
+                        /*makeBorder(lineType, 1, 0);
+                        makeBorder(lineType, 1, 1);*/
+                        threads[0].Start();
+                        threads[1].Start();
                         break;
                     case 3:
-                        makeBorder(lineType, 1, 0);
+                        /*makeBorder(lineType, 1, 0);
                         makeBorder(lineType, 1, 1);
-                        makeBorder(lineType, 1, 2);
+                        makeBorder(lineType, 1, 2);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
                         break;
                     case 4:
-                        makeBorder(lineType, 1, 0);
+                        /*makeBorder(lineType, 1, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 1, 2);
-                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 1, 3);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
                         break;
                     case 5:
-                        makeBorder(lineType, 1, 0);
+                        /*makeBorder(lineType, 1, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 1, 2);
                         makeBorder(lineType, 1, 3);
-                        makeBorder(lineType, 1, 4);
+                        makeBorder(lineType, 1, 4);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
+                        threads[4].Start();
                         break;
                 }
             }
             else if (lineType == "green")
             {
+                 for (int i = 0; i < 5; i++)
+                {
+                    int localVar = i;
+                    threads[i] = new Thread(() => makeBorder("green", 2, localVar));
+                }
                 switch (iconAmount)
                 {
                     case 2:
-                        makeBorder(lineType, 2, 0);
-                        makeBorder(lineType, 2, 1);
+                        /*makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 2, 1);*/
+                        threads[0].Start();
+                        threads[1].Start();
                         break;
                     case 3:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 2, 1);
-                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 2, 2);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
                         break;
                     case 4:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 2, 1);
                         makeBorder(lineType, 2, 2);
-                        makeBorder(lineType, 2, 3);
+                        makeBorder(lineType, 2, 3);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
                         break;
                     case 5:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 2, 1);
                         makeBorder(lineType, 2, 2);
                         makeBorder(lineType, 2, 3);
-                        makeBorder(lineType, 2, 4);
+                        makeBorder(lineType, 2, 4);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
+                        threads[4].Start();
                         break;
                 }
             }
             else if (lineType == "yellow")
             {
+                threads[0] = new Thread(() => makeBorder("yellow", 0, 0));
+                threads[1] = new Thread(() => makeBorder("yellow", 1, 1));
+                threads[2] = new Thread(() => makeBorder("yellow", 2, 2));
+                threads[3] = new Thread(() => makeBorder("yellow", 1, 3));
+                threads[4] = new Thread(() => makeBorder("yellow", 0, 4));
                 switch (iconAmount)
                 {
                     case 2:
-                        makeBorder(lineType, 0, 0);
-                        makeBorder(lineType, 1, 1);
+                       /* makeBorder(lineType, 0, 0);
+                        makeBorder(lineType, 1, 1);*/
+                        threads[0].Start();
+                        threads[1].Start();
                         break;
                     case 3:
-                        makeBorder(lineType, 0, 0);
+                       /* makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 1, 1);
-                        makeBorder(lineType, 2, 2);
+                        makeBorder(lineType, 2, 2);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
                         break;
                     case 4:
-                        makeBorder(lineType, 0, 0);
+                        /*makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 2, 2);
-                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 1, 3);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
                         break;
                     case 5:
-                        makeBorder(lineType, 0, 0);
+                       /* makeBorder(lineType, 0, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 2, 2);
                         makeBorder(lineType, 1, 3);
-                        makeBorder(lineType, 0, 4);
+                        makeBorder(lineType, 0, 4);*/
+                         threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
+                        threads[4].Start();
                         break;
                 }   
             }
              else if (lineType == "purple")
             {
+                threads[0] = new Thread(() => makeBorder("purple", 2, 0));
+                threads[1] = new Thread(() => makeBorder("purple", 1, 1));
+                threads[2] = new Thread(() => makeBorder("purple", 0, 2));
+                threads[3] = new Thread(() => makeBorder("purple", 1, 3));
+                threads[4] = new Thread(() => makeBorder("purple", 2, 4));
                 switch (iconAmount)
                 {
                     case 2:
-                        makeBorder(lineType, 2, 0);
-                        makeBorder(lineType, 1, 1);
+                        /*makeBorder(lineType, 2, 0);
+                        makeBorder(lineType, 1, 1);*/
+                        threads[0].Start();
+                        threads[1].Start();
                         break;
                     case 3:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 1, 1);
-                        makeBorder(lineType, 0, 2);
+                        makeBorder(lineType, 0, 2);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
                         break;
                     case 4:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 0, 2);
-                        makeBorder(lineType, 1, 3);
+                        makeBorder(lineType, 1, 3);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
                         break;
                     case 5:
-                        makeBorder(lineType, 2, 0);
+                        /*makeBorder(lineType, 2, 0);
                         makeBorder(lineType, 1, 1);
                         makeBorder(lineType, 0, 2);
                         makeBorder(lineType, 1, 3);
-                        makeBorder(lineType, 2, 4);
+                        makeBorder(lineType, 2, 4);*/
+                        threads[0].Start();
+                        threads[1].Start();
+                        threads[2].Start();
+                        threads[3].Start();
+                        threads[4].Start();
                         break;
                 }
             }
