@@ -1,18 +1,15 @@
 Native library pre-loader is trying to load native SQLite library "C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
-05-01-2020-08:49-PM	Logged in succesfully
-05-01-2020-08:49-PM	Decriptat
-05-01-2020-08:49-PM	Criptat
-05-01-2020-08:49-PM	Decriptat
-05-01-2020-08:49-PM	Criptat
-05-01-2020-08:49-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-05-01-2020-08:29-PMJackpot Won
-39-PM	Selected Jackpot winners from database
-UInt32 timeoutMS, String& strRemain)
+06-01-2020-11:51-AM	Registered new account: enrico99
+06-01-2020-11:51-AM	Login fail: incorrect username and/or password
+06-01-2020-11:52-AM	Logged in succesfully
+06-01-2020-11:52-AM	Decriptat
+06-01-2020-11:52-AM	Criptat
+Winners Selected
+06-01-2020-11:52-AM	Selected Jackpot winners from database
+SQLite error (1): unrecognized token: "'���ז�+X�" in "SELECT * FROM Users WHERE Username='enrico99' AND Password='���ז�+X�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'���ז�+X�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
    at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
    at System.Data.SQLite.SQLiteDataReader.NextResult()
@@ -20,18 +17,15 @@ UInt32 timeoutMS, String& strRemain)
    at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
    at System.Data.SQLite.SQLiteCommand.ExecuteReader()
    at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
-05-01-2020-06:32-PM	Login fail: incorrect username and/or password
-05-01-2020-06:32-PM	Logged in succesfully
-05-01-2020-06:32-PM	Decriptat
-05-01-2020-06:32-PM	Decriptat
-05-01-2020-06:32-PMJackpot Won
-05-01-2020-06:32-PMJackpot Won
-05-01-2020-06:32-PMJackpot Won
-05-01-2020-06:32-PMJackpot Won
-05-01-2020-06:32-PMJackpot Won
-05-01-2020-06:33-PMJackpot Won
-05-01-2020-06:33-PMJackpot Won
-05-01-2020-06:33-PMJackpot Won
-05-01-2020-06:33-PMJackpot Won
-05-01-2020-06:33-PMJackpot Won
-05-01-2020-06:33-PM	Decriptat
+06-01-2020-11:52-AM	Decriptat
+06-01-2020-11:52-AM	Criptat
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
+06-01-2020-11:53-AMJackpot Won
