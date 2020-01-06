@@ -43,9 +43,9 @@
             // JackpotWin
             // 
             this.JackpotWin.Image = ((System.Drawing.Image)(resources.GetObject("JackpotWin.Image")));
-            this.JackpotWin.Location = new System.Drawing.Point(82, 92);
+            this.JackpotWin.Location = new System.Drawing.Point(117, 23);
             this.JackpotWin.Name = "JackpotWin";
-            this.JackpotWin.Size = new System.Drawing.Size(431, 259);
+            this.JackpotWin.Size = new System.Drawing.Size(542, 302);
             this.JackpotWin.TabIndex = 1;
             this.JackpotWin.TabStop = false;
             // 
