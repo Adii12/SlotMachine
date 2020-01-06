@@ -47,7 +47,7 @@ namespace SlotMachine {
             setupScreen();
             databaseDLL = System.Reflection.Assembly.Load("Database");
             if (databaseDLL == null) {
-                MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 System.Environment.Exit(1);
             }
 
@@ -143,7 +143,7 @@ namespace SlotMachine {
                 this.Show();     
             }
             else {
-                MessageBox.Show("Incorrect username and/or password!");
+               // MessageBox.Show("Incorrect username and/or password!");
                 Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tLogin fail: incorrect username and/or password");
 
             }

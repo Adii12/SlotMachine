@@ -33,29 +33,28 @@
             // backgroundImage
             // 
             this.backgroundImage.Image = global::SlotMachine.Properties.Resources.background_image;
-            this.backgroundImage.Location = new System.Drawing.Point(1, 15);
-            this.backgroundImage.Margin = new System.Windows.Forms.Padding(4);
+            this.backgroundImage.Location = new System.Drawing.Point(1, 12);
             this.backgroundImage.Name = "backgroundImage";
-            this.backgroundImage.Size = new System.Drawing.Size(1060, 537);
+            this.backgroundImage.Size = new System.Drawing.Size(795, 436);
             this.backgroundImage.TabIndex = 0;
             this.backgroundImage.TabStop = false;
             // 
             // casinoLogo
             // 
             this.casinoLogo.Image = global::SlotMachine.Properties.Resources.vegascasino_logo;
-            this.casinoLogo.Location = new System.Drawing.Point(179, 46);
-            this.casinoLogo.Margin = new System.Windows.Forms.Padding(4);
+            this.casinoLogo.Location = new System.Drawing.Point(134, 37);
             this.casinoLogo.Name = "casinoLogo";
-            this.casinoLogo.Size = new System.Drawing.Size(676, 166);
+            this.casinoLogo.Size = new System.Drawing.Size(507, 135);
             this.casinoLogo.TabIndex = 1;
             this.casinoLogo.TabStop = false;
             // 
             // cancelButton
             // 
-            this.cancelButton.Location = new System.Drawing.Point(753, 425);
-            this.cancelButton.Margin = new System.Windows.Forms.Padding(4);
+            this.cancelButton.FlatAppearance.BorderSize = 0;
+            this.cancelButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.cancelButton.Location = new System.Drawing.Point(565, 345);
             this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(100, 28);
+            this.cancelButton.Size = new System.Drawing.Size(75, 23);
             this.cancelButton.TabIndex = 2;
             this.cancelButton.Text = "button1";
             this.cancelButton.UseVisualStyleBackColor = true;
@@ -63,13 +62,12 @@
             // 
             // JackpotWinnersScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1067, 554);
+            this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.casinoLogo);
             this.Controls.Add(this.backgroundImage);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "JackpotWinnersScreen";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.backgroundImage)).EndInit();

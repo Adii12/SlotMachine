@@ -98,7 +98,7 @@
             this.loginButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.loginButton.BackColor = System.Drawing.Color.Yellow;
             this.loginButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.Ivory;
+            this.loginButton.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.loginButton.FlatAppearance.BorderSize = 0;
             this.loginButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.loginButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
