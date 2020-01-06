@@ -80,6 +80,7 @@ namespace SlotMachine {
             label.Size = new Size(width, height);
             label.Anchor = AnchorStyles.None;
             label.Location = new Point(x, y);
+            label.ForeColor = Color.White;
         }
         private void setupButton(Button button, String text, int x, int y) {
             button.Font = new Font(egyptFont.Families[0], 30);

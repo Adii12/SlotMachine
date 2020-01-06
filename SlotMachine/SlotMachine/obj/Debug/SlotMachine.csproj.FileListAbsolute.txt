@@ -106,3 +106,7 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMach
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\blunt.wav
+F:\slots\SlotMachine\SlotMachine\bin\Debug\blunt.wav
+F:\slots\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.dll
+F:\slots\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.pdb
+F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources

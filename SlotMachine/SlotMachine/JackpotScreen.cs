@@ -53,18 +53,19 @@ namespace SlotMachine {
             label.UseCompatibleTextRendering = true;
             label.Anchor = AnchorStyles.None;
             label.Location = new Point(x, y);
+            label.Size = new Size(300, 100);
         }
 
         private void setupButton(Button button, String text, int x, int y) {
-            button.Font = new Font(egyptFont.Families[0], 20);
-            button.BackColor = Color.Orange;
+            button.Font = new Font(egyptFont.Families[0], 40);
+            button.BackColor = Color.Green;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;
             button.Text = text;
             button.Location = new Point(x, y);
             button.Anchor = AnchorStyles.None;
-            button.Width = 180;
-            button.Height = 60;
+            button.Width = 360;
+            button.Height = 120;
             button.UseCompatibleTextRendering = true;
         }
 
@@ -76,16 +77,20 @@ namespace SlotMachine {
             BackgroundImage.Dock = DockStyle.Fill;
             int x = this.Width / 2;
             int y = this.Height / 2;
-            JackpotWin.Size = new Size(715, 715);
-            JackpotWin.Location = new Point(x - 250, y - 400);
+            //JackpotWin.Size = new Size(715, 715);
+            JackpotWin.Location = new Point(x - 375, y - 500);
             JackpotWin.Parent = BackgroundImage;
             JackpotWin.BackColor = Color.Transparent;
             JackpotWin.Anchor = AnchorStyles.None;
             Label winLabel = new Label();
             Label winLabel2 = new Label();
-            setupLabel(winLabel, "YOU WIN: "+win.ToString()+" x 500",40,x-250,y-100);
-            setupLabel(winLabel, newWin.ToString() + " x 500", 40, x - 250, y);
-            setupButton(CollectButton, "Collect", x + 700, y + 430);
+            setupLabel(winLabel, "YOU WIN: "+win.ToString()+" x 500",45,x-250,y+100);
+            winLabel.Width = 600;
+            winLabel.ForeColor = Color.White;
+            setupLabel(winLabel2, newWin.ToString(), 60, x - 150, y+250);
+            winLabel2.ForeColor = Color.White;
+            setupButton(CollectButton, "Collect", x + -200, y + 390);
+            winLabel2.Width = 700;
         }
 
         private void CollectButton_Click(object sender, EventArgs e) {

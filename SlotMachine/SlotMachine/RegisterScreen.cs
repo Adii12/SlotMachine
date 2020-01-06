@@ -44,14 +44,14 @@ namespace SlotMachine {
             setupLabel(passwordLabel, "Enter password:", 35, x - 300, y - 50);
             setupLabel(confirmPasswordLabel, "Confirm password:", 35, x - 300, y + 50);
 
-            setupTextbox(usernameTextbox, x, y - 150, false);
-            setupTextbox(passwordTextbox, x, y - 50, true);
-            setupTextbox(confirmPasswordTextbox, x, y + 50, true);
+            setupTextbox(usernameTextbox, x+100, y - 150, false);
+            setupTextbox(passwordTextbox, x+100, y - 50, true);
+            setupTextbox(confirmPasswordTextbox, x+100, y + 50, true);
 
             setupButton(registerButton, "Register", x - 100, y + 250);
             setupButton(cancelButton, "Cancel", x + 700, y + 430);
 
-            setupCheckbox(over18Check, x - 150, y + 150);
+            setupCheckbox(over18Check, x - 180, y + 150);
             logoPicturebox.Location = new Point(x - 250, y - 400);
             logoPicturebox.Parent = backgroundImage;
             logoPicturebox.BackColor = Color.Transparent;
@@ -60,6 +60,7 @@ namespace SlotMachine {
 
         private void setupLabel(Label label, String text, int fontSize, int x, int y) {
             label.Parent = backgroundImage;
+            label.ForeColor = Color.White;
             label.BackColor = Color.Transparent;
             label.Font = new Font(egyptFont.Families[0], fontSize);
             label.Text = text;
@@ -74,12 +75,13 @@ namespace SlotMachine {
             textbox.Anchor = AnchorStyles.None;
             textbox.Location = new Point(x, y);
             textbox.Width = 300;
+            textbox.TextAlign = HorizontalAlignment.Center;
             if (isPassword == true) {
                 textbox.PasswordChar = '*';
             }
         }
         private void setupButton(Button button, String text, int x, int y) {
-            button.Font = new Font(egyptFont.Families[0], 20);
+            button.Font = new Font(egyptFont.Families[0], 22);
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;
@@ -101,6 +103,7 @@ namespace SlotMachine {
 
         private void setupCheckbox(CheckBox checkbox, int x, int y) {
             checkbox.Font = new Font(egyptFont.Families[0], 35);
+            checkbox.ForeColor = Color.Crimson;
             checkbox.UseCompatibleTextRendering = true;
             checkbox.Text = "Are you over 18?";
             checkbox.Parent = backgroundImage;

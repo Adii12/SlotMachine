@@ -75,6 +75,7 @@ namespace SlotMachine {
             label.Anchor = AnchorStyles.None;
             label.Location = new Point(x, y);
             label.TextAlign = ContentAlignment.MiddleRight;
+            label.ForeColor = Color.White;
         }
 
         private void setupTextbox(TextBox textbox, int x, int y, bool isPassword) {
