@@ -1,13 +1,14 @@
-Native library pre-loader is trying to load native SQLite library "C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
-05-01-2020-06:39-PM	Logged in succesfully
-05-01-2020-06:39-PM	Decriptat
-05-01-2020-06:39-PM	Criptat
-05-01-2020-06:39-PM	Decriptat
-05-01-2020-06:39-PM	Criptat
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
-05-01-2020-06:39-PMJackpot Won
+Native library pre-loader is trying to load native SQLite library "F:\slots\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
+05/01/2020-08:02-PM	Logged in succesfully
+05/01/2020-08:02-PM	Decriptat
+05/01/2020-08:02-PM	Criptat
+Winners Selected
+05/01/2020-08:02-PM	Selected Jackpot winners from database
+05/01/2020-08:02-PM	Decriptat
+05/01/2020-08:02-PM	Criptat
+05/01/2020-08:02-PMJackpot Won
+05/01/2020-08:02-PMJackpot Won
+PMJackpot Won
 05-01-2020-06:39-PMJackpot Won
 05-01-2020-06:39-PMJackpot Won
 Winners Selected
