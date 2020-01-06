@@ -34,6 +34,7 @@
             this.quitButton = new System.Windows.Forms.Button();
             this.casinoLogo = new System.Windows.Forms.PictureBox();
             this.BackgroundImage = new System.Windows.Forms.PictureBox();
+            this.muteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).BeginInit();
             this.SuspendLayout();
@@ -168,12 +169,25 @@
             this.BackgroundImage.TabIndex = 0;
             this.BackgroundImage.TabStop = false;
             // 
+            // muteButton
+            // 
+            this.muteButton.FlatAppearance.BorderSize = 0;
+            this.muteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.muteButton.Location = new System.Drawing.Point(1143, 43);
+            this.muteButton.Name = "muteButton";
+            this.muteButton.Size = new System.Drawing.Size(140, 49);
+            this.muteButton.TabIndex = 10;
+            this.muteButton.Text = "Mute Music";
+            this.muteButton.UseVisualStyleBackColor = true;
+            this.muteButton.Click += new System.EventHandler(this.muteMusic_Click);
+            // 
             // LoginScreen
             // 
             this.AcceptButton = this.loginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1324, 715);
+            this.Controls.Add(this.muteButton);
             this.Controls.Add(this.quitButton);
             this.Controls.Add(this.noAccountLabel);
             this.Controls.Add(this.registerButton);
@@ -205,6 +219,7 @@
         private System.Windows.Forms.Button registerButton;
         private System.Windows.Forms.Label noAccountLabel;
         private System.Windows.Forms.Button quitButton;
+        private System.Windows.Forms.Button muteButton;
     }
 }
 

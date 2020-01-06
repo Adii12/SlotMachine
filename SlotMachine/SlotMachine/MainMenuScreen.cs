@@ -11,13 +11,19 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Media;
 
 namespace SlotMachine {
     public partial class MainMenuScreen : Form {
         Assembly xmlReader;
         dynamic xml;
         PrivateFontCollection egyptFont;
-        public MainMenuScreen() {
+        int c = 1;
+        SoundPlayer menuMusic;
+        
+        public MainMenuScreen(SoundPlayer menuMusic) {
+            this.menuMusic = menuMusic;
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
@@ -53,6 +59,7 @@ namespace SlotMachine {
             setupButton(leaderboardButton, "Leaderboard", x + 200, y - 180);
             setupButton(addcreditButton, "Add Credit", x + 200, y - 310);
             setupButton(playButton, "Play", x + 200, y - 440);
+            setupButton(muteButton, "Mute", x + 950, y -45);
 
         }
 
@@ -94,7 +101,7 @@ namespace SlotMachine {
 
         private void playButton_Click(object sender, EventArgs e) {
             this.Hide();
-            SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen();
+            SlotMachine.SlotMachineScreen slotMachine = new SlotMachine.SlotMachineScreen(menuMusic);
             slotMachine.ShowDialog();
             this.Show();
         }
@@ -104,6 +111,22 @@ namespace SlotMachine {
             SlotMachine.AddCreditScreen addCreditScreen = new SlotMachine.AddCreditScreen();
             addCreditScreen.ShowDialog();
             this.Show();
+        }
+
+        private void muteButton_Click(object sender, EventArgs e)
+        {
+
+            c++;
+            if (c % 2 == 1)
+            {
+                menuMusic.PlayLooping();
+                muteButton.Text = "Mute";
+            }
+            else if (c % 2 == 0)
+            {
+                menuMusic.Stop();
+                muteButton.Text = "Unmute";
+            }
         }
     }
 }

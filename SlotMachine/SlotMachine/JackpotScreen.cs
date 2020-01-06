@@ -12,6 +12,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Reflection;
 using System.Diagnostics;
+using System.Media;
 
 namespace SlotMachine {
     public partial class JackpotScreen : Form {
@@ -23,6 +24,10 @@ namespace SlotMachine {
         dynamic db;
         public JackpotScreen(int win) {
             InitializeComponent();
+            System.Media.SoundPlayer jackpotSound = new SoundPlayer();
+            jackpotSound.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "jackpotSound.wav";
+            jackpotSound.Play();
+
             this.win = win;
             currentPlayer = CurrentPlayer.getInstance();
             newWin = this.win * 500;

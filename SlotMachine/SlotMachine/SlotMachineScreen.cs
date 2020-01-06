@@ -12,6 +12,7 @@ using System.Diagnostics;
 using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
+using System.Media;
 
 namespace SlotMachine {
     public partial class SlotMachineScreen : Form {
@@ -21,11 +22,15 @@ namespace SlotMachine {
         dynamic winningsCalculator;
         Assembly database;
         dynamic db;
+        int c = 1;
 
         private double[] chances = new double[9];
         private double jackpotChance;
         PrivateFontCollection egyptFont;
         CurrentPlayer currentPlayer;
+        SoundPlayer menuMusic;
+        SoundPlayer winWait;
+        SoundPlayer changeBet;
 
         private int[] bets = new int[6];
         int bet_pos_in_vector;
@@ -39,7 +44,12 @@ namespace SlotMachine {
         double win;
 
         Graphics graphics;
-        public SlotMachineScreen() {
+        public SlotMachineScreen(SoundPlayer menuMusic) {
+            this.menuMusic = menuMusic;
+            winWait = new SoundPlayer();
+            winWait.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "winWait.wav";
+            changeBet = new SoundPlayer();
+            changeBet.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "changeBet.wav";
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             currentPlayer = SlotMachine.CurrentPlayer.getInstance();
@@ -86,6 +96,7 @@ namespace SlotMachine {
             setupSpinButton(gambleButton, "GAMBLE", spinButton.Location.X + 350, y + 400);
             setupButton(PaytableButton, "Paytable", x - 953, y - 430);
             gambleButton.Hide();
+            setupButton(muteButton, "Mute", x - 953, y - 340);
 
             createBets(bets);
             setupLabel(BetLabel, "BET: " + bets[bet_pos_in_vector], 35, x - 650, y + 440);
@@ -421,55 +432,8 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < 3; ++i)
-            {
-                for(int j = 0; j < 5; ++j)
-                {
-                    borderMatrix[i, j].Image = null;
-                }
-            }
-            int rnd = random.Next(0, 100);
-            if (rnd < jackpotChance + 70)
-            {
-                JackpotScreen jackpotScreen = new JackpotScreen(bets[bet_pos_in_vector]);
-                jackpotScreen.ShowDialog();
-                userCredits += bets[bet_pos_in_vector] * 500;
-                db.UpdateBalance(currentPlayer.getUsername(), userCredits);
-                CreditsLabel.Text = "Credits:\n" + userCredits;
-                jackpotChance = 0;
-            }
-            else
-            {
-                win = 0;
-                WinLabel.Text = "Win:\n" + win;
-                if (userCredits >= bets[bet_pos_in_vector])
-                {
-                    gambleButton.Hide();
-                    updateMatrix();
 
-                    userCredits -= bets[bet_pos_in_vector];
-                    db.UpdateBalance(currentPlayer.getUsername(), userCredits);
-                    CreditsLabel.Text = "Credits:\n" + userCredits;
-
-                    winTypes = winningsCalculator.findWins(pictureMatrix, winTypes);
-                    if (winTypes[0] != null)
-                    {
-                        win = calculateWin(bets[bet_pos_in_vector], winTypes);
-                        gambleButton.Show();
-                        userCredits += win;
-                        CreditsLabel.Text = "Credits:\n" + userCredits;
-                        WinLabel.Text = "Win:\n" + win;
-                        db.UpdateBalance(currentPlayer.getUsername(), userCredits);
-
-                    }
-                }
-                else
-                {
-                    MessageBox.Show("Sorry. You don't have enough credits!");
-                }
-                jackpotChance += 0.01;
-            }
-            xmlReader.updateJackpot(jackpotChance);
+            spin();
         }
 
         private void PaytableButton_Click(object sender, EventArgs e) {
@@ -478,6 +442,7 @@ namespace SlotMachine {
         }
 
         private void lessBet_Click(object sender, EventArgs e) {
+            changeBet.Play();
             if (bet_pos_in_vector == 0)
                 bet_pos_in_vector = 5; //daca ajunge la cel mai mic bet si se apasa butonul = > se pune pe bet cel mai mare
             else
@@ -487,6 +452,7 @@ namespace SlotMachine {
         }
 
         private void moreBet_Click(object sender, EventArgs e) {
+            changeBet.Play();
             if (bet_pos_in_vector == 5)
                 bet_pos_in_vector = 0;  //daca ajunge la cel mai mare bet si se apasa butonul = > se reseteaza bet ul
             else
@@ -507,6 +473,7 @@ namespace SlotMachine {
         }
 
         private void gambleButton_Click(object sender, EventArgs e) {
+            winWait.Stop();
             this.Hide();
             GamblingScreen gamblingScreen = new GamblingScreen(win);
             gamblingScreen.ShowDialog();
@@ -804,6 +771,81 @@ namespace SlotMachine {
                         threads[4].Start();
                         break;
                 }
+            }
+        }
+
+        private void spin()
+        {
+            winWait.Stop();
+            System.Media.SoundPlayer spinSound = new SoundPlayer();
+            spinSound.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "start.wav";
+            spinSound.Play();
+            Thread.Sleep(500);
+
+            for (int i = 0; i < 3; ++i)
+            {
+                for (int j = 0; j < 5; ++j)
+                {
+                    borderMatrix[i, j].Image = null;
+                }
+            }
+            int rnd = random.Next(0, 100);
+            if (rnd < jackpotChance)
+            {
+                JackpotScreen jackpotScreen = new JackpotScreen(bets[bet_pos_in_vector]);
+                jackpotScreen.ShowDialog();
+                userCredits += bets[bet_pos_in_vector] * 500;
+                db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                CreditsLabel.Text = "Credits:\n" + userCredits;
+                jackpotChance = 0;
+            }
+            else
+            {
+                win = 0;
+                WinLabel.Text = "Win:\n" + win;
+                if (userCredits >= bets[bet_pos_in_vector])
+                {
+                    gambleButton.Hide();
+                    updateMatrix();
+
+                    userCredits -= bets[bet_pos_in_vector];
+                    db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                    CreditsLabel.Text = "Credits:\n" + userCredits;
+
+                    winTypes = winningsCalculator.findWins(pictureMatrix, winTypes);
+                    if (winTypes[0] != null)
+                    {
+                        winWait.Play();
+                        win = calculateWin(bets[bet_pos_in_vector], winTypes);
+                        gambleButton.Show();
+                        userCredits += win;
+                        CreditsLabel.Text = "Credits:\n" + userCredits;
+                        WinLabel.Text = "Win:\n" + win;
+                        db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Sorry. You don't have enough credits!");
+                }
+                jackpotChance += 0.01;
+            }
+            xmlReader.updateJackpot(jackpotChance);
+        }
+
+        private void muteButton_Click(object sender, EventArgs e)
+        {
+            c++;
+            if (c % 2 == 1)
+            {
+                menuMusic.PlayLooping();
+                muteButton.Text = "Mute";
+            }
+            else if (c % 2 == 0)
+            {
+                menuMusic.Stop();
+                muteButton.Text = "Unmute";
             }
         }
     }

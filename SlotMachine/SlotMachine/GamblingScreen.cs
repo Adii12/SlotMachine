@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing.Text;
+using System.Media;
 
 
 namespace SlotMachine {
@@ -17,10 +18,22 @@ namespace SlotMachine {
         Random random = new Random();
         int randomNumber;
         int counter;
+        SoundPlayer gambleWin;
+        SoundPlayer gambleFail;
+        SoundPlayer fiveGamble;
        
         public double win { get; set; }
        
         public GamblingScreen(double win) {
+
+            gambleWin = new SoundPlayer();
+            gambleFail = new SoundPlayer();
+            fiveGamble = new SoundPlayer();
+            gambleWin.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "gamble.wav";
+            gambleFail.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "failGamble.wav";
+            fiveGamble.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "fiveGamble.wav";
+
+
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
             
@@ -100,17 +113,20 @@ namespace SlotMachine {
         private void RedButton_Click(object sender, EventArgs e) {
             randomNumber = random.Next(0, 100);
             if (randomNumber < 49) {
+                gambleWin.Play();
                 win *= 2;
                 WinLabel.Text = "Winnings:\n" + win;
                 counter++;
 
                 if (counter == 5) {
-                    MessageBox.Show("I see that you're a man of culture as well!");
+                    fiveGamble.Play();
+                   // MessageBox.Show("I see that you're a man of culture as well!");
                     this.Dispose();
                 }
             }
             else {
-                MessageBox.Show("Good luck next time!", randomNumber.ToString());
+                // MessageBox.Show("Good luck next time!", randomNumber.ToString());
+                gambleFail.Play();
                 win = 0;
                 this.Dispose();
             }
@@ -119,17 +135,20 @@ namespace SlotMachine {
         private void BlackButton_Click(object sender, EventArgs e) {
             randomNumber = random.Next(0, 100);
             if (randomNumber > 50) {
+                gambleWin.Play();
                 win *= 2;
                 WinLabel.Text = "Winnings:\n" + win;
                 counter++;
 
                 if (counter == 5) {
-                    MessageBox.Show("I see that you're a man of culture as well!");
+                    // MessageBox.Show("I see that you're a man of culture as well!");
+                    fiveGamble.Play();
                     this.Dispose();
                 }
             }
             else {
-                MessageBox.Show("Good luck next time!", randomNumber.ToString());
+                //MessageBox.Show("Good luck next time!", randomNumber.ToString());
+                gambleFail.Play();
                 win = 0;
                 this.Dispose();
             }
@@ -141,7 +160,8 @@ namespace SlotMachine {
         }
 
         private void CollectButton_Click(object sender, EventArgs e) {
-            MessageBox.Show("Congratulations! You have earned: " + win);
+            fiveGamble.Play();
+           // MessageBox.Show("Congratulations! You have earned: " + win);
             this.Dispose();
         }
     }

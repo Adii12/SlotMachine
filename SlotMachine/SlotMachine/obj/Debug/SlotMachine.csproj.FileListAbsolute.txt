@@ -105,8 +105,15 @@ C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\MACEncry
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.AddCreditScreen.resources
 C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
-C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\blunt.wav
 F:\slots\SlotMachine\SlotMachine\bin\Debug\blunt.wav
 F:\slots\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.dll
 F:\slots\SlotMachine\SlotMachine\bin\Debug\MACEncryptor.pdb
 F:\slots\SlotMachine\SlotMachine\obj\Debug\SlotMachine.JackpotScreen.resources
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\menu-music.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\start.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\jackpotSound.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\failGamble.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\gamble.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\fiveGamble.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\winWait.wav
+C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\changeBet.wav

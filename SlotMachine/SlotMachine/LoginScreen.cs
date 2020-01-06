@@ -21,9 +21,11 @@ namespace SlotMachine {
         PrivateFontCollection egyptFont;
         SlotMachine.CurrentPlayer currentPlayer;
         System.IO.FileStream LogFile;
-
+        int c = 1;
         TextWriterTraceListener txtListener;
-        
+        SoundPlayer menuMusic;
+
+
 
         public LoginScreen() {
             LogFile = new FileStream(System.IO.Directory.GetParent(Environment.CurrentDirectory).ToString() + "\\Logs.txt", FileMode.OpenOrCreate);
@@ -31,9 +33,12 @@ namespace SlotMachine {
             Trace.AutoFlush = true;
             Trace.Listeners.Add(txtListener);
 
-            /*System.Media.SoundPlayer player = new SoundPlayer();
-            player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "blunt.wav";
-            player.Play();*/
+            menuMusic = new SoundPlayer();
+            menuMusic.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "menu-music.wav";
+            menuMusic.Play();
+
+
+            
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -76,6 +81,7 @@ namespace SlotMachine {
             setupButton(loginButton, "Login");
             setupButton(registerButton, "Register");
             setupButton(quitButton, "Quit");
+            setupButton(muteButton, "Mute");
 
             int x = this.Width / 2;
             int y = this.Height / 2;
@@ -91,6 +97,7 @@ namespace SlotMachine {
             loginButton.FlatStyle = FlatStyle.Flat;
             registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 120);
             quitButton.Location = new Point(x + 1050, y + 619);
+            muteButton.Location = new Point(x + 1050, y+519 );
 
             noAccountLabel.Location = new Point(loginButton.Location.X - 100, loginButton.Location.Y + 90);
             noAccountLabel.ForeColor = Color.Crimson;
@@ -129,7 +136,7 @@ namespace SlotMachine {
                 currentPlayer = SlotMachine.CurrentPlayer.getInstance();
                 currentPlayer.setUsername(usernameTextbox.Text);
                 currentPlayer.setBalance(db.GetBalance(usernameTextbox.Text));
-                MainMenuScreen mainMenu = new MainMenuScreen();
+                MainMenuScreen mainMenu = new MainMenuScreen(menuMusic);
                 usernameTextbox.Text = "";
                 passwordTextbox.Text = "";
                 mainMenu.ShowDialog();
@@ -152,6 +159,21 @@ namespace SlotMachine {
 
         private void quitButton_Click(object sender, EventArgs e) {
             this.Dispose();
+        }
+
+        private void muteMusic_Click(object sender, EventArgs e)
+        {
+            c++;   
+            if (c % 2 == 1)
+            {
+                menuMusic.PlayLooping();
+                setupButton(muteButton, "Mute");
+            }
+            else if (c % 2 == 0)
+            {
+                menuMusic.Stop();
+                setupButton(muteButton, "Unmute");
+            }
         }
     }
 }

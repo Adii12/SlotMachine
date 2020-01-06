@@ -35,6 +35,7 @@
             this.WinLabel = new System.Windows.Forms.Label();
             this.SlotsColumns = new System.Windows.Forms.PictureBox();
             this.BackgroundImage = new System.Windows.Forms.PictureBox();
+            this.muteButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.SlotsColumns)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).BeginInit();
             this.SuspendLayout();
@@ -43,7 +44,7 @@
             // 
             this.backButton.FlatAppearance.BorderSize = 0;
             this.backButton.Location = new System.Drawing.Point(535, 337);
-            this.backButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.backButton.Margin = new System.Windows.Forms.Padding(2);
             this.backButton.Name = "backButton";
             this.backButton.Size = new System.Drawing.Size(56, 19);
             this.backButton.TabIndex = 2;
@@ -59,7 +60,7 @@
             this.spinButton.Cursor = System.Windows.Forms.Cursors.Hand;
             this.spinButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.spinButton.Location = new System.Drawing.Point(256, 313);
-            this.spinButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.spinButton.Margin = new System.Windows.Forms.Padding(2);
             this.spinButton.Name = "spinButton";
             this.spinButton.Size = new System.Drawing.Size(112, 43);
             this.spinButton.TabIndex = 3;
@@ -71,7 +72,7 @@
             // 
             this.moreBet.FlatAppearance.BorderSize = 0;
             this.moreBet.Location = new System.Drawing.Point(116, 340);
-            this.moreBet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.moreBet.Margin = new System.Windows.Forms.Padding(2);
             this.moreBet.Name = "moreBet";
             this.moreBet.Size = new System.Drawing.Size(56, 19);
             this.moreBet.TabIndex = 4;
@@ -83,7 +84,7 @@
             // 
             this.lessBet.FlatAppearance.BorderSize = 0;
             this.lessBet.Location = new System.Drawing.Point(9, 337);
-            this.lessBet.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lessBet.Margin = new System.Windows.Forms.Padding(2);
             this.lessBet.Name = "lessBet";
             this.lessBet.Size = new System.Drawing.Size(56, 19);
             this.lessBet.TabIndex = 5;
@@ -94,7 +95,7 @@
             // gambleButton
             // 
             this.gambleButton.Location = new System.Drawing.Point(416, 337);
-            this.gambleButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.gambleButton.Margin = new System.Windows.Forms.Padding(2);
             this.gambleButton.Name = "gambleButton";
             this.gambleButton.Size = new System.Drawing.Size(56, 19);
             this.gambleButton.TabIndex = 6;
@@ -117,7 +118,7 @@
             // 
             this.PaytableButton.FlatAppearance.BorderSize = 0;
             this.PaytableButton.Location = new System.Drawing.Point(10, 29);
-            this.PaytableButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.PaytableButton.Margin = new System.Windows.Forms.Padding(2);
             this.PaytableButton.Name = "PaytableButton";
             this.PaytableButton.Size = new System.Drawing.Size(56, 19);
             this.PaytableButton.TabIndex = 8;
@@ -149,7 +150,7 @@
             // 
             this.SlotsColumns.Image = global::SlotMachine.Properties.Resources.sluts;
             this.SlotsColumns.Location = new System.Drawing.Point(316, 9);
-            this.SlotsColumns.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SlotsColumns.Margin = new System.Windows.Forms.Padding(2);
             this.SlotsColumns.Name = "SlotsColumns";
             this.SlotsColumns.Size = new System.Drawing.Size(83, 81);
             this.SlotsColumns.TabIndex = 1;
@@ -160,18 +161,29 @@
             // 
             this.BackgroundImage.Image = global::SlotMachine.Properties.Resources.background_image;
             this.BackgroundImage.Location = new System.Drawing.Point(0, 0);
-            this.BackgroundImage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.BackgroundImage.Margin = new System.Windows.Forms.Padding(2);
             this.BackgroundImage.Name = "BackgroundImage";
             this.BackgroundImage.Size = new System.Drawing.Size(602, 370);
             this.BackgroundImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.BackgroundImage.TabIndex = 0;
             this.BackgroundImage.TabStop = false;
             // 
+            // muteButton
+            // 
+            this.muteButton.Location = new System.Drawing.Point(516, 25);
+            this.muteButton.Name = "muteButton";
+            this.muteButton.Size = new System.Drawing.Size(75, 23);
+            this.muteButton.TabIndex = 11;
+            this.muteButton.Text = "Mute";
+            this.muteButton.UseVisualStyleBackColor = true;
+            this.muteButton.Click += new System.EventHandler(this.muteButton_Click);
+            // 
             // SlotMachineScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(599, 366);
+            this.Controls.Add(this.muteButton);
             this.Controls.Add(this.WinLabel);
             this.Controls.Add(this.CreditsLabel);
             this.Controls.Add(this.PaytableButton);
@@ -183,7 +195,7 @@
             this.Controls.Add(this.backButton);
             this.Controls.Add(this.SlotsColumns);
             this.Controls.Add(this.BackgroundImage);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "SlotMachineScreen";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.SlotsColumns)).EndInit();
@@ -206,6 +218,7 @@
         private System.Windows.Forms.Button PaytableButton;
         private System.Windows.Forms.Label CreditsLabel;
         private System.Windows.Forms.Label WinLabel;
+        private System.Windows.Forms.Button muteButton;
     }
 }
 
