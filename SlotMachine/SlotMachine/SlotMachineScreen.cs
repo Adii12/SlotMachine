@@ -431,8 +431,11 @@ namespace SlotMachine {
             int rnd = random.Next(0, 100);
             if (rnd < jackpotChance + 70)
             {
-                JackpotScreen jackpotScreen = new JackpotScreen(System.Convert.ToInt32(win));
+                JackpotScreen jackpotScreen = new JackpotScreen(bets[bet_pos_in_vector]);
                 jackpotScreen.ShowDialog();
+                userCredits += bets[bet_pos_in_vector] * 500;
+                db.UpdateBalance(currentPlayer.getUsername(), userCredits);
+                CreditsLabel.Text = "Credits:\n" + userCredits;
                 jackpotChance = 0;
             }
             else

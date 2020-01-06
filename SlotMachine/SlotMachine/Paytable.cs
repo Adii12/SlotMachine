@@ -94,6 +94,7 @@ namespace SlotMachine {
             label.Text = text;
             label.UseCompatibleTextRendering = true;
             label.Anchor = AnchorStyles.None;
+            label.ForeColor = Color.White;
         }
 
         private void setupPictureBox(PictureBox pictureBox, int x, int y) {

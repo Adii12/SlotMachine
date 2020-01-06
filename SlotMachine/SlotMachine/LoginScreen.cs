@@ -31,9 +31,9 @@ namespace SlotMachine {
             Trace.AutoFlush = true;
             Trace.Listeners.Add(txtListener);
 
-            System.Media.SoundPlayer player = new SoundPlayer();
+            /*System.Media.SoundPlayer player = new SoundPlayer();
             player.SoundLocation = AppDomain.CurrentDomain.BaseDirectory + "blunt.wav";
-            player.Play();
+            player.Play();*/
 
             this.FormBorderStyle = FormBorderStyle.None;
             this.WindowState = FormWindowState.Maximized;
@@ -66,9 +66,9 @@ namespace SlotMachine {
         public void setupScreen() {
             BackgroundImage.Dock = DockStyle.Fill;
 
-            setupLabel(userLabel, "Username:", 25);
-            setupLabel(passwordLabel, "Password:", 25);
-            setupLabel(noAccountLabel, "Don't have an account?", 20);
+            setupLabel(userLabel, "Username:", 30);
+            setupLabel(passwordLabel, "Password:", 30);
+            setupLabel(noAccountLabel, "Don't have an account?", 25);
 
             setupTextBox(usernameTextbox);
             setupTextBox(passwordTextbox);
@@ -81,17 +81,19 @@ namespace SlotMachine {
             int y = this.Height / 2;
 
             //locations
-            userLabel.Location = new Point(x - 200, y - 100);
+            userLabel.Location = new Point(x - 250, y - 100);
             passwordLabel.Location = new Point(userLabel.Location.X, y);
 
-            usernameTextbox.Location = new Point(userLabel.Location.X + 190, y - 105);
-            passwordTextbox.Location = new Point(passwordLabel.Location.X + 190, y - 4);
+            usernameTextbox.Location = new Point(userLabel.Location.X + 240, y - 105);
+            passwordTextbox.Location = new Point(passwordLabel.Location.X + 240, y - 4);
 
             loginButton.Location = new Point(passwordLabel.Location.X + 160, y + 100);
+            loginButton.FlatStyle = FlatStyle.Flat;
             registerButton.Location = new Point(loginButton.Location.X, loginButton.Location.Y + 120);
             quitButton.Location = new Point(x + 1050, y + 619);
 
-            noAccountLabel.Location = new Point(loginButton.Location.X - 70, loginButton.Location.Y + 90);
+            noAccountLabel.Location = new Point(loginButton.Location.X - 100, loginButton.Location.Y + 90);
+            noAccountLabel.ForeColor = Color.Crimson;
 
             casinoLogo.Location = new Point(usernameTextbox.Location.X - 250, usernameTextbox.Location.Y - 230);
             casinoLogo.Parent = BackgroundImage;
@@ -103,6 +105,7 @@ namespace SlotMachine {
             label.BackColor = Color.Transparent;
             label.Text = text;
             label.UseCompatibleTextRendering = true;
+            label.ForeColor = Color.White;
         }
 
         private void setupTextBox(TextBox textBox) {
@@ -111,7 +114,7 @@ namespace SlotMachine {
         }
 
         private void setupButton(Button button, String text) {
-            button.Font = new Font(egyptFont.Families[0], 20);
+            button.Font = new Font(egyptFont.Families[0], 22);
             button.BackColor = Color.Orange;
             button.FlatStyle = FlatStyle.Flat;
             button.FlatAppearance.BorderColor = Color.Yellow;

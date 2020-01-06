@@ -30,6 +30,7 @@
             this.developer2 = new System.Windows.Forms.Label();
             this.developer3 = new System.Windows.Forms.Label();
             this.QuitButton = new System.Windows.Forms.Button();
+            this.releaseDateLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.BackgroundImage)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.casinoLogo)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +58,7 @@
             this.DevelopersLabel.AutoSize = true;
             this.DevelopersLabel.Location = new System.Drawing.Point(571, 258);
             this.DevelopersLabel.Name = "DevelopersLabel";
-            this.DevelopersLabel.Size = new System.Drawing.Size(45, 16);
+            this.DevelopersLabel.Size = new System.Drawing.Size(35, 13);
             this.DevelopersLabel.TabIndex = 2;
             this.DevelopersLabel.Text = "label1";
             // 
@@ -66,7 +67,7 @@
             this.developer1.AutoSize = true;
             this.developer1.Location = new System.Drawing.Point(574, 332);
             this.developer1.Name = "developer1";
-            this.developer1.Size = new System.Drawing.Size(45, 16);
+            this.developer1.Size = new System.Drawing.Size(35, 13);
             this.developer1.TabIndex = 3;
             this.developer1.Text = "label2";
             // 
@@ -75,7 +76,7 @@
             this.developer2.AutoSize = true;
             this.developer2.Location = new System.Drawing.Point(574, 392);
             this.developer2.Name = "developer2";
-            this.developer2.Size = new System.Drawing.Size(45, 16);
+            this.developer2.Size = new System.Drawing.Size(35, 13);
             this.developer2.TabIndex = 4;
             this.developer2.Text = "label3";
             // 
@@ -84,12 +85,13 @@
             this.developer3.AutoSize = true;
             this.developer3.Location = new System.Drawing.Point(574, 467);
             this.developer3.Name = "developer3";
-            this.developer3.Size = new System.Drawing.Size(45, 16);
+            this.developer3.Size = new System.Drawing.Size(35, 13);
             this.developer3.TabIndex = 5;
             this.developer3.Text = "label4";
             // 
             // QuitButton
             // 
+            this.QuitButton.FlatAppearance.BorderSize = 0;
             this.QuitButton.Location = new System.Drawing.Point(805, 545);
             this.QuitButton.Name = "QuitButton";
             this.QuitButton.Size = new System.Drawing.Size(146, 48);
@@ -98,9 +100,19 @@
             this.QuitButton.UseVisualStyleBackColor = true;
             this.QuitButton.Click += new System.EventHandler(this.QuitButton_Click);
             // 
+            // releaseDateLabel
+            // 
+            this.releaseDateLabel.AutoSize = true;
+            this.releaseDateLabel.Location = new System.Drawing.Point(418, 564);
+            this.releaseDateLabel.Name = "releaseDateLabel";
+            this.releaseDateLabel.Size = new System.Drawing.Size(35, 13);
+            this.releaseDateLabel.TabIndex = 7;
+            this.releaseDateLabel.Text = "label1";
+            // 
             // AboutScreen
             // 
             this.ClientSize = new System.Drawing.Size(1281, 651);
+            this.Controls.Add(this.releaseDateLabel);
             this.Controls.Add(this.QuitButton);
             this.Controls.Add(this.developer3);
             this.Controls.Add(this.developer2);
@@ -126,6 +138,7 @@
         private System.Windows.Forms.Label developer2;
         private System.Windows.Forms.Label developer3;
         private System.Windows.Forms.Button QuitButton;
+        private System.Windows.Forms.Label releaseDateLabel;
     }
 }
 

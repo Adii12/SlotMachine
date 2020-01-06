@@ -43,15 +43,16 @@
             // JackpotWin
             // 
             this.JackpotWin.Image = ((System.Drawing.Image)(resources.GetObject("JackpotWin.Image")));
-            this.JackpotWin.Location = new System.Drawing.Point(117, 23);
+            this.JackpotWin.Location = new System.Drawing.Point(67, -6);
             this.JackpotWin.Name = "JackpotWin";
-            this.JackpotWin.Size = new System.Drawing.Size(542, 302);
+            this.JackpotWin.Size = new System.Drawing.Size(671, 412);
             this.JackpotWin.TabIndex = 1;
             this.JackpotWin.TabStop = false;
             // 
             // CollectButton
             // 
-            this.CollectButton.FlatAppearance.BorderColor = System.Drawing.Color.Yellow;
+            this.CollectButton.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.CollectButton.FlatAppearance.BorderSize = 0;
             this.CollectButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CollectButton.Location = new System.Drawing.Point(713, 412);
             this.CollectButton.Name = "CollectButton";
