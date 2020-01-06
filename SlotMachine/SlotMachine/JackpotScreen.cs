@@ -31,7 +31,7 @@ namespace SlotMachine {
             this.win = win;
             currentPlayer = CurrentPlayer.getInstance();
             newWin = this.win * 500;
-            Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "Jackpot Won");
+            Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tJackpot Won");
             databaseDLL = Assembly.Load("Database");
             db = databaseDLL.CreateInstance("Database.Database");
             db.Init();
