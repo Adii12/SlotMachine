@@ -432,7 +432,6 @@ namespace SlotMachine {
 
         private void spinButton_Click(object sender, EventArgs e)
         {
-
             spin();
         }
 
@@ -798,6 +797,7 @@ namespace SlotMachine {
                 db.UpdateBalance(currentPlayer.getUsername(), userCredits);
                 CreditsLabel.Text = "Credits:\n" + userCredits;
                 jackpotChance = 0;
+                
             }
             else
             {
