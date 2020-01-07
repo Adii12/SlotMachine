@@ -1,15 +1,32 @@
-Native library pre-loader is trying to load native SQLite library "F:\slots\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
-06/01/2020-07:35-PM	Logged in succesfully
-06/01/2020-07:35-PM	Decriptat
-06/01/2020-07:35-PM	Criptat
-06/01/2020-07:35-PM	Decriptat
-06/01/2020-07:35-PM	Criptat
-06/01/2020-07:32-PM	Decriptat
-06/01/2020-07:27-PM	Criptat
-06/01/2020-07:27-PM	Decriptat
-06/01/2020-07:27-PM	Criptat
-06/01/2020-07:27-PM	Decriptat
- syntax error
+Native library pre-loader is trying to load native SQLite library "C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\x86\SQLite.Interop.dll"...
+06-01-2020-07:53-PM	Logged in succesfully
+06-01-2020-07:53-PM	Decriptat
+06-01-2020-07:53-PM	Criptat
+06-01-2020-07:53-PM	Decriptat
+06-01-2020-07:53-PM	Criptat
+06-01-2020-07:54-PM	Criptat
+06-01-2020-07:54-PM	Decriptat
+06-01-2020-07:54-PM	Criptat
+06-01-2020-07:54-PM	Criptat
+06-01-2020-07:51-PM	Decriptat
+06-01-2020-07:51-PM	Criptat
+06-01-2020-07:51-PM	Criptat
+QLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
+06-01-2020-07:38-PM	Login fail: incorrect username and/or password
+06-01-2020-07:38-PM	Logged in succesfully
+06-01-2020-07:38-PM	Decriptat
+06-01-2020-07:38-PM	Criptat
+06-01-2020-07:38-PM	Decriptat
+06-01-2020-07:38-PM	Criptat
+ SQL logic error
+unrecognized token: "'>#�"
    at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
    at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
    at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
@@ -18,20 +35,269 @@ Native library pre-loader is trying to load native SQLite library "F:\slots\Slot
    at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
    at System.Data.SQLite.SQLiteCommand.ExecuteReader()
    at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
-06/01/2020-07:26-PM	Login fail: incorrect username and/or password
-06/01/2020-07:26-PM	Logged in succesfully
-06/01/2020-07:26-PM	Decriptat
-06/01/2020-07:26-PM	Criptat
-06/01/2020-07:26-PM	Decriptat
-06/01/2020-07:26-PM	Criptat
-55-PM	Selected Jackpot winners from database
-
-06/01/2020-03:37-PM	Criptat
-06/01/2020-03:37-PMJackpot Won
-06/01/2020-03:37-PMJackpot Won
-06/01/2020-03:37-PMJackpot Won
-06/01/2020-03:37-PMJackpot Won
-06/01/2020-03:37-PMJackpot Won
-06/01/2020-03:37-PMJackpot Won
--06:33-PMJackpot Won
-05-01-2020-06:33-PM	Decriptat
+06-01-2020-07:23-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
+06-01-2020-07:23-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
+06-01-2020-07:23-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
+06-01-2020-07:23-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 135
+06-01-2020-07:23-PM	Login fail: incorrect username and/or password
+2020-07:21-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:21-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:21-PM	Login fail: incorrect username and/or password
+ecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password
+SQLite error (1): unrecognized token: "'>#�" in "SELECT * FROM Users WHERE Username='b' AND Password='>#�"
+code = Error (1), message = System.Data.SQLite.SQLiteException (0x800007BF): SQL logic error
+unrecognized token: "'>#�"
+   at System.Data.SQLite.SQLite3.Prepare(SQLiteConnection cnn, String strSql, SQLiteStatement previous, UInt32 timeoutMS, String& strRemain)
+   at System.Data.SQLite.SQLiteCommand.BuildNextCommand()
+   at System.Data.SQLite.SQLiteCommand.GetStatement(Int32 index)
+   at System.Data.SQLite.SQLiteDataReader.NextResult()
+   at System.Data.SQLite.SQLiteDataReader..ctor(SQLiteCommand cmd, CommandBehavior behave)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.SQLite.SQLiteCommand.ExecuteReader()
+   at Database.Database.AuthenticateUser(String username, String password) in C:\Users\adic8\Documents\slot-machine\SlotMachine\Database\Database.cs:line 136
+06-01-2020-07:19-PM	Login fail: incorrect username and/or password

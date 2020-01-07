@@ -13,6 +13,7 @@ using System.Drawing.Text;
 using System.Runtime.InteropServices;
 using System.Threading;
 using System.Media;
+using System.IO;
 
 namespace SlotMachine {
     public partial class SlotMachineScreen : Form {
@@ -162,6 +163,11 @@ namespace SlotMachine {
         }
 
         private void backButton_Click(object sender, EventArgs e) {
+            winWait.Stop();
+            xmlReader.updateJackpot(jackpotChance);
+            xmlReader.Encrypt();
+            if (File.Exists("chances.xml"))
+                File.Delete("chances.xml");
             this.Dispose();
         }
         private void createPic(int i, int j)

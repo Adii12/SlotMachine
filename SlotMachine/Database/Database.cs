@@ -20,12 +20,7 @@ using System.Diagnostics;
 namespace Database {
     public class Database {
         private SQLiteConnection conn = null;
-       
-
-        public Database() {
-          
-        }
-
+      
         public void Init() {
             if (!File.Exists("Database.sqlite"))
                 SQLiteConnection.CreateFile("Database.sqlite");
