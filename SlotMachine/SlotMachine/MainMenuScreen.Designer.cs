@@ -123,6 +123,8 @@
             // 
             // muteButton
             // 
+            this.muteButton.FlatAppearance.BorderSize = 0;
+            this.muteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.muteButton.Location = new System.Drawing.Point(44, 27);
             this.muteButton.Name = "muteButton";
             this.muteButton.Size = new System.Drawing.Size(75, 23);

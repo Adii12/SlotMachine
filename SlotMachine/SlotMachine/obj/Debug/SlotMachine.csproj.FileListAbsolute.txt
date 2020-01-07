@@ -117,3 +117,11 @@ C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\gamble.w
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\fiveGamble.wav
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\winWait.wav
 C:\Users\enric\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\changeBet.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\changeBet.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\failGamble.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\gamble.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\fiveGamble.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\jackpotSound.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\menu-music.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\start.wav
+C:\Users\adic8\Documents\slot-machine\SlotMachine\SlotMachine\bin\Debug\winWait.wav

@@ -27,7 +27,7 @@ namespace SlotMachine {
             setupScreen();
             databaseDLL = Assembly.Load("Database");
             if (databaseDLL == null) {
-                MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+               // MessageBox.Show("Could not load database assembly.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Trace.WriteLine(DateTime.Now.ToString("dd/MM/yyyy-hh:mm-tt") + "\tCould not load database assembly");
                 System.Environment.Exit(1);
             }
